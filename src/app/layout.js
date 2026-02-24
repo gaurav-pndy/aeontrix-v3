@@ -1,14 +1,23 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
+import Navbar from "@/components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+export const satoshi = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Satoshi-Variable.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata = {
@@ -20,8 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${satoshi.variable} ${jetbrainsMono.variable} antialiased bg-[#05070a]`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
