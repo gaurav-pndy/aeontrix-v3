@@ -222,7 +222,10 @@ function ProcessEfficiency({ isAfter, beforeOpacity, afterOpacity }) {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className={`absolute text-xs md:body-text font-semibold ${isAfter ? "text-success" : "text-danger"}`}
+          className={`absolute text-xs md:body-text font-semibold `}
+          style={{
+            color: isAfter ? "#059669" : "#b80005",
+          }}
         >
           {isAfter ? "Completely / Automated" : "Partially / Manual"}
         </motion.div>
