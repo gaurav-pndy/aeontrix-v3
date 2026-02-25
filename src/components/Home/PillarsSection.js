@@ -2,14 +2,14 @@
 
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
-import PillarTextColumn from "./PillarTextColumn";
+import PillarTextColumn from "./Pillars/PillarTextColumn";
 import dynamic from "next/dynamic";
 
-const PillarStack = dynamic(() => import("./PillarStack"), {
+const PillarStack = dynamic(() => import("./Pillars/PillarStack"), {
   ssr: false,
 });
 import { useSpring } from "framer-motion";
-import PillarStepIndicator from "./PillarStepIndicator";
+import PillarStepIndicator from "./Pillars/PillarStepIndicator";
 
 export default function PillarsSection() {
   const ref = useRef(null);

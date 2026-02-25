@@ -54,7 +54,7 @@ export default function Hero() {
 
       <section
         ref={heroRef}
-        className="relative h-screen w-full overflow-hidden bg-[#05070a] text-white"
+        className="relative h-dvh md:h-screen w-full overflow-hidden bg-[#05070a] text-white"
       >
         {/* GRID */}
         <div

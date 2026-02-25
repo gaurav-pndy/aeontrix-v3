@@ -26,7 +26,7 @@ export default function ShimmerText({ children, className }) {
             backgroundPosition: ["-200% center", "200% center"],
           }}
           className={cn(
-            "bg-size-[200%_100%] bg-linear-to-r from-primary via-neutral-400 to-primary bg-clip-text  text-transparent ",
+            "bg-size-[200%_100%] bg-linear-to-r from-primary via-white to-primary bg-clip-text  text-transparent ",
             className,
           )}
           transition={{

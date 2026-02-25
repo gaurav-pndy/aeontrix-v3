@@ -16,7 +16,7 @@ function useBreakpoint() {
   if (window.matchMedia("(max-width: 400px)").matches) return "xs";
   if (window.matchMedia("(max-width: 640px)").matches) return "sm";
   if (window.matchMedia("(max-width: 1024px)").matches) return "md";
-  if (window.matchMedia("(max-width: 1280px)").matches) return "lg";
+  if (window.matchMedia("(max-width: 1270px)").matches) return "lg";
   return "xl";
 }
 
@@ -84,7 +84,7 @@ export default function PillarStack({ scrollYProgress }) {
     md:mt-0
     md:ml-36
 
-    lg:ml-48 xl:ml-70 2xl:ml-80 xl:top-[30%] xl:-translate-y-[30%]
+    lg:ml-48 xl:ml-66 2xl:ml-80 xl:top-[30%] xl:-translate-y-[30%]
 
     h-28 lg:h-40 xl:h-56
     w-28 lg:w-40 xl:w-56
