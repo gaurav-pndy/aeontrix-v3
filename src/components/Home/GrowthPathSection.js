@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 export default function GrowthPathSection() {
   return (
-    <section className="relative bg-white py-16 rounded-4xl mt-10 px-2">
+    <section className="relative bg-white py-16 rounded-4xl mt-10 mx-2">
       {/* HEADER */}
       <div className="max-w-7xl px-4 mx-auto text-center mb-16">
         <p className="small-text uppercase font-mono text-primary mb-4">
