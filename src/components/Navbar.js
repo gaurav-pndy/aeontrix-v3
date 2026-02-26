@@ -70,7 +70,7 @@ export default function Navbar() {
                 key={item}
                 data-item={item}
                 onClick={() => setActive(item)}
-                className={`relative z-10 px-6 py-2 cursor-pointer caption-text transition ${
+                className={`relative z-10 px-6 py-2 cursor-pointer small-text transition ${
                   active === item
                     ? "text-white"
                     : "text-white/70 hover:text-white"
@@ -149,7 +149,7 @@ export default function Navbar() {
                     setActive(item);
                     setMobileOpen(false);
                   }}
-                  className="caption-text text-white/80 hover:text-white text-left"
+                  className="small-text text-white/80 hover:text-white text-left"
                 >
                   {item}
                 </motion.button>

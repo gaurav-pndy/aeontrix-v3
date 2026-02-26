@@ -56,8 +56,8 @@ export default function BeforeAfterSection() {
   const afterOpacity = useTransform(progress, [scanStart, scanEnd], [0, 1]);
 
   return (
-    <section ref={ref} className="relative h-[380vh] w-full">
-      <div className="sticky top-0 h-screen overflow-hidden pt-6 md:pt-16 ">
+    <section ref={ref} className="relative h-[380vh] w-full ">
+      <div className="sticky top-0 h-screen  overflow-hidden pt-6 md:pt-16 ">
         {/* HEADER */}
         <HeaderToggle
           isAfter={isAfter}
@@ -66,97 +66,99 @@ export default function BeforeAfterSection() {
         />
 
         {/* GRID */}
-        <div className="max-w-360 px-4 mx-auto mt-4 md:mt-16 grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 gap-2 md:gap-6 h-[90%] md:h-[85%] lg:h-[75%]">
-          <BottleneckBox isAfter={isAfter} active={hasEntered} />{" "}
-          <BoxReveal index={1} active={hasEntered}>
-            <MetricBox
-              title="Acquisition"
-              beforeOpacity={beforeOpacity}
-              afterOpacity={afterOpacity}
-              before={[
-                ["Leads", "Unscored"],
-                ["Outreach", "Manual"],
-                ["Conversion", "Unknown"],
-                ["Attribution", "Missing"],
-              ]}
-              after={[
-                ["Leads", "Scored"],
-                ["Outreach", "Automated"],
-                ["Conversion", "Tracked"],
-                ["Attribution", "Unified"],
-              ]}
-            />{" "}
-          </BoxReveal>
-          <BoxReveal index={2} active={hasEntered}>
-            <MetricBox
-              title="Monetization"
-              beforeOpacity={beforeOpacity}
-              afterOpacity={afterOpacity}
-              before={[
-                ["Pricing", "Flat"],
-                ["Upsells", "None"],
-                ["Retainers", "Ad-hoc"],
-                ["Forecast", "Guess"],
-              ]}
-              after={[
-                ["Pricing", "Engineered"],
-                ["Upsells", "Automated"],
-                ["Retainers", "Systemized"],
-                ["Forecast", "Predictive"],
-              ]}
-            />{" "}
-          </BoxReveal>
-          <BoxReveal index={3} active={hasEntered}>
-            <ProcessEfficiency
-              isAfter={isAfter}
-              beforeOpacity={beforeOpacity}
-              afterOpacity={afterOpacity}
-            />{" "}
-          </BoxReveal>
-          <BoxReveal index={4} active={hasEntered}>
-            <MetricBox
-              title="Retention"
-              beforeOpacity={beforeOpacity}
-              afterOpacity={afterOpacity}
-              before={[
-                ["Health Score", "None"],
-                ["Churn Risk", "Unknown"],
-                ["Check-ins", "Manual"],
-                ["Expansion", "Random"],
-              ]}
-              after={[
-                ["Health Score", "Live"],
-                ["Churn Risk", "Flagged"],
-                ["Check-ins", "Triggered"],
-                ["Expansion", "Systemized"],
-              ]}
-            />{" "}
-          </BoxReveal>
-          <BoxReveal index={5} active={hasEntered}>
-            <MetricBox
-              title="Intelligence"
-              beforeOpacity={beforeOpacity}
-              afterOpacity={afterOpacity}
-              before={[
-                ["CAC", "Unknown"],
-                ["LTV", "Untracked"],
-                ["Margin", "Guess"],
-                ["Reports", "Manual"],
-              ]}
-              after={[
-                ["CAC", "Live"],
-                ["LTV", "Live"],
-                ["Margin", "Real-Time"],
-                ["Reports", "Auto"],
-              ]}
-            />{" "}
-          </BoxReveal>
-          <BoxReveal index={6} active={hasEntered}>
-            <DataScatter
-              beforeOpacity={beforeOpacity}
-              afterOpacity={afterOpacity}
-            />{" "}
-          </BoxReveal>
+        <div className="flex items-center justify-center pb-6 lg:pb-10 h-full w-full">
+          <div className="max-w-360 w-full px-4 mx-auto  grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 gap-2 md:gap-6 h-[90%] md:h-[85%] lg:h-[80%] max-h-160 md:max-h-full lg:max-h-132 ">
+            <BottleneckBox isAfter={isAfter} active={hasEntered} />{" "}
+            <BoxReveal index={1} active={hasEntered}>
+              <MetricBox
+                title="Acquisition"
+                beforeOpacity={beforeOpacity}
+                afterOpacity={afterOpacity}
+                before={[
+                  ["Leads", "Unscored"],
+                  ["Outreach", "Manual"],
+                  ["Conversion", "Unknown"],
+                  ["Attribution", "Missing"],
+                ]}
+                after={[
+                  ["Leads", "Scored"],
+                  ["Outreach", "Automated"],
+                  ["Conversion", "Tracked"],
+                  ["Attribution", "Unified"],
+                ]}
+              />{" "}
+            </BoxReveal>
+            <BoxReveal index={2} active={hasEntered}>
+              <MetricBox
+                title="Monetization"
+                beforeOpacity={beforeOpacity}
+                afterOpacity={afterOpacity}
+                before={[
+                  ["Pricing", "Flat"],
+                  ["Upsells", "None"],
+                  ["Retainers", "Ad-hoc"],
+                  ["Forecast", "Guess"],
+                ]}
+                after={[
+                  ["Pricing", "Engineered"],
+                  ["Upsells", "Automated"],
+                  ["Retainers", "Systemized"],
+                  ["Forecast", "Predictive"],
+                ]}
+              />{" "}
+            </BoxReveal>
+            <BoxReveal index={3} active={hasEntered}>
+              <ProcessEfficiency
+                isAfter={isAfter}
+                beforeOpacity={beforeOpacity}
+                afterOpacity={afterOpacity}
+              />{" "}
+            </BoxReveal>
+            <BoxReveal index={4} active={hasEntered}>
+              <MetricBox
+                title="Retention"
+                beforeOpacity={beforeOpacity}
+                afterOpacity={afterOpacity}
+                before={[
+                  ["Health Score", "None"],
+                  ["Churn Risk", "Unknown"],
+                  ["Check-ins", "Manual"],
+                  ["Expansion", "Random"],
+                ]}
+                after={[
+                  ["Health Score", "Live"],
+                  ["Churn Risk", "Flagged"],
+                  ["Check-ins", "Triggered"],
+                  ["Expansion", "Systemized"],
+                ]}
+              />{" "}
+            </BoxReveal>
+            <BoxReveal index={5} active={hasEntered}>
+              <MetricBox
+                title="Intelligence"
+                beforeOpacity={beforeOpacity}
+                afterOpacity={afterOpacity}
+                before={[
+                  ["CAC", "Unknown"],
+                  ["LTV", "Untracked"],
+                  ["Margin", "Guess"],
+                  ["Reports", "Manual"],
+                ]}
+                after={[
+                  ["CAC", "Live"],
+                  ["LTV", "Live"],
+                  ["Margin", "Real-Time"],
+                  ["Reports", "Auto"],
+                ]}
+              />{" "}
+            </BoxReveal>
+            <BoxReveal index={6} active={hasEntered}>
+              <DataScatter
+                beforeOpacity={beforeOpacity}
+                afterOpacity={afterOpacity}
+              />{" "}
+            </BoxReveal>
+          </div>
         </div>
 
         {/* SCAN */}
@@ -204,7 +206,7 @@ function ProcessEfficiency({ isAfter, beforeOpacity, afterOpacity }) {
         className="absolute inset-0 rounded-lg border border-success/40 shadow-[0_0_14px_rgba(5,150,105,0.4)]"
       />
 
-      <h4 className="text-white bg-[#0e0e0e] rounded-t-lg px-4 py-2 caption-text md:large-text">
+      <h4 className="text-white bg-[#0e0e0e] rounded-t-lg px-4 py-2 small-text md:large-text">
         Process Efficiency
       </h4>
 
