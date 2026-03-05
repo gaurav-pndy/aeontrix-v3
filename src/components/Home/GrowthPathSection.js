@@ -4,6 +4,33 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Check, Layers, Users, Zap, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 
+const WORKSTREAMS = [
+  {
+    label: "Paid Ads & Performance",
+    className: "bg-emerald-50 border-emerald-300 text-emerald-700",
+  },
+  {
+    label: "Content & Brand",
+    className: "bg-amber-50 border-amber-300 text-amber-700",
+  },
+  {
+    label: "Email & Lifecycle",
+    className: "bg-violet-50 border-violet-300 text-violet-700",
+  },
+  {
+    label: "Outbound & Sales",
+    className: "bg-red-50 border-red-300 text-red-600",
+  },
+  {
+    label: "Software & AI Automation",
+    className: "bg-blue-50 border-blue-300 text-blue-700",
+  },
+  {
+    label: "Hiring & Talent",
+    className: "bg-orange-50 border-orange-300 text-orange-700",
+  },
+];
+
 export default function GrowthPathSection() {
   return (
     <section className="relative bg-white py-16 rounded-4xl mt-10 mx-2">
@@ -136,19 +163,12 @@ export default function GrowthPathSection() {
             </p>
 
             <div className="flex max-w-lg justify-center mx-auto flex-wrap gap-2 mb-8">
-              {[
-                "Paid Ads & Performance",
-                "Content & Brand",
-                "Email & Lifecycle",
-                "Outbound & Sales",
-                "Software & AI Automation",
-                "Hiring & Talent",
-              ].map((tag) => (
+              {WORKSTREAMS.map((tag) => (
                 <span
-                  key={tag}
-                  className="text-sm px-3 py-1 rounded-full border border-primary/30 text-primary"
+                  key={tag.label}
+                  className={`text-sm px-3 py-1 rounded-full border font-medium hover:scale-105 transition-all duration-300 hover:shadow-md ${tag.className}`}
                 >
-                  {tag}
+                  {tag.label}
                 </span>
               ))}
             </div>
@@ -185,10 +205,6 @@ export default function GrowthPathSection() {
 function HoverCard({ children }) {
   return (
     <motion.div
-      whileHover={{
-        y: -6,
-        boxShadow: "0 30px 80px rgba(0,0,0,0.08)",
-      }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       className="relative flex flex-col justify-between bg-white rounded-2xl border border-primary p-4 md:p-6 lg:p-8"
     >
@@ -222,7 +238,7 @@ function XentaryBox() {
     <div className="flex  gap-2 bg-primary/10 border border-primary rounded-lg p-4 text-sm text-muted-foreground mb-6">
       <Layers className="text-primary shrink-0 mt-px" size={18} />
       <span>
-        Access to <span className="text-primary font-medium">Xentary</span> —
+        Access to <span className="text-primary font-medium">Xentary</span> -
         Aeontrix's proprietary internal operating system.
       </span>
     </div>
@@ -232,48 +248,32 @@ function XentaryBox() {
 function CustomButton({ label = "Get Started 🡢" }) {
   return (
     <motion.button
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-      className=" w-full cursor-pointer
+      whileHover={{ y: -2 }}
+      whileTap={{
+        y: 2,
+        scale: 0.985,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 250,
+        damping: 18,
+      }}
+      className="
+        w-full cursor-pointer
         relative
-        overflow-hidden
         rounded-lg
         bg-primary
         px-8
-        py-3
+        py-2.5
         font-medium
-        text-white border border-primary
+        text-white
+        border border-primary
       "
+      style={{
+        boxShadow: "0 6px 0 rgba(4,100,75,1)",
+      }}
     >
-      {/* WHITE FILL */}
-      <motion.span
-        variants={{
-          rest: { width: "0%" },
-          hover: { width: "100%" },
-        }}
-        transition={{ duration: 0.45, ease: "easeInOut" }}
-        className="
-          absolute
-          left-0
-          top-0
-          h-full
-          bg-white
-          z-0
-        "
-      />
-
-      {/* TEXT */}
-      <motion.span
-        variants={{
-          rest: { color: "#ffffff" },
-          hover: { color: "#000000" },
-        }}
-        transition={{ duration: 0.25, ease: "linear" }}
-        className="relative z-10"
-      >
-        {label}
-      </motion.span>
+      {label}
     </motion.button>
   );
 }

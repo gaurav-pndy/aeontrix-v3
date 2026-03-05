@@ -31,12 +31,12 @@ export default function PillarsSection() {
       className="relative  px-2"
       style={{ height: "500vh" }} // more space → slower
     >
-      <div className="sticky top-0 h-screen rounded-4xl bg-background overflow-hidden">
+      <div className="sticky top-0 h-screen rounded-4xl bg-background-dark overflow-hidden">
         <div className="h-screen flex flex-col-reverse md:grid md:grid-cols-2  mx-auto  ">
           <div className="h-[50vh] md:h-auto bg-white flex justify-end  rounded-4xl  overflow-hidden ">
             <div className="flex-1 flex xl:gap-8 max-w-180 pl-4">
               {/* STEP INDICATOR */}
-              <div className="  py-8 hidden xl:flex  ">
+              <div className="  py-8 pt-18 hidden xl:flex  ">
                 <PillarStepIndicator scrollYProgress={smoothProgress} />
               </div>
 
@@ -47,14 +47,14 @@ export default function PillarsSection() {
             </div>
           </div>
 
-          <div className="h-[50vh] md:h-auto max-w-180 px-4 relative overflow-hidden ">
+          <div className="h-[50vh] md:h-auto max-w-180 px-4 relative  ">
             {/* Grid background */}
             <div
-              className="absolute scale-125 inset-0 pointer-events-none"
+              className="absolute scale-125 mt-40 inset-0 pointer-events-none"
               style={{
                 backgroundImage: `
-      linear-gradient(rgba(0,0,0,0.3) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,0,0,0.3) 1px, transparent 1px)
+      linear-gradient(rgba(203,255,238,0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(203,255,238,0.3) 1px, transparent 1px)
     `,
                 backgroundSize: "100px 100px",
 
@@ -73,7 +73,7 @@ export default function PillarsSection() {
               }}
             />
 
-            <h3 className="large-text font-semibold mt-4 md:mt-8 text-center md:text-right">
+            <h3 className="large-text font-medium text-white mt-10 md:mt-20 text-center md:text-right">
               {" "}
               Aeontrix's 4 Pillars of Growth for Service Businesses
             </h3>

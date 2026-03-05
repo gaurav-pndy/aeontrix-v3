@@ -2,6 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const satoshi = localFont({
   src: [
@@ -83,6 +84,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

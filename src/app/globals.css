@@ -235,7 +235,6 @@ body {
 @utility body-text {
   font-size: 1rem;
   /* line-height: 1.7; */
-  color: var(--text-muted);
 }
 
 @utility small-text {
@@ -244,8 +243,7 @@ body {
 }
 
 @utility xs-text {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 
 .shimmer-text {
@@ -379,3 +377,45 @@ body {
 
 
 
+:nth-child(1 of .shape) {
+  clip-path: shape(
+    from 0 100%,
+    arc by var(--r) calc(-1*var(--r)) of var(--r),
+    vline to var(--r),
+    arc by var(--r) calc(-1*var(--r)) of var(--r) cw,
+    hline to calc(100% - 2*var(--r)),
+    arc by var(--r) var(--r) of var(--r) cw,
+    vline to calc(100% - var(--r)),
+    arc by var(--r) var(--r) of var(--r)
+  )
+}
+.shape {
+  --r: 26px;
+ 
+}
+
+/* Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #07765984; 
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #077659cc;
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #07765957 transparent;
+}

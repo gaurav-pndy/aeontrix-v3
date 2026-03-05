@@ -42,10 +42,10 @@ export default function BeforeAfterSection() {
   });
 
   /* Timeline */
-  const scanStart = 0.45;
-  const scanEnd = 0.65;
+  const scanStart = 0.4;
+  const scanEnd = 0.75;
 
-  const scanX = useTransform(progress, [scanStart, scanEnd], ["100%", "-100%"]);
+  const scanX = useTransform(progress, [scanStart, scanEnd], ["120%", "-100%"]);
 
   const beforeOpacity = useTransform(
     progress,
@@ -57,7 +57,7 @@ export default function BeforeAfterSection() {
 
   return (
     <section ref={ref} className="relative h-[380vh] w-full ">
-      <div className="sticky top-0 h-screen  overflow-hidden pt-6 md:pt-16 ">
+      <div className="sticky top-0 h-screen  overflow-hidden pt-16 md:pt-24 ">
         {/* HEADER */}
         <HeaderToggle
           isAfter={isAfter}
@@ -66,8 +66,8 @@ export default function BeforeAfterSection() {
         />
 
         {/* GRID */}
-        <div className="flex items-center justify-center pb-6 lg:pb-10 h-full w-full">
-          <div className="max-w-360 w-full px-4 mx-auto  grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 gap-2 md:gap-6 h-[90%] md:h-[85%] lg:h-[80%] max-h-160 md:max-h-full lg:max-h-132 ">
+        <div className="flex items-center justify-center pb-4 lg:pb-10 h-full w-full">
+          <div className="max-w-360 w-full px-4 mx-auto  grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 gap-2 md:gap-6 h-[95%] md:h-[85%] lg:h-[80%] max-h-160 md:max-h-full lg:max-h-132 ">
             <BottleneckBox isAfter={isAfter} active={hasEntered} />{" "}
             <BoxReveal index={1} active={hasEntered}>
               <MetricBox

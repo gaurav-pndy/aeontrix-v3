@@ -16,6 +16,7 @@ export default function Navbar() {
   const [active, setActive] = useState("Home");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [indicatorStyle, setIndicatorStyle] = useState({});
+  const [isAtTop, setIsAtTop] = useState(true);
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -28,30 +29,64 @@ export default function Navbar() {
     });
   }, [active]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY < 40);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <motion.header
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="absolute top-6 left-0 right-0 z-50 px-6 md:px-10"
+      className="fixed top-4 left-0 right-0 z-50 px-4 xl:px-10"
     >
       <div className="relative mx-auto flex max-w-7xl items-center">
         {/* LOGO */}
         <Link href="/">
-          <img src="/logo-light.png" className="h-10 md:h-12" />
+          <div className="relative h-10 md:h-12 w-60">
+            <AnimatePresence mode="wait">
+              {isAtTop ? (
+                <motion.img
+                  key="logo-light"
+                  src="/logo-light.png"
+                  initial={{ opacity: 0, y: -6, filter: "blur(4px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, y: 6, filter: "blur(4px)" }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="absolute h-10 md:h-12"
+                />
+              ) : (
+                <motion.img
+                  key="logo-dark"
+                  src="/aeontrix-logo.png"
+                  initial={{ opacity: 0, y: -6, filter: "blur(4px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, y: 6, filter: "blur(4px)" }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="absolute h-10 md:h-12"
+                />
+              )}
+            </AnimatePresence>
+          </div>{" "}
         </Link>
 
         {/* DESKTOP NAV */}
-        <div className="absolute left-1/2 hidden -translate-x-1/2 md:block">
+        <div className="absolute left-1/2 hidden -translate-x-1/2 lg:block ">
           <div
             ref={navRef}
             className="
               relative flex items-center
               rounded-full
               border border-white/20
-              bg-white/5
+              bg-black/60
               px-2 py-2
-              backdrop-blur-xl
+              backdrop-blur-2xl
               shadow-lg
             "
           >
@@ -59,7 +94,7 @@ export default function Navbar() {
             <motion.div
               layout
               transition={{ type: "spring", stiffness: 400, damping: 35 }}
-              className="absolute top-2 bottom-2 rounded-full bg-white/10"
+              className="absolute top-2 bottom-2 rounded-full bg-white/20"
               style={indicatorStyle}
             />
 
@@ -70,10 +105,8 @@ export default function Navbar() {
                 key={item}
                 data-item={item}
                 onClick={() => setActive(item)}
-                className={`relative z-10 px-6 py-2 cursor-pointer small-text transition ${
-                  active === item
-                    ? "text-white"
-                    : "text-white/70 hover:text-white"
+                className={`relative z-10 px-4 xl:px-6 py-2 cursor-pointer small-text transition whitespace-nowrap ${
+                  active === item ? "text-white" : "text-white"
                 }`}
               >
                 {item}
@@ -83,7 +116,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA DESKTOP */}
-        <div className="ml-auto hidden md:block">
+        <div className="ml-auto hidden lg:block">
           <motion.div
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2 }}
@@ -93,11 +126,11 @@ export default function Navbar() {
               className="
                 rounded-full
                 border border-primary/60
-                bg-primary/20
+                bg-primary/60
                 px-6 py-3
                 text-sm font-medium
-                text-primary-soft
-                backdrop-blur-xl
+                text-white
+                backdrop-blur-2xl
                 shadow-[0_0_30px_rgba(7,118,89,0.35)]
                 transition
                 hover:bg-primary/30
@@ -109,7 +142,7 @@ export default function Navbar() {
         </div>
 
         {/* MOBILE MENU BUTTON */}
-        <div className="ml-auto md:hidden">
+        <div className="ml-auto lg:hidden">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-xl"
@@ -137,7 +170,7 @@ export default function Navbar() {
               bg-black/70
               backdrop-blur-xl
               p-6
-              md:hidden
+              lg:hidden
             "
           >
             <div className="flex flex-col gap-4">

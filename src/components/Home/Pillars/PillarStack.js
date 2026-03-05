@@ -84,7 +84,7 @@ export default function PillarStack({ scrollYProgress }) {
     md:mt-0
     md:ml-36
 
-    lg:ml-48 xl:ml-66 2xl:ml-80 xl:top-[30%] xl:-translate-y-[30%]
+    lg:ml-48 xl:ml-66 2xl:ml-80 xl:top-[35%] xl:-translate-y-[35%]
 
     h-28 lg:h-40 xl:h-56
     w-28 lg:w-40 xl:w-56
@@ -141,7 +141,7 @@ export default function PillarStack({ scrollYProgress }) {
             `
     grayscale(${g})
     brightness(${g ? 0.45 : 1})
-    drop-shadow(0 0 ${glowVal * 25}px rgba(5,150,105,0.7))
+
   `,
         );
 

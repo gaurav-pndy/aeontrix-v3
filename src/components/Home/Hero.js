@@ -63,6 +63,8 @@ export default function Hero() {
             transform: `translate(${offset.x}px, ${offset.y}px)`,
           }}
         >
+          {" "}
+          <FloatingMarkers />
           <PerspectiveGrid />
         </div>
         {/* VIGNETTE OVERLAY */}
@@ -116,7 +118,7 @@ function PerspectiveGrid() {
 
   const barrelX = (x, y) => {
     const dy = (y - centerY) / centerY;
-    const pinch = 1 - 0.28 * Math.exp(-dy * dy * 2.2);
+    const pinch = 1 - 0.12 * Math.exp(-dy * dy * 2);
     return cx + (x - cx) * pinch;
   };
 
@@ -174,5 +176,38 @@ function PerspectiveGrid() {
     >
       {lines}
     </svg>
+  );
+}
+
+function FloatingMarkers() {
+  return (
+    <>
+      {/* Top Left — Square */}
+      <div className="absolute left-[25%] top-[28%] opacity-70">
+        <div className="relative flex items-center justify-center">
+          <div className="h-5 w-5 border border-white/80  flex items-center justify-center">
+            <div className="h-2 w-2 rounded-full bg-white/80" />
+          </div>
+        </div>
+      </div>
+
+      {/* Right — Circle */}
+      <div className="absolute right-[22%] top-[50%] opacity-70">
+        <div className="relative flex items-center justify-center">
+          <div className="h-5 w-5 border border-white/80 rounded-full flex items-center justify-center">
+            <div className="h-2 w-2 rounded-full bg-white/80" />
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Left — Triangle */}
+      <div className="absolute left-[32%] bottom-[23%] opacity-70">
+        <div className="relative flex items-center justify-center">
+          <div className="h-5 w-5 border border-white/80  flex items-center justify-center">
+            <div className="h-2 w-2 rounded-full bg-white/80" />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
