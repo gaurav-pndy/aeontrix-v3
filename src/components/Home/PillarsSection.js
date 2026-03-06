@@ -29,19 +29,23 @@ export default function PillarsSection() {
     <section
       ref={ref}
       className="relative  px-2"
-      style={{ height: "500vh" }} // more space → slower
+      style={{ height: "400vh" }} // more space → slower
     >
       <div className="sticky top-0 h-screen rounded-4xl bg-background-dark overflow-hidden">
         <div className="h-screen flex flex-col-reverse md:grid md:grid-cols-2  mx-auto  ">
           <div className="h-[50vh] md:h-auto bg-white flex justify-end  rounded-4xl  overflow-hidden ">
-            <div className="flex-1 flex xl:gap-8 max-w-180 pl-4">
+            <div className="flex-1 flex xl:gap-8 max-w-180 px-4">
               {/* STEP INDICATOR */}
               <div className="  py-8 pt-18 hidden xl:flex  ">
                 <PillarStepIndicator scrollYProgress={smoothProgress} />
               </div>
 
               {/* TEXT */}
-              <div className="flex-1">
+              <div className="flex-1 relative">
+                <h3 className="absolute title-text font-medium text-text md:max-w-md   top-4 md:top-20 text-center md:text-left">
+                  {" "}
+                  Aeontrix's 4 Pillars of Growth for Service Businesses
+                </h3>
                 <PillarTextColumn scrollYProgress={smoothProgress} />
               </div>
             </div>
@@ -72,11 +76,6 @@ export default function PillarsSection() {
                 opacity: 0.7,
               }}
             />
-
-            <h3 className="large-text font-medium text-white mt-10 md:mt-20 text-center md:text-right">
-              {" "}
-              Aeontrix's 4 Pillars of Growth for Service Businesses
-            </h3>
 
             {/* Stack */}
             <PillarStack scrollYProgress={smoothProgress} />

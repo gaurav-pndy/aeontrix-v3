@@ -95,6 +95,33 @@ export default function Navbar() {
     return () => clearTimeout(timeout);
   }, [pathname]);
 
+  useEffect(() => {
+    const solutionsSection = document.getElementById("solutions");
+
+    if (!solutionsSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+
+        if (entry.isIntersecting) {
+          setActive("Solutions");
+        } else {
+          setActive("Home");
+        }
+      },
+      {
+        root: null,
+        rootMargin: "-40% 0px -40% 0px",
+        threshold: 0,
+      },
+    );
+
+    observer.observe(solutionsSection);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.header
       initial={{ y: -40, opacity: 0 }}

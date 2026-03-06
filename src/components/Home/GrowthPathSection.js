@@ -52,7 +52,7 @@ export default function GrowthPathSection() {
           Everything starts with a{" "}
           <span className="text-primary font-medium">Diagnosis</span>. But if
           you know exactly what you want, get started with{" "}
-          <span className="text-primary font-medium">The Blueprint</span> or{" "}
+          {/* <span className="text-primary font-medium">The Blueprint</span> or{" "} */}
           <span className="text-primary font-medium">The Buildout</span>.
         </p>
       </div>
@@ -167,8 +167,8 @@ export default function GrowthPathSection() {
                     PRESCRIPTION WITHOUT DIAGNOSIS IS MALPRACTICE
                   </p>
                 </div>
-                <div className="flex justify-end mb-4">
-                  <span className="text-xs rounded-full border font-mono border-primary px-3 py-1 text-primary bg-primary/10 whitespace-nowrap">
+                <div className="flex w-full justify-end mb-4">
+                  <span className="text-xs rounded-full border font-mono border-primary px-3 py-1 text-primary bg-primary/10 md:whitespace-nowrap">
                     ENTRY POINT
                   </span>
                 </div>
@@ -277,7 +277,7 @@ function CardHeader({ icon, title, badge }) {
     <div className="flex flex-row items-start md:items-center gap-2 md:gap-3 mb-6">
       <IconBox>{icon}</IconBox>
       <h3 className="title-text font-semibold text-black">{title}</h3>
-      <span className="ml-auto text-xs rounded-full bg-primary/10 border font-mono border-primary text-primary px-3 py-1 whitespace-nowrap">
+      <span className="ml-auto text-xs rounded-full bg-primary/10 border font-mono border-primary text-primary px-3 py-1 md:whitespace-nowrap">
         {badge}
       </span>
     </div>

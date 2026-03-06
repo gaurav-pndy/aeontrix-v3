@@ -10,7 +10,7 @@ const TESTIMONIALS = [
     org: "EAFO",
     website: "https://eafo.info",
     image:
-      "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=400",
+      "/testimonials/Dr. Soma.png",
     quote:
       "We run a large number of conferences and seminars for medical professionals, but for years we had no real CRM, no centralized data storage, and no consistent marketing system. Everything ran through my personal network that I’ve built over two decades. It worked, but it wasn’t scalable. Aeontrix came in and built the infrastructure we were missing. They created a proper system with an admin portal and a member portal where we can host webinars, store recordings, and maintain a structured database of participants. We now have a newsletter database to send updates to the right audience, plus payments built in, including invoice creation and delivery. This has been genuinely game-changing for a not-for-profit like ours. We finally have systems that make our work repeatable, organized, and sustainable.",
     author: "Dr. Somasundaram Subramanian",
@@ -20,7 +20,7 @@ const TESTIMONIALS = [
     org: "Ayushma Yoga",
     website: "https://ayushmayoga.ru/",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400",
+      "/testimonials/Dr. Murali.jpg",
     quote:
       "Before working with Aeontrix, I honestly didn’t even know what KPIs were, or how people were using data to make decisions. I was just teaching and posting occasionally. The Diagnostic was insane. The amount of findings they pulled out of my business, the gaps, the opportunities, the blind spots, it was the most comprehensive business audit I’ve ever seen. Then they built and entire system around me. They set up the community properly, created seamless onboarding, and built a complete marketing strategy from scratch. They ran ads, created content ideas, hired a dedicated video editor, and helped grow my social media following. Everything now runs like a well oiled machine. And I can focus purely on yoga and meditation classes. That made my classes better, students are happier, and people stay in the community long-term.",
     author: "Dr. Kavin Murali Muthu",

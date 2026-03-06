@@ -419,3 +419,12 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #07765957 transparent;
 }
+
+
+.react-tel-input{
+  margin-top: 0.5rem !important;
+}
+
+.react-tel-input .selected-flag{
+  border-radius: 8px 0 0 8px !important;
+}

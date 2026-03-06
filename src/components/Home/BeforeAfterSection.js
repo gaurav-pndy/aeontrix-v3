@@ -56,7 +56,7 @@ export default function BeforeAfterSection() {
   const afterOpacity = useTransform(progress, [scanStart, scanEnd], [0, 1]);
 
   return (
-    <section ref={ref} className="relative h-[380vh] w-full ">
+    <section ref={ref} className="relative h-[200vh] w-full ">
       <div className="sticky top-0 h-screen  overflow-hidden pt-16 md:pt-24 ">
         {/* HEADER */}
         <HeaderToggle
