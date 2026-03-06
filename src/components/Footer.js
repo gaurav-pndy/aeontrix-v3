@@ -40,17 +40,17 @@ export default function Footer() {
           {/* Brand + slogan + socials */}
           {/* Brand + slogan + socials */}
           <div>
-            <div className="flex items-center mb-2">
+            <div className="flex items-center mb-4">
               <img src="/logo-light.png" alt="Aeontrix" className="h-12" />
             </div>
 
-            <p className="large-text mb-4 text-primary-soft leading-tight">
+            {/* <p className="large-text mb-4 text-primary-soft leading-tight">
               Automate the Grind,
               <br /> Accelerate the Growth
-            </p>
+            </p> */}
 
             {/* EMAIL INPUT */}
-            <div className="mb-6 flex flex-col gap-2 max-w-72">
+            <div className="mb-8 flex flex-col gap-2 max-w-72">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -69,7 +69,7 @@ export default function Footer() {
 
               {/* BOOK STRATEGY CALL BUTTON */}
               <CustomButton
-                text="Book a Free Strategy Call"
+                text="Join Newsletter"
                 bg="var(--color-primary)"
                 border="var(--color-primary)"
                 shadow="#064c3b"
@@ -79,7 +79,7 @@ export default function Footer() {
             </div>
 
             {/* SOCIALS */}
-            <div className="flex gap-3">
+            <div className="flex gap-3 max-w-72 justify-between">
               <FooterIconLink
                 href="https://www.linkedin.com/company/aeontrix"
                 label="LinkedIn"
@@ -261,7 +261,7 @@ function FooterIconLink({ href, label, children }) {
       aria-label={label}
       target="_blank"
       rel="noreferrer"
-      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg r bg-primary  hover:bg-primary/60 hover:scale-110 text-white  transition-all duration-300"
+      className="flex h-10 w-10 text-lg shrink-0 items-center justify-center rounded-lg r bg-primary  hover:bg-primary/60 hover:scale-110 text-white  transition-all duration-300"
     >
       {children}
     </a>

@@ -34,7 +34,10 @@ const WORKSTREAMS = [
 
 export default function GrowthPathSection() {
   return (
-    <section id="solutions" className="relative bg-white py-16 rounded-4xl mt-10 mx-2">
+    <section
+      id="solutions"
+      className="relative bg-white py-16 rounded-4xl mt-10 mx-2"
+    >
       {/* HEADER */}
       <div className="max-w-7xl px-4 mx-auto text-center mb-16">
         <p className="small-text uppercase font-mono text-primary mb-4">
@@ -152,8 +155,8 @@ export default function GrowthPathSection() {
           <div className=" gap-10">
             {/* LEFT */}
             <div>
-              <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6">
-                <div className="h-16 w-16 rounded-lg bg-primary flex items-center justify-center shrink-0 text-white">
+              <div className="flex items-start md:items-center gap-2 md:gap-3 mb-6">
+                <div className="h-14 md:h-16 w-14 md:w-16 rounded-lg bg-primary flex items-center justify-center shrink-0 text-white">
                   <Users size={28} />
                 </div>
                 <div>
@@ -271,10 +274,10 @@ function HoverCard({ children }) {
 
 function CardHeader({ icon, title, badge }) {
   return (
-    <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6">
+    <div className="flex flex-row items-start md:items-center gap-2 md:gap-3 mb-6">
       <IconBox>{icon}</IconBox>
       <h3 className="title-text font-semibold text-black">{title}</h3>
-      <span className="ml-auto text-xs rounded-full bg-primary/10 border font-mono border-primary text-primary px-3 py-1">
+      <span className="ml-auto text-xs rounded-full bg-primary/10 border font-mono border-primary text-primary px-3 py-1 whitespace-nowrap">
         {badge}
       </span>
     </div>
@@ -283,7 +286,7 @@ function CardHeader({ icon, title, badge }) {
 
 function IconBox({ children }) {
   return (
-    <div className="h-16 w-16 shrink-0 rounded-lg bg-primary text-xl flex items-center justify-center text-white">
+    <div className="h-14 md:h-16 w-14 md:w-16 shrink-0 rounded-lg bg-primary text-xl flex items-center justify-center text-white">
       {children}
     </div>
   );
