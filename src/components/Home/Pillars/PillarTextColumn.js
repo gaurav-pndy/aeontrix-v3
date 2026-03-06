@@ -56,7 +56,7 @@ export default function PillarTextColumn({ scrollYProgress }) {
           <motion.div
             key={i}
             style={{ opacity, scale }}
-            className="absolute inset-0  flex items-center xl:pr-20"
+            className="absolute inset-0  flex items-center xl:pr-18"
           >
             <div className="flex items-start gap-10">
               <div>

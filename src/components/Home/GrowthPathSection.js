@@ -167,7 +167,7 @@ export default function GrowthPathSection() {
                     PRESCRIPTION WITHOUT DIAGNOSIS IS MALPRACTICE
                   </p>
                 </div>
-                <div className="flex w-full justify-end mb-4">
+                <div className="flex ml-auto  justify-end mb-4">
                   <span className="text-xs rounded-full border font-mono border-primary px-3 py-1 text-primary bg-primary/10 md:whitespace-nowrap">
                     ENTRY POINT
                   </span>
