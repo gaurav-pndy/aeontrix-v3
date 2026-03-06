@@ -140,7 +140,7 @@ export default function GrowthInfrastructure() {
         {/* CENTER LOGO */}
         <motion.div
           style={{ y: logoY, scale: logoScale }}
-          className="absolute z-20 w-10 md:w-16 lg:w-28 h-10 md:h-16 lg:h-28 rounded-lg bg-[#111113] border border-gray-800 flex items-center justify-center text-4xl font-bold text-white "
+          className="absolute z-20 w-10 md:w-16 lg:w-28 h-10 md:h-16 lg:h-28 rounded-lg bg-black border border-gray-800 flex items-center justify-center text-4xl font-bold text-white "
         >
           <img
             src="/aeontrix-logo.png"
@@ -202,7 +202,7 @@ export default function GrowthInfrastructure() {
             <motion.div
               key={i}
               style={{ x, y, rotate, opacity: iconsOpacity }}
-              className="absolute w-10 md:w-16 lg:w-28 h-10 md:h-16 lg:h-28  rounded-lg bg-[#111113] border border-gray-800 flex items-center justify-center shadow-lg"
+              className="absolute w-10 md:w-16 lg:w-28 h-10 md:h-16 lg:h-28  rounded-lg bg-black border border-gray-800 flex items-center justify-center shadow-lg"
             >
               <Icon
                 className={`${item.color} text-2xl md:text-4xl lg:text-6xl`}
