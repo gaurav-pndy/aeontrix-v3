@@ -94,7 +94,7 @@ export default function PillarStack({ scrollYProgress }) {
         // Scroll segmentation
         const start = i * STEP_SIZE;
         const phase1 = start + STEP_SIZE * 0.3;
-        const phase2 = start + STEP_SIZE * 0.55;
+        const phase2 = start + STEP_SIZE * 0.4;
         const phaseHold = start + STEP_SIZE * 0.8;
         const end = start + STEP_SIZE * 0.95;
         /* -------------------------

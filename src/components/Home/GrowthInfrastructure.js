@@ -108,7 +108,7 @@ export default function GrowthInfrastructure() {
   const bottomTextY = useSpring(rawBottomTextY, springConfig);
 
   return (
-    <section ref={ref} className="relative h-[400vh] pt-16">
+    <section ref={ref} className="relative h-[250vh] pt-16">
       <div
         ref={containerRef}
         className="sticky top-0 h-screen flex items-center justify-center overflow-hidden"
@@ -204,7 +204,9 @@ export default function GrowthInfrastructure() {
               style={{ x, y, rotate, opacity: iconsOpacity }}
               className="absolute w-10 md:w-16 lg:w-28 h-10 md:h-16 lg:h-28  rounded-lg bg-[#111113] border border-gray-800 flex items-center justify-center shadow-lg"
             >
-              <Icon className={`${item.color} text-2xl md:text-4xl lg:text-6xl`} />
+              <Icon
+                className={`${item.color} text-2xl md:text-4xl lg:text-6xl`}
+              />
             </motion.div>
           );
         })}

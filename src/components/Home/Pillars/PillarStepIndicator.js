@@ -35,8 +35,8 @@ export default function PillarStepIndicator({ scrollYProgress }) {
           {STEPS.map((step, i) => {
             const start = i * STEP_SIZE;
 
-            const activeStart = start + STEP_SIZE * 0.45;
-            const activeEnd = start + STEP_SIZE * 0.85;
+            const activeStart = start + STEP_SIZE * 0.3;
+            const activeEnd = start + STEP_SIZE * 0.45;
 
             const active = useTransform(
               scrollYProgress,
@@ -59,7 +59,7 @@ export default function PillarStepIndicator({ scrollYProgress }) {
             // Line fill for PREVIOUS connection
             const lineFill = useTransform(
               scrollYProgress,
-              [activeStart - STEP_SIZE * 0.3, activeStart],
+              [activeStart - STEP_SIZE * 0.2, activeStart],
               [0, 1],
             );
 

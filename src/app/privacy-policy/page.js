@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="relative py-24 pt-36 bg-background">
+    <section className="relative py-24 pt-36 bg-white">
       <div className="mx-auto relative max-w-348 px-4">
         {/* ---------- HEADER ---------- */}
         <header className="mb-10">
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
                     </nav>
 
           {/* ---------- CONTENT CARD ---------- */}
-          <div className="relative rounded-3xl lg:w-3/4 bg-white border-l-4 border-primary shadow-sm overflow-hidden">
+          <div className="relative rounded-3xl lg:w-3/4 bg-background border-l-4 border-primary shadow-sm overflow-hidden">
             {/* Accent strip */}
             {/* <div className="absolute left-0 top-0 h-full w-1 bg-primary/60" /> */}
 

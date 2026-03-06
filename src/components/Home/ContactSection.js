@@ -13,7 +13,7 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <section className="  px-2">
+    <section className="  ">
       <div className="bg-white py-16 rounded-t-4xl">
         <div className="max-w-5xl px-4 mx-auto ">
           <h2 className="title-text font-semibold mb-10 text-center">

@@ -26,24 +26,21 @@ export default function PillarTextColumn({ scrollYProgress }) {
   const STEP_SIZE = 1 / STEP_COUNT; // 0.25
   return (
     <div className="relative h-full overflow-hidden flex items-center">
-      {DATA.map((item, i) => {
-        const start = i * STEP_SIZE;
-        const phase1 = start + STEP_SIZE * 0.3;
-        const phase2 = start + STEP_SIZE * 0.55;
-        const phaseHold = start + STEP_SIZE * 0.8;
-        const end = start + STEP_SIZE * 0.95;
+    {DATA.map((item, i) => {
+  const start = i * STEP_SIZE;
+  const end = start + STEP_SIZE;
 
-        const y = useTransform(
-          scrollYProgress,
-          [start, phase2, phaseHold, end],
-          ["100%", "0%", "0%", "-100%"],
-        );
+  const y = useTransform(
+    scrollYProgress,
+    [start, end],
+    ["100%", "-100%"]
+  );
 
-        const opacity = useTransform(
-          scrollYProgress,
-          [start, phase1, phase2, phaseHold, end],
-          [0, 1, 1, 1, 0],
-        );
+  const opacity = useTransform(
+    scrollYProgress,
+    [start, start + STEP_SIZE * 0.1, end - STEP_SIZE * 0.1, end],
+    [0, 1, 1, 0]
+  );
 
         return (
           <motion.div

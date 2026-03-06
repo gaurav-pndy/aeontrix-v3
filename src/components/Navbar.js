@@ -3,13 +3,13 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-
+import { usePathname, useRouter } from "next/navigation";
 const NAV_ITEMS = [
-  "Home",
-  "The Diagnostic",
-  "Case Studies",
-  "Resources",
-  "Careers",
+  { label: "Home", type: "page", href: "/" },
+  { label: "Solutions", type: "scroll", id: "solutions" },
+  { label: "Case Studies", type: "page", href: "/case-studies" },
+  { label: "Resources", type: "page", href: "/resources" },
+  { label: "Careers", type: "page", href: "/careers" },
 ];
 
 export default function Navbar() {
@@ -38,6 +38,62 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const scrollToSection = (id) => {
+    const offset = 80;
+
+    const attemptScroll = () => {
+      const el = document.getElementById(id);
+      if (!el) return false;
+
+      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+      return true;
+    };
+
+    // already on home
+    if (pathname === "/") {
+      attemptScroll();
+      return;
+    }
+
+    // go home with intent
+    router.push(`/#${id}`);
+
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const offset = 120;
+
+      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }, 300);
+  };
+
+  useEffect(() => {
+    if (!window.location.hash) return;
+
+    const id = window.location.hash.replace("#", "");
+
+    const timeout = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const offset = 120;
+
+      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }, 200);
+
+    return () => clearTimeout(timeout);
+  }, [pathname]);
 
   return (
     <motion.header
@@ -102,14 +158,20 @@ export default function Navbar() {
               <motion.button
                 whileHover={{ y: -1 }}
                 transition={{ duration: 0.2 }}
-                key={item}
-                data-item={item}
-                onClick={() => setActive(item)}
-                className={`relative z-10 px-4 xl:px-6 py-2 cursor-pointer small-text transition whitespace-nowrap ${
-                  active === item ? "text-white" : "text-white"
-                }`}
+                key={item.label}
+                data-item={item.label}
+                onClick={() => {
+                  setActive(item.label);
+
+                  if (item.type === "scroll") {
+                    scrollToSection(item.id);
+                  } else {
+                    router.push(item.href);
+                  }
+                }}
+                className="relative z-10 px-4 xl:px-6 py-2 cursor-pointer small-text whitespace-nowrap text-white"
               >
-                {item}
+                {item.label}
               </motion.button>
             ))}
           </div>
@@ -176,15 +238,21 @@ export default function Navbar() {
             <div className="flex flex-col gap-4">
               {NAV_ITEMS.map((item) => (
                 <motion.button
-                  key={item}
+                  key={item.label}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => {
-                    setActive(item);
+                    setActive(item.label);
                     setMobileOpen(false);
+
+                    if (item.type === "scroll") {
+                      scrollToSection(item.id);
+                    } else {
+                      router.push(item.href);
+                    }
                   }}
                   className="small-text text-white/80 hover:text-white text-left"
                 >
-                  {item}
+                  {item.label}
                 </motion.button>
               ))}
 

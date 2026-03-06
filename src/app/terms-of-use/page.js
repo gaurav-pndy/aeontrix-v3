@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function TermsOfUsePage() {
   return (
-    <section className="relative py-24 pt-36 bg-background">
+    <section className="relative py-24 pt-36 bg-white">
       <div className="mx-auto relative max-w-348 px-4">
         {/* ---------- HEADER ---------- */}
         <header className="mb-10">
@@ -62,7 +62,7 @@ export default function TermsOfUsePage() {
           </nav>
 
           {/* ---------- CONTENT ---------- */}
-          <div className="relative rounded-3xl lg:w-3/4 bg-white border-l-4 border-primary shadow-sm overflow-hidden">
+          <div className="relative rounded-3xl lg:w-3/4 bg-background border-l-4 border-primary shadow-sm overflow-hidden">
             <div className="p-8 md:p-12 space-y-14">
               <Section id="agreement" title="1. AGREEMENT TO TERMS">
                 <p className="body-text">

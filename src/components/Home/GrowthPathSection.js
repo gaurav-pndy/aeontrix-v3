@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Check, Layers, Users, Zap, ArrowRight } from "lucide-react";
 import { useRef } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const WORKSTREAMS = [
   {
@@ -33,7 +34,7 @@ const WORKSTREAMS = [
 
 export default function GrowthPathSection() {
   return (
-    <section className="relative bg-white py-16 rounded-4xl mt-10 mx-2">
+    <section id="solutions" className="relative bg-white py-16 rounded-4xl mt-10 mx-2">
       {/* HEADER */}
       <div className="max-w-7xl px-4 mx-auto text-center mb-16">
         <p className="small-text uppercase font-mono text-primary mb-4">
@@ -54,10 +55,9 @@ export default function GrowthPathSection() {
       </div>
 
       {/* DIAGNOSTIC */}
-      <div className="max-w-7xl px-4 mx-auto mb-12">
+      {/* <div className="max-w-7xl px-4 mx-auto mb-12">
         <div className="relative rounded-lg bg-white p-4 md:p-6 lg:p-8 z-10 border border-primary">
-          <div className="grid lg:grid-cols-2 gap-10">
-            {/* LEFT */}
+          <div className=" gap-10">
             <div>
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6">
                 <div className="h-16 w-16 rounded-lg bg-primary flex items-center justify-center shrink-0 text-white">
@@ -81,11 +81,9 @@ export default function GrowthPathSection() {
                 the failures.
               </p>
 
-              <CustomButton />
             </div>
 
-            {/* RIGHT */}
-            <div className="">
+            <div className="mb-6">
               <div className="flex justify-end mb-4">
                 <span className="text-xs rounded-full border font-mono border-primary px-3 py-1 text-primary bg-primary/10">
                   ENTRY POINT
@@ -107,14 +105,17 @@ export default function GrowthPathSection() {
                 ))}
               </ul>
             </div>
+
+                          <CustomButton />
+
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* BLUEPRINT + BUILDOUT */}
       <div className="max-w-7xl px-4 mx-auto grid lg:grid-cols-2 gap-8">
         {/* BLUEPRINT */}
-        <HoverCard>
+        {/* <HoverCard>
           <CardHeader
             icon={<Users size={24} />}
             title="The Blueprint"
@@ -145,13 +146,68 @@ export default function GrowthPathSection() {
           <XentaryBox />
 
           <CustomButton />
-        </HoverCard>
+        </HoverCard> */}
+
+        <div className="relative rounded-lg bg-white p-4 md:p-6 lg:p-8 z-10 border border-primary">
+          <div className=" gap-10">
+            {/* LEFT */}
+            <div>
+              <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6">
+                <div className="h-16 w-16 rounded-lg bg-primary flex items-center justify-center shrink-0 text-white">
+                  <Users size={28} />
+                </div>
+                <div>
+                  <h3 className="title-text font-semibold text-black">
+                    The Diagnostic
+                  </h3>
+                  <p className="uppercase mt-2 text-xs tracking-widest text-muted-foreground ">
+                    PRESCRIPTION WITHOUT DIAGNOSIS IS MALPRACTICE
+                  </p>
+                </div>
+                <div className="flex justify-end mb-4">
+                  <span className="text-xs rounded-full border font-mono border-primary px-3 py-1 text-primary bg-primary/10 whitespace-nowrap">
+                    ENTRY POINT
+                  </span>
+                </div>
+              </div>
+
+              <p className="text-muted-foreground mb-6">
+                A comprehensive Operational Audit across all Key Function of
+                your business. Most businesses, just sell you their service
+                without understanding what you actually need for your growth or
+                understanding your business, which is the main reason for 99% of
+                the failures.
+              </p>
+            </div>
+
+            {/* RIGHT */}
+            <div className="mb-6">
+              <ul className="bg-muted/40 rounded-xl p-4  grid sm:grid-cols-2 gap-4 border border-primary/30 text-muted-foreground">
+                {[
+                  "Stakeholder interviews across all key functions",
+                  "Complete process mapping of current operations",
+                  "Bottleneck & constraint identification",
+                  "Opportunity matrix ranked by impact vs effort",
+                  "Implementation roadmap with priorities & timelines",
+                  "KPI tracking plan across every function",
+                ].map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <Check className="text-primary mt-0.5 shrink-0" size={20} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <CustomButton />
+          </div>
+        </div>
 
         {/* BUILDOUT */}
         <HoverCard>
           <div>
             <CardHeader
-              icon={<Zap size={24} />}
+              icon={<Zap size={28} />}
               title="The Buildout"
               badge="DONE FOR YOU"
             />
@@ -215,7 +271,7 @@ function HoverCard({ children }) {
 
 function CardHeader({ icon, title, badge }) {
   return (
-    <div className="flex flex-col md:flex-row md:items-center gap-3 mb-4">
+    <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6">
       <IconBox>{icon}</IconBox>
       <h3 className="title-text font-semibold text-black">{title}</h3>
       <span className="ml-auto text-xs rounded-full bg-primary/10 border font-mono border-primary text-primary px-3 py-1">
@@ -227,7 +283,7 @@ function CardHeader({ icon, title, badge }) {
 
 function IconBox({ children }) {
   return (
-    <div className="h-14 w-14 shrink-0 rounded-lg bg-primary text-xl flex items-center justify-center text-white">
+    <div className="h-16 w-16 shrink-0 rounded-lg bg-primary text-xl flex items-center justify-center text-white">
       {children}
     </div>
   );
@@ -245,7 +301,7 @@ function XentaryBox() {
   );
 }
 
-function CustomButton({ label = "Get Started 🡢" }) {
+function CustomButton({ label = "Get Started " }) {
   return (
     <motion.button
       whileHover={{ y: -2 }}
@@ -267,13 +323,13 @@ function CustomButton({ label = "Get Started 🡢" }) {
         py-2.5
         font-medium
         text-white
-        border border-primary
+        border border-primary flex items-center justify-center gap-2
       "
       style={{
         boxShadow: "0 6px 0 rgba(4,100,75,1)",
       }}
     >
-      {label}
+      {label} <FaArrowRight className="text-base" />
     </motion.button>
   );
 }
