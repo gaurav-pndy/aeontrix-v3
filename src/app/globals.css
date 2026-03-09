@@ -196,7 +196,7 @@ html {
 
 body {
   background: var(--bg-page-dark);
-  color: var(--text-main);
+  /* color: var(--text-main); */
   font-family: var(--font-satoshi);
 }
 
@@ -205,7 +205,6 @@ body {
   /* font-weight: 00; */
   line-height: 1.05;
   letter-spacing: -0.04em;
-  color: white;
 }
 
 @utility display-text {
@@ -280,7 +279,7 @@ body {
 }
 
 .primary-btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: var(--radius-md);
   background: var(--brand-green);
   color: white;

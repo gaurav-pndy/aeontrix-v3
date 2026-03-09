@@ -5,33 +5,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import CustomButton from "./CustomButton";
+import { scrollToSection } from "@/utils/navigation";
 
 export default function Footer() {
   const router = useRouter();
   const pathname = usePathname();
-
-  const scrollToSection = (id) => {
-    const offset = 120;
-
-    const attemptScroll = () => {
-      const el = document.getElementById(id);
-      if (!el) return false;
-
-      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-      return true;
-    };
-
-    // Already on home → just scroll
-    if (pathname === "/") {
-      attemptScroll();
-      return;
-    }
-
-    // On another page → go home with intent
-    router.push(`/#${id}`);
-  };
 
   return (
     <footer className=" pb-1 bg-white">
@@ -123,7 +101,9 @@ export default function Footer() {
               <ul className="space-y-1 body-text text-white/90">
                 <li>
                   <button
-                    onClick={() => scrollToSection("services")}
+                    onClick={() =>
+                      scrollToSection(router, pathname, "solutions")
+                    }
                     className="hover:text-primary text-left leading-tight cursor-pointer transition-colors"
                   >
                     The Diagnostic
@@ -132,21 +112,23 @@ export default function Footer() {
 
                 <li>
                   <button
-                    onClick={() => scrollToSection("services")}
+                    onClick={() =>
+                      scrollToSection(router, pathname, "solutions")
+                    }
                     className="hover:text-primary leading-tight text-left cursor-pointer transition-colors"
                   >
                     The Buildout{" "}
                   </button>
                 </li>
 
-                <li>
+                {/* <li>
                   <button
                     onClick={() => scrollToSection("services")}
                     className="hover:text-primary text-left leading-tight cursor-pointer transition-colors"
                   >
                     The Blueprint{" "}
                   </button>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -206,20 +188,22 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => scrollToSection("contact-us")}
+                  <Link
+                    href="/careers"
                     className="hover:text-primary text-left leading-tight cursor-pointer transition-colors"
                   >
                     Careers
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
+                  <button
+                    onClick={() =>
+                      scrollToSection(router, pathname, "contact-us")
+                    }
                     className="hover:text-primary text-left leading-tight cursor-pointer transition-colors"
                   >
                     Contact Us
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -236,12 +220,14 @@ export default function Footer() {
           </span>
           <div className="flex gap-6">
             <Link
+              target="_blank"
               href="/terms-of-use"
               className="hover:text-green transition-colors"
             >
               T&amp;C
             </Link>
             <Link
+              target="_blank"
               href="/privacy-policy"
               className="hover:text-green transition-colors"
             >

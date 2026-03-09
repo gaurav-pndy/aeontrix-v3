@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { scrollToSection } from "@/utils/navigation";
 const NAV_ITEMS = [
   { label: "Home", type: "page", href: "/" },
   { label: "Solutions", type: "scroll", id: "solutions" },
@@ -42,57 +43,28 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const scrollToSection = (id) => {
-    const offset = 80;
-
-    const attemptScroll = () => {
-      const el = document.getElementById(id);
-      if (!el) return false;
-
-      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-      return true;
-    };
-
-    // already on home
-    if (pathname === "/") {
-      attemptScroll();
-      return;
-    }
-
-    // go home with intent
-    router.push(`/#${id}`);
-
-    setTimeout(() => {
-      const el = document.getElementById(id);
-      if (!el) return;
-
-      const offset = 120;
-
-      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }, 300);
-  };
-
   useEffect(() => {
-    if (!window.location.hash) return;
+    if (pathname !== "/") return;
 
-    const id = window.location.hash.replace("#", "");
+    const solutionsSection = document.getElementById("solutions");
+    if (!solutionsSection) return;
 
-    const timeout = setTimeout(() => {
-      const el = document.getElementById(id);
-      if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive("Solutions");
+        } else {
+          setActive("Home");
+        }
+      },
+      {
+        rootMargin: "-45% 0px -45% 0px",
+      },
+    );
 
-      const offset = 120;
+    observer.observe(solutionsSection);
 
-      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }, 200);
-
-    return () => clearTimeout(timeout);
+    return () => observer.disconnect();
   }, [pathname]);
 
   useEffect(() => {
@@ -121,6 +93,18 @@ export default function Navbar() {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setActive("Home");
+    } else if (pathname.startsWith("/case-studies")) {
+      setActive("Case Studies");
+    } else if (pathname.startsWith("/resources")) {
+      setActive("Resources");
+    } else if (pathname.startsWith("/careers")) {
+      setActive("Careers");
+    }
+  }, [pathname]);
 
   return (
     <motion.header
@@ -196,14 +180,14 @@ export default function Navbar() {
             {NAV_ITEMS.map((item) => (
               <motion.button
                 whileHover={{ y: -1 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.3 }}
                 key={item.label}
                 data-item={item.label}
                 onClick={() => {
                   setActive(item.label);
 
                   if (item.type === "scroll") {
-                    scrollToSection(item.id);
+                    scrollToSection(router, pathname, item.id);
                   } else {
                     router.push(item.href);
                   }
@@ -249,8 +233,8 @@ export default function Navbar() {
             className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-xl"
           >
             <div className="space-y-1.5">
-              <span className="block h-[2px] w-5 bg-white" />
-              <span className="block h-[2px] w-5 bg-white" />
+              <span className="block h-0.5 w-5 bg-white" />
+              <span className="block h-0.5 w-5 bg-white" />
             </div>
           </button>
         </div>
@@ -284,7 +268,7 @@ export default function Navbar() {
                     setMobileOpen(false);
 
                     if (item.type === "scroll") {
-                      scrollToSection(item.id);
+                      scrollToSection(router, pathname, item.id);
                     } else {
                       router.push(item.href);
                     }
