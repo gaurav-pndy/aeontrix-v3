@@ -281,8 +281,8 @@ ${pathname === "/" ? "border-white/20 bg-white/5" : "border-text/20 bg-surface"}
                 href="#"
                 className="
                   mt-4 rounded-xl
-                  border border-primary/60
-                  bg-primary/20
+                  border border-primary/80
+                bg-primary/60
                   px-5 py-3
                   text-sm font-medium
                   text-primary-soft
