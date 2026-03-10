@@ -115,11 +115,11 @@ export default function Navbar() {
     >
       <div className="relative mx-auto flex max-w-7xl items-center">
         {/* LOGO */}
-        <Link href="/">
-          <div className="relative h-10 md:h-12 w-60">
-            <AnimatePresence mode="wait">
-              {isAtTop ? (
-                pathname === "/" ? (
+        {isAtTop ? (
+          <Link href="/">
+            <div className="relative h-10 md:h-12 w-60">
+              <AnimatePresence mode="wait">
+                {pathname === "/" ? (
                   <motion.img
                     key="logo-home-top"
                     src="/logo-light.png"
@@ -139,21 +139,13 @@ export default function Navbar() {
                     transition={{ duration: 0.25, ease: "easeOut" }}
                     className="absolute h-10 md:h-12"
                   />
-                )
-              ) : (
-                <motion.img
-                  key="logo-scrolled"
-                  src="/aeontrix-logo.png"
-                  initial={{ opacity: 0, y: -6, filter: "blur(4px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, y: 6, filter: "blur(4px)" }}
-                  transition={{ duration: 0.25, ease: "easeOut" }}
-                  className="absolute h-10 md:h-12"
-                />
-              )}
-            </AnimatePresence>
-          </div>{" "}
-        </Link>
+                )}
+              </AnimatePresence>
+            </div>
+          </Link>
+        ) : (
+          <div className="h-10 md:h-12 hidden lg:block" />
+        )}
 
         {/* DESKTOP NAV */}
         <div className="absolute left-1/2 hidden -translate-x-1/2 lg:block ">
@@ -210,15 +202,15 @@ export default function Navbar() {
               href="#"
               className="
                 rounded-full
-                border border-primary/60
-                bg-primary/60
+                border border-primary/80
+                bg-primary/80
                 px-6 py-3
                 text-sm font-medium
                 text-white
                 backdrop-blur-2xl
                 shadow-[0_0_30px_rgba(7,118,89,0.35)]
                 transition
-                hover:bg-primary/30
+                hover:bg-primary/40
               "
             >
               Book a Free Strategy Call
@@ -230,11 +222,17 @@ export default function Navbar() {
         <div className="ml-auto lg:hidden">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-xl"
+            className={`flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-xl border
+${pathname === "/" ? "border-white/20 bg-white/5" : "border-text/20 bg-surface"}
+`}
           >
             <div className="space-y-1.5">
-              <span className="block h-0.5 w-5 bg-white" />
-              <span className="block h-0.5 w-5 bg-white" />
+              <span
+                className={`block h-0.5 w-5 ${pathname === "/" ? "bg-white" : "bg-text"}`}
+              />
+              <span
+                className={`block h-0.5 w-5 ${pathname === "/" ? "bg-white" : "bg-text"}`}
+              />
             </div>
           </button>
         </div>
