@@ -64,7 +64,7 @@ export default function PillarTextColumn({ scrollYProgress }) {
                   {String(i + 1).padStart(2, "0")}
                 </div>
 
-                <h2 className="text-4xl md:text-6xl font-semibold text-text">
+                <h2 className="text-4xl md:text-6xl font-medium text-text">
                   {item.title}
                 </h2>
 

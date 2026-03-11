@@ -111,15 +111,15 @@ export default function Navbar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-4 left-0 right-0 z-50 px-4 xl:px-10"
+      className="fixed top-4 left-0 right-0 z-50 "
     >
-      <div className="relative mx-auto flex max-w-7xl items-center">
+      <div className="relative mx-auto flex max-w-7xl items-center px-4">
         {/* LOGO */}
         {isAtTop ? (
           <Link href="/">
             <div className="relative h-10 md:h-12 w-60">
               <AnimatePresence mode="wait">
-                {pathname === "/" ? (
+                {pathname === "/" || pathname === "/case-studies" ? (
                   <motion.img
                     key="logo-home-top"
                     src="/logo-light.png"
@@ -223,8 +223,8 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-xl border
-${pathname === "/" ? "border-white/20 bg-white/5" : "border-text/20 bg-surface"}
-`}
+            ${pathname === "/" ? "border-white/20 bg-white/5" : "border-text/20 bg-surface"}
+            `}
           >
             <div className="space-y-1.5">
               <span

@@ -238,7 +238,7 @@ body {
 
 @utility small-text {
   font-size: 0.875rem;
-  color: var(--text-subtle);
+  /* color: var(--text-subtle); */
 }
 
 @utility xs-text {

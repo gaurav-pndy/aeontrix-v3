@@ -127,7 +127,7 @@ export default function ApplicationModal({ role, onClose }) {
 
             <button
               onClick={onClose}
-              className="flex h-8 w-8 items-center justify-center rounded-md border border-border bg-muted shrink-0 text-text-muted hover:text-text mt-1.5 md:mt-0"
+              className="flex h-8 w-8 items-center justify-center rounded-md border border-border bg-muted shrink-0 text-text-muted hover:text-text mt-1.5 md:mt-0 cursor-pointer"
             >
               ×
             </button>

@@ -42,9 +42,11 @@ export default function PillarsSection() {
 
               {/* TEXT */}
               <div className="flex-1 relative">
-                <h3 className="absolute title-text font-medium text-text md:max-w-md   top-4 md:top-20 text-center md:text-left">
+                <h3 className="absolute title-text font-bold text-text    top-4 md:top-20 text-center ">
                   {" "}
-                  Aeontrix's 4 Pillars of Growth for Service Businesses
+                  Aeontrix's{" "}
+                  <span className="text-primary"> 4 Pillars of Growth</span> for
+                  Service Businesses
                 </h3>
                 <PillarTextColumn scrollYProgress={smoothProgress} />
               </div>
