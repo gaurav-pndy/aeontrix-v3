@@ -113,7 +113,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-4 left-0 right-0 z-50 "
     >
-      <div className="relative mx-auto flex max-w-7xl items-center px-4">
+      <div className="relative mx-auto flex max-w-7xl items-center px-4 lg:px-6">
         {/* LOGO */}
         {isAtTop ? (
           <Link href="/">

@@ -34,7 +34,7 @@ export default function PillarsSection() {
       <div className="sticky top-0 h-screen rounded-4xl bg-background-dark overflow-hidden">
         <div className="h-screen flex flex-col-reverse md:grid md:grid-cols-2  mx-auto  ">
           <div className="h-[50vh] md:h-auto bg-white flex justify-end  rounded-4xl  overflow-hidden ">
-            <div className="flex-1 flex xl:gap-8 max-w-180 px-4">
+            <div className="flex-1 flex xl:gap-8 max-w-180 px-4 lg:px-6">
               {/* STEP INDICATOR */}
               <div className="  py-8 pt-18 hidden xl:flex  ">
                 <PillarStepIndicator scrollYProgress={smoothProgress} />
@@ -53,7 +53,7 @@ export default function PillarsSection() {
             </div>
           </div>
 
-          <div className="h-[50vh] md:h-auto max-w-180 px-4 relative  ">
+          <div className="h-[50vh] md:h-auto max-w-180 px-4  relative  ">
             {/* Grid background */}
             <div
               className="absolute scale-125 mt-40 inset-0 pointer-events-none"

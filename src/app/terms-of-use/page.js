@@ -19,7 +19,7 @@ export const metadata = {
 export default function TermsOfUsePage() {
   return (
     <section className="relative py-24 pt-36 bg-white">
-      <div className="mx-auto relative max-w-348 px-4">
+      <div className="mx-auto relative max-w-348 px-4 lg:px-6">
         {/* ---------- HEADER ---------- */}
         <header className="mb-10">
           <h1 className="display-text mb-4">Terms of Use</h1>

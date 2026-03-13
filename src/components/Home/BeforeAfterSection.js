@@ -67,7 +67,7 @@ export default function BeforeAfterSection() {
 
         {/* GRID */}
         <div className="flex items-center justify-center pb-4 lg:pb-10 h-full w-full">
-          <div className="max-w-360 w-full px-4 mx-auto  grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 gap-2 md:gap-6 h-[95%] md:h-[85%] lg:h-[80%] max-h-160 md:max-h-full lg:max-h-132 ">
+          <div className="max-w-360 w-full px-4 lg:px-6 mx-auto  grid grid-cols-2 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 gap-2 md:gap-6 h-[95%] md:h-[85%] lg:h-[80%] max-h-160 md:max-h-full lg:max-h-132 ">
             <BottleneckBox isAfter={isAfter} active={hasEntered} />{" "}
             <BoxReveal index={1} active={hasEntered}>
               <MetricBox

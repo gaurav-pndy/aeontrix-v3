@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % TESTIMONIALS.length);
-    }, 6000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -65,8 +65,8 @@ export default function TestimonialsSection() {
   const active = TESTIMONIALS[index];
 
   return (
-    <section className="relative bg-[#05070a] py-16 px-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-[#05070a] py-16  overflow-hidden">
+      <div className="max-w-7xl px-4 lg:px-6 mx-auto">
         {/* HEADER */}
         <div className="mb-12">
           <p className="small-text text-primary uppercase font-mono mb-4">

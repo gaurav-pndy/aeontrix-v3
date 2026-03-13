@@ -12,7 +12,7 @@ export default function CaseStudiesHero({ activeTab, onTabChange }) {
 
   return (
     <section className=" bg-background-dark text-white  ">
-      <div className="relative mx-auto max-w-7xl px-4 pt-28 md:pt-36 pb-20 ">
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-6 pt-28 md:pt-36 pb-20 ">
         {/* Tag */}
         <div className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono xs-text text-primary mb-6">
           WHERE STRATEGY BECOMES INFRASTRUCTURE
@@ -33,7 +33,7 @@ export default function CaseStudiesHero({ activeTab, onTabChange }) {
         </p>
 
         {/* Tabs */}
-        <div className="absolute left-1/2 -translate-x-1/2 md:translate-0 w-full md:w-fit md:left-4 -bottom-4  flex justify-center">
+        <div className="absolute left-1/2 -translate-x-1/2 md:translate-0 w-full md:w-fit md:left-4 lg:left-6 -bottom-4  flex justify-center">
           <div className="relative flex  rounded-lg bg-white p-1 shadow-sm">
             {TABS.map((tab) => {
               const active = activeTab === tab;

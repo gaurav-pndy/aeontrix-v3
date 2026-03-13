@@ -29,7 +29,7 @@ export default function CareersPage() {
     <div className="relative min-h-screen overflow-hidden bg-white  font-satoshi pt-28 md:pt-36">
       {/* Ambient Glow */}
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 lg:px-6">
         {/* Hero */}
         <div className="">
           <div className="mb-9 flex flex-wrap items-center gap-2 lg:gap-12">

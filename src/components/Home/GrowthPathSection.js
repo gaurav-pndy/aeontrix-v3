@@ -39,7 +39,7 @@ export default function GrowthPathSection() {
       className="relative bg-white py-16 rounded-4xl mt-10 mx-2"
     >
       {/* HEADER */}
-      <div className="max-w-7xl px-4 mx-auto text-center mb-16">
+      <div className="max-w-7xl px-4 lg:px-6 mx-auto text-center mb-16">
         <p className="small-text uppercase font-mono text-primary mb-4">
           HOW WE WORK
         </p>
@@ -116,7 +116,7 @@ export default function GrowthPathSection() {
       </div> */}
 
       {/* BLUEPRINT + BUILDOUT */}
-      <div className="max-w-7xl px-4 mx-auto grid lg:grid-cols-2 gap-8">
+      <div className="max-w-7xl px-4 lg:px-6 mx-auto grid lg:grid-cols-2 gap-8">
         {/* BLUEPRINT */}
         {/* <HoverCard>
           <CardHeader

@@ -12,7 +12,7 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer className=" pb-1 bg-white">
+    <footer className=" pb-1 bg-white px-2">
       <div className="max-w-360 mx-auto rounded-4xl bg-background-dark px-4 py-6 pb-0">
         <div className="max-w-7xl mx-auto pb-8 grid gap-10 md:grid-cols-[0.5fr_1fr] lg:grid-cols-[0.3fr_1fr] xl:grid-cols-[0.4fr_1fr] md:items-start md:justify-between">
           {/* Brand + slogan + socials */}

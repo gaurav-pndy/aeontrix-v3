@@ -3,7 +3,7 @@
 export default function CaseHeroSection({ study }) {
   return (
     <section className="bg-background-dark text-white ">
-      <div className="max-w-7xl mx-auto px-4 pt-28 md:pt-36 pb-28 md:pb-20 relative">
+      <div className="max-w-7xl mx-auto px-4 lg:px-6 pt-28 md:pt-36 pb-28 md:pb-20 relative">
         {/* Tags */}
         <div className="flex gap-2 mb-6 flex-wrap">
           {study.partners?.map((tag) => (
