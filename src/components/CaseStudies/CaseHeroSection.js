@@ -54,7 +54,7 @@ export default function CaseHeroSection({ study }) {
         <div className="absolute left-1/2 -translate-x-1/2  w-full  bottom-0  translate-y-3/4  flex justify-center">
           {" "}
           <div className="max-w-6xl mx-auto px-4">
-            <div className="bg-surface rounded-lg shadow-lg border border-border p-6">
+            <div className="bg-surface rounded-lg shadow-lg border border-border p-4 md:p-6">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {study.metricsFull.map((metric) => (
                   <div
