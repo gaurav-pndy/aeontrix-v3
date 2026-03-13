@@ -167,19 +167,18 @@ export default function GrowthPathSection() {
                     PRESCRIPTION WITHOUT DIAGNOSIS IS MALPRACTICE
                   </p>
                 </div>
-                <div className="flex ml-auto  justify-end mb-4">
+                {/* <div className="flex ml-auto  justify-end mb-4">
                   <span className="text-xs rounded-full border font-mono border-primary px-3 py-1 text-primary bg-primary/10 md:whitespace-nowrap">
                     ENTRY POINT
                   </span>
-                </div>
+                </div> */}
               </div>
 
               <p className="text-muted-foreground mb-6">
                 A comprehensive Operational Audit across all Key Function of
                 your business. Most businesses, just sell you their service
-                without understanding what you actually need for your growth or
-                understanding your business, which is the main reason for 99% of
-                the failures.
+                without understanding what you actually need for your growth,
+                which is the main reason for 99% of the failures.
               </p>
             </div>
 
@@ -277,9 +276,9 @@ function CardHeader({ icon, title, badge }) {
     <div className="flex flex-row items-start md:items-center gap-2 md:gap-3 mb-6">
       <IconBox>{icon}</IconBox>
       <h3 className="title-text font-semibold text-black">{title}</h3>
-      <span className="ml-auto text-xs rounded-full bg-primary/10 border font-mono border-primary text-primary px-3 py-1 md:whitespace-nowrap">
+      {/* <span className="ml-auto text-xs rounded-full bg-primary/10 border font-mono border-primary text-primary px-3 py-1 md:whitespace-nowrap">
         {badge}
-      </span>
+      </span> */}
     </div>
   );
 }
