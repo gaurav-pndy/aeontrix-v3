@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProductWalkthrough({ media = [], comingSoon }) {
   const [index, setIndex] = useState(0);
@@ -15,7 +15,9 @@ export default function ProductWalkthrough({ media = [], comingSoon }) {
 
   return (
     <section
-      className={`py-10 ${!comingSoon ? "pt-80 md:pt-68 lg:pt-50" : "pt-20"} bg-white`}
+      className={`py-10 ${
+        !comingSoon ? "pt-80 md:pt-68 lg:pt-50" : "pt-20"
+      } bg-white`}
     >
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -32,11 +34,13 @@ export default function ProductWalkthrough({ media = [], comingSoon }) {
           </span>
         </div>
 
-        {/* -------- COMING SOON -------- */}
         {comingSoon ? (
-          <div className="relative rounded-xl border border-border bg-muted overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="relative rounded-xl border border-border bg-muted overflow-hidden"
+          >
             <div className="aspect-16/8 flex items-center justify-center text-center">
-              {" "}
               <div>
                 <p className="text-primary font-semibold mb-2 font-mono subtitle-text">
                   Coming Soon
@@ -46,74 +50,100 @@ export default function ProductWalkthrough({ media = [], comingSoon }) {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ) : (
           <>
-            {/* -------- NORMAL WALKTHROUGH -------- */}
-
+            {/* Main Media */}
             <div className="relative rounded-xl border border-border bg-muted overflow-hidden">
-              <div className="aspect-16/8 flex items-center justify-center">
-                {current?.type === "video" ? (
-                  <video
-                    src={current.src}
-                    controls
-                    className="w-full h-full object-cover"
-                  />
-                ) : current?.src ? (
-                  <img
-                    src={current.src}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="text-center text-text-muted">
-                    <ImageIcon className="mx-auto mb-2" />
-                    Screenshot or Video
-                  </div>
-                )}
+              <div className="aspect-16/8 flex items-center justify-center overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 1.02 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="w-full h-full"
+                  >
+                    {current?.type === "video" ? (
+                      <video
+                        src={current.src}
+                        controls
+                        className="w-full h-full object-cover"
+                      />
+                    ) : current?.src ? (
+                      <motion.img
+                        src={current.src}
+                        className="w-full h-full object-cover"
+                        initial={{ scale: 1.05 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.6 }}
+                      />
+                    ) : (
+                      <div className="text-center text-text-muted">
+                        <ImageIcon className="mx-auto mb-2" />
+                        Screenshot or Video
+                      </div>
+                    )}
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
               {/* Arrows */}
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={prev}
                 className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full border border-border bg-white/80 backdrop-blur"
               >
                 <ChevronLeft size={18} />
-              </button>
+              </motion.button>
 
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={next}
                 className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full border border-border bg-white/80 backdrop-blur"
               >
                 <ChevronRight size={18} />
-              </button>
+              </motion.button>
 
               {/* Counter */}
-              <div className="absolute bottom-4 right-4 text-xs bg-black/70 font-mono text-white px-2.5 py-1 rounded">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="absolute bottom-4 right-4 text-xs bg-black/70 font-mono text-white px-2.5 py-1 rounded"
+              >
                 {index + 1} / {media.length}
-              </div>
+              </motion.div>
             </div>
 
             {/* Thumbnails */}
             <div className="flex gap-2 mt-4 flex-wrap">
               {media.map((item, i) => (
-                <button
+                <motion.button
                   key={i}
                   onClick={() => setIndex(i)}
-                  className={`w-18 h-12 rounded-md border flex items-center justify-center ${
-                    i === index
-                      ? "border-primary bg-primary/10"
-                      : "border-border bg-muted"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  animate={{
+                    borderColor: i === index ? "#6366f1" : "#e5e7eb",
+                  }}
+                  className={`w-18 h-12 rounded-md border flex items-center justify-center overflow-hidden ${
+                    i === index ? "bg-primary/10" : "bg-muted"
                   }`}
                 >
                   {item.src ? (
-                    <img
+                    <motion.img
                       src={item.src}
-                      className="w-full h-full object-cover rounded"
+                      className="w-full h-full object-cover"
+                      whileHover={{ scale: 1.1 }}
                     />
                   ) : (
                     <ImageIcon size={18} className="text-text-muted" />
                   )}
-                </button>
+                </motion.button>
               ))}
             </div>
           </>
