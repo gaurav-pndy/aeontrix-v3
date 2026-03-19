@@ -3,6 +3,16 @@ import { TRANSFORMATIONS } from "@/data/caseStudies";
 import CaseHeroSection from "@/components/CaseStudies/CaseHeroSection";
 import ProductWalkthrough from "@/components/CaseStudies/ProductWalkthrough";
 import OperationalReality from "@/components/CaseStudies/OperationalReality";
+import BeforeAfter from "@/components/CaseStudies/BeforeAfter";
+import TheSolution from "@/components/CaseStudies/TheSolution";
+import AISystems from "@/components/CaseStudies/AISystems";
+import FinancialImpact from "@/components/CaseStudies/FinancialImpact";
+import WhatWeBuilt from "@/components/CaseStudies/WhatWeBuilt";
+import TechStack from "@/components/CaseStudies/TechStack";
+import Testimonial from "@/components/CaseStudies/Testimonial";
+import BeyondNumbers from "@/components/CaseStudies/BeyondNumbers";
+import CTASection from "@/components/CaseStudies/CTASection";
+import DiagnosticSection from "@/components/CaseStudies/DiagnosticSection";
 
 export default async function DetailedCaseStudyPage({ params }) {
   const { slug } = await params;
@@ -15,27 +25,26 @@ export default async function DetailedCaseStudyPage({ params }) {
 
   return (
     <>
-      <CaseHeroSection study={study} />
-      <ProductWalkthrough media={study.walkthrough} />
-      <section className="py-10 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          {/* Section Label */}
-          <div className="flex items-center gap-2 mb-6">
-            <span className="w-1 h-5 bg-primary rounded"></span>
-            <span className="font-mono small-text font-semibold text-primary uppercase">
-              What the Diagnostic Revealed{" "}
-            </span>
-          </div>
-
-          {/* Diagnostic Box */}
-          <div className="bg-muted border border-border rounded-xl p-4 md:p-8 ">
-            <p className="body-text  leading-8 text-primary-dark italic">
-              {study.diagnostic?.text}
-            </p>
-          </div>
-        </div>
-      </section>
-      <OperationalReality items={study.operationalReality} />
+      <CaseHeroSection study={study} comingSoon={study.comingSoon} />
+      <ProductWalkthrough
+        media={study.walkthrough}
+        comingSoon={study.comingSoon}
+      />
+      {!study.comingSoon && (
+        <>
+          <DiagnosticSection text={study.diagnostic?.text} />
+          <OperationalReality items={study.operationalReality} />
+          <BeforeAfter items={study.beforeAfter} />
+          <TheSolution solution={study.solution} />
+          {study.aiSystems && <AISystems systems={study.aiSystems} />}
+          <FinancialImpact data={study.financialImpact} />
+          <WhatWeBuilt items={study.whatWeBuilt} />
+          <TechStack techStack={study.techStack} />
+          <Testimonial testimonial={study.testimonial} />
+          <BeyondNumbers items={study.beyondNumbers} />
+          <CTASection />{" "}
+        </>
+      )}
     </>
   );
 }

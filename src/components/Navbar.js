@@ -119,7 +119,7 @@ export default function Navbar() {
           <Link href="/">
             <div className="relative h-10 md:h-12 w-60">
               <AnimatePresence mode="wait">
-                {pathname === "/" || pathname === "/case-studies" ? (
+                {pathname === "/" || pathname.startsWith("/case-studies") ? (
                   <motion.img
                     key="logo-home-top"
                     src="/logo-light.png"

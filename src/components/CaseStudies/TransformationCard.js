@@ -43,9 +43,11 @@ export default function TransformationCard({ study }) {
 
         {/* Metrics */}
         {study.comingSoon ? (
-          <p className="text-text-muted italic body-text mb-6">
-            Full case study coming soon
-          </p>
+          <div className="flex justify-center items-center h-full">
+            <p className="text-text-muted italic body-text mb-6 text-center">
+              Full case study coming soon
+            </p>
+          </div>
         ) : (
           <div className="grid grid-cols-3 gap-2 mb-6 text-center">
             {study.metrics.map((m) => (

@@ -23,7 +23,7 @@ const itemAnim = {
 };
 
 export default function OperationalReality({ items }) {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(null);
 
   return (
     <section className="py-10 bg-white">
@@ -63,7 +63,7 @@ export default function OperationalReality({ items }) {
               <motion.div
                 key={i}
                 variants={itemAnim}
-                className="border border-border rounded-xl bg-surface overflow-hidden"
+                className="border border-border rounded-lg bg-surface overflow-hidden"
               >
                 {/* Header */}
                 <button
