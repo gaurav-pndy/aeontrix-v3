@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto pb-8 grid gap-10 md:grid-cols-[0.5fr_1fr] lg:grid-cols-[0.3fr_1fr] xl:grid-cols-[0.4fr_1fr] md:items-start md:justify-between">
           {/* Brand + slogan + socials */}
           {/* Brand + slogan + socials */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center mb-4">
               <img src="/logo-light.png" alt="Aeontrix" className="h-12" />
             </div>
@@ -33,7 +33,7 @@ export default function Footer() {
                 type="email"
                 placeholder="Enter your email"
                 className="
-        w-full
+      min-w-64 lg:min-w-72  w-full
         rounded-lg
         bg-background-dark/80
         border border-white/20
@@ -57,7 +57,7 @@ export default function Footer() {
             </div>
 
             {/* SOCIALS */}
-            <div className="flex gap-3 max-w-72 justify-between">
+            <div className="flex min-w-64 lg:min-w-72 gap-3 max-w-72 justify-between">
               <FooterIconLink
                 href="https://www.linkedin.com/company/aeontrix"
                 label="LinkedIn"
@@ -89,16 +89,16 @@ export default function Footer() {
           </div>
 
           {/* Columns */}
-          <div className="grid flex-1 gap-4 md:gap-8  grid-cols-2 lg:grid-cols-[1fr_0.8fr_0.9fr]">
+          <div className="grid flex-1 gap-2 xs:gap-4 md:gap-8  grid-cols-3 lg:grid-cols-[1fr_0.8fr_0.9fr]">
             {/* Services (placeholder links) */}
             <div className="space-y-3 ">
               <button
                 onClick={() => scrollToSection("services")}
-                className="subtitle-text cursor-pointer font-semibold text-white"
+                className="body-text md:subtitle-text cursor-pointer font-semibold text-white"
               >
                 Services
               </button>
-              <ul className="space-y-1 body-text text-white/90">
+              <ul className="space-y-1 small-text md:body-text text-white/90">
                 <li>
                   <button
                     onClick={() =>
@@ -138,13 +138,13 @@ export default function Footer() {
               <h4>
                 <Link
                   href="/case-studies"
-                  className="subtitle-text cursor-pointer font-semibold text-white"
+                  className="body-text md:subtitle-text cursor-pointer font-semibold text-white"
                 >
                   {" "}
                   Case Studies
                 </Link>
               </h4>
-              <ul className="space-y-1 body-text text-white/90">
+              <ul className="space-y-1 small-text md:body-text text-white/90">
                 <li>
                   <Link
                     href="#"
@@ -174,11 +174,11 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div className="space-y-3">
-              <h4 className="subtitle-text cursor-pointer font-semibold text-white">
+              <h4 className="body-text md:subtitle-text cursor-pointer font-semibold text-white">
                 {" "}
                 Quick Links
               </h4>
-              <ul className="space-y-1 body-text text-white/90">
+              <ul className="space-y-1 small-text md:body-text text-white/90">
                 <li>
                   <Link
                     href="/"

@@ -9,8 +9,7 @@ const TESTIMONIALS = [
   {
     org: "EAFO",
     website: "https://eafo.info",
-    image:
-      "/testimonials/Dr. Soma.png",
+    image: "/testimonials/Dr. Soma.png",
     quote:
       "We run a large number of conferences and seminars for medical professionals, but for years we had no real CRM, no centralized data storage, and no consistent marketing system. Everything ran through my personal network that I’ve built over two decades. It worked, but it wasn’t scalable. Aeontrix came in and built the infrastructure we were missing. They created a proper system with an admin portal and a member portal where we can host webinars, store recordings, and maintain a structured database of participants. We now have a newsletter database to send updates to the right audience, plus payments built in, including invoice creation and delivery. This has been genuinely game-changing for a not-for-profit like ours. We finally have systems that make our work repeatable, organized, and sustainable.",
     author: "Dr. Somasundaram Subramanian",
@@ -19,8 +18,7 @@ const TESTIMONIALS = [
   {
     org: "Ayushma Yoga",
     website: "https://ayushmayoga.ru/",
-    image:
-      "/testimonials/Dr. Murali.jpg",
+    image: "/testimonials/Dr. Murali.jpg",
     quote:
       "Before working with Aeontrix, I honestly didn’t even know what KPIs were, or how people were using data to make decisions. I was just teaching and posting occasionally. The Diagnostic was insane. The amount of findings they pulled out of my business, the gaps, the opportunities, the blind spots, it was the most comprehensive business audit I’ve ever seen. Then they built and entire system around me. They set up the community properly, created seamless onboarding, and built a complete marketing strategy from scratch. They ran ads, created content ideas, hired a dedicated video editor, and helped grow my social media following. Everything now runs like a well oiled machine. And I can focus purely on yoga and meditation classes. That made my classes better, students are happier, and people stay in the community long-term.",
     author: "Dr. Kavin Murali Muthu",
@@ -72,7 +70,9 @@ export default function TestimonialsSection() {
           <p className="small-text text-primary uppercase font-mono mb-4">
             TESTIMONIALS
           </p>
-          <h2 className="display-text text-white">What our clients say</h2>
+          <h2 className="display-text text-white">
+            What our clients say about us
+          </h2>
         </div>
 
         <div className="flex flex-col-reverse md:flex-row gap-12 items-center rounded-3xl  bg-linear-to-br from-primary-dark via-black to-primary-dark min-h-124 p-4 md:p-6 lg:p-10 ">
@@ -120,7 +120,7 @@ export default function TestimonialsSection() {
                 transition={{ duration: 0.6 }}
                 className="relative"
               >
-                <p className="subtitle-text lg:large-text leading-tight text-white mb-4 whitespace-pre-line ">
+                <p className="subtitle-text lg:large-text leading-tight text-white mb-4 pt-6 md:pt-0 whitespace-pre-line ">
                   "{active.quote}"
                 </p>
 
@@ -196,7 +196,7 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
 
-                <FaQuoteRight className="absolute text-primary -top-4 md:-top-10 right-2 text-6xl md:text-8xl opacity-50" />
+                <FaQuoteRight className="absolute text-primary -top-4 md:-top-8 lg:-top-10 right-2 text-5xl md:text-6xl lg:text-8xl opacity-50" />
               </motion.div>
             </AnimatePresence>
           </div>

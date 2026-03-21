@@ -1157,3 +1157,124 @@ Management dashboards with real-time KPIs gave the founder complete visibility â
     ],
   },
 ];
+
+export const DIGITAL_IDENTITY = [
+  {
+    title: "Centre for Scientific Research",
+    image: "/websites/cso.png",
+    href: "https://www.thecso.in/",
+    tags: ["NGO", "Donations", "Impact"],
+    description:
+      "NGO platform with integrated donation processing, sponsor forms, and impact reporting.",
+    result:
+      "Immediate increase in donations post-launch. Professional presence helped secure government approval for organizational plans.",
+  },
+  {
+    title: "National Aviation Olympiad",
+    image: "/websites/nao.png",
+
+    href: "https://nationalaviationolympiad.com/",
+    tags: ["Education", "Registration"],
+    description:
+      "Event information hub with online student registration system and results portal.",
+    result:
+      "Significant increase in student registrations. Schools found it easier to enroll students, reducing drop-off.",
+  },
+  {
+    title: "Sophos Medical Centre",
+    image: "/websites/sophos.png",
+
+    href: "https://sophos-med.ru/",
+    tags: ["Healthcare", "Multilingual"],
+    description:
+      "Healthcare provider website with doctor profiles, service pages, and appointment inquiry forms.",
+    result:
+      "More patient enquiries through the website. Professional digital presence improved trust with new patients.",
+  },
+  {
+    title: "FIRMST Language School",
+    image: "/websites/firmst.png",
+
+    href: "https://firmst.org/",
+    tags: ["Education", "Lead Gen"],
+    description:
+      "Program showcase with course catalog, enrollment CTAs, student testimonials, and multilingual support.",
+    result:
+      "Higher student registrations from organic search. Multilingual site expanded reach to international students.",
+  },
+  {
+    title: "Sanmas Industries",
+    image: "/websites/sanmas.png",
+
+    href: "https://sanmas.com/",
+    tags: ["Corporate", "B2B"],
+    description:
+      "Professional corporate presence with service catalog, inquiry generation, and project portfolio.",
+    result:
+      "More enquiries from professional online presence. Clients reported increased trust before first meeting.",
+  },
+  {
+    title: "Ayushma Yoga",
+    image: "/websites/ayushma-yoga.png",
+
+    href: "https://ayushmayoga.ru/",
+    tags: ["Wellness", "Bookings"],
+    description:
+      "Community-focused wellness site with class schedules, instructor profiles, and event registration.",
+    result:
+      "Growth in community membership. Online class bookings reduced admin phone calls significantly.",
+  },
+  {
+    title: "Akashgati",
+    image: "/websites/akashgati.png",
+
+    href: "http://akashgati.org/",
+    tags: ["Foundation", "Non-Profit"],
+    description:
+      "Foundation website with program information, volunteer sign-up, and organizational credibility.",
+    result:
+      "Improved organizational credibility with stakeholders and potential partners.",
+  },
+  {
+    title: "Eurasian Federation of Oncology",
+    image: "/websites/eafo.png",
+
+    href: "https://eafo.info/",
+    tags: ["Healthcare", "Federation"],
+    description:
+      "Institutional platform for oncology professionals, events, and research collaboration.",
+    result:
+      "Strengthened digital presence across the oncology community. Streamlined event and membership management.",
+  },
+  {
+    title: "Pasovit Technologies",
+    image: "/websites/pasovit.png",
+
+    href: "https://pasovit.com/",
+    tags: ["Tech", "B2B"],
+    description:
+      "Custom software development company website showcasing capabilities, portfolio, and service offerings.",
+    result:
+      "Professional positioning that elevated brand perception. Inbound leads increased from organic search.",
+  },
+  {
+    title: "Vayupath",
+    href: "https://vayupath.com/",
+    tags: ["Brand", "Corporate"],
+    description:
+      "Brand and digital presence build with modern design, clear messaging, and conversion-focused layout.",
+    result:
+      "Clean, high-performance site that established immediate credibility in the market.",
+  },
+  {
+    title: "Saffron Restaurant",
+    image: "/websites/saffron.png",
+
+    href: "https://saffronmoscow.ru/",
+    tags: ["Tech", "B2B"],
+    description:
+      "Restaurant website with menu showcase, reservation system, event booking, and brand storytelling for a premium dining experience.",
+    result:
+      "Increased online reservations through stronger brand positioning in the competitive Moscow dining scene",
+  },
+];

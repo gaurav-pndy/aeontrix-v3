@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="relative py-24 pt-36 bg-white">
+    <section data-nav-theme="light" className="relative py-24 pt-36 bg-white">
       <div className="mx-auto relative max-w-348 px-4 lg:px-6">
         {/* ---------- HEADER ---------- */}
         <header className="mb-10">
@@ -36,32 +36,32 @@ export default function PrivacyPolicyPage() {
         <div className="flex relative gap-6 flex-col lg:flex-row-reverse">
           {/* ---------- TOC ---------- */}
 
-           <nav
-                      className="hidden lg:block lg:sticky h-fit top-24 right-0 lg:w-1/4 rounded-2xl bg-linear-to-b from-[#444444] to-background-dark  text-white p-4 
+          <nav
+            className="hidden lg:block lg:sticky h-fit top-24 right-0 lg:w-1/4 rounded-2xl bg-linear-to-b from-[#444444] to-background-dark  text-white p-4 
                                         shadow-[inset_0_1px_0.25px_rgba(0,0,0,0.6),inset_0_2px_1px_rgba(0,0,0,0.4)]"
-                    >
-                      <p className="xs-text font-medium text-white/80 text-center mb-2">
-                        TABLE OF CONTENTS
-                      </p>
-          
-                      <div className="space-y-2 max-h-[73vh] overflow-y-scroll custom-scrollbar pr-1">
-                        {TOC.map((item) => (
-                          <a
-                            key={item.id}
-                            href={`#${item.id}`}
-                            className="group flex items-center gap-2 justify-between rounded-lg bg-white/5 border xs-text border-background-dark/40 py-2 px-3 transition-all duration-300 hover:border-background-dark"
-                          >
-                            <span className=" group-hover:text-primary  transition-all duration-300">
-                              {item.label}
-                            </span>
-                            <ArrowRight
-                              size={14}
-                              className="group-hover:translate-x-1 transition-all duration-300"
-                            />
-                          </a>
-                        ))}
-                      </div>
-                    </nav>
+          >
+            <p className="xs-text font-medium text-white/80 text-center mb-2">
+              TABLE OF CONTENTS
+            </p>
+
+            <div className="space-y-2 max-h-[73vh] overflow-y-scroll custom-scrollbar pr-1">
+              {TOC.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className="group flex items-center gap-2 justify-between rounded-lg bg-white/5 border xs-text border-background-dark/40 py-2 px-3 transition-all duration-300 hover:border-background-dark"
+                >
+                  <span className=" group-hover:text-primary  transition-all duration-300">
+                    {item.label}
+                  </span>
+                  <ArrowRight
+                    size={14}
+                    className="group-hover:translate-x-1 transition-all duration-300"
+                  />
+                </a>
+              ))}
+            </div>
+          </nav>
 
           {/* ---------- CONTENT CARD ---------- */}
           <div className="relative rounded-3xl lg:w-3/4 bg-background border-l-4 border-primary shadow-sm overflow-hidden">

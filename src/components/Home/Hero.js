@@ -71,9 +71,15 @@ export default function Hero() {
         <div className="pointer-events-none absolute inset-0 z-1 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_40%,rgba(0,0,0,0.9)_75%,rgba(0,0,0,0.1)_100%)]" />
         {/* CONTENT */}
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-          <h1 className="max-w-6xl  hero-heading leading-12 md:leading-22 tracking-[-0.02em] ">
+          <h1 className="max-w-6xl hidden md:block hero-heading leading-14 md:leading-22 tracking-[-0.02em] ">
             <ShimmerText>Where Strategy becomes </ShimmerText>
             <span className="rounded-xl border border-primary/70 bg-primary/20 px-4  text-primary-soft shadow-[0_0_40px_rgba(7,118,89,0.35)]">
+              Infrastructure
+            </span>{" "}
+          </h1>
+          <h1 className="max-w-6xl md:hidden  hero-heading leading-14 md:leading-22 tracking-[-0.02em] flex flex-col gap-4 items-center">
+            <p> Where Strategy becomes</p>
+            <span className="rounded-xl border border-primary/70 bg-primary/20 px-6 py-1  text-primary-soft shadow-[0_0_40px_rgba(7,118,89,0.35)]">
               Infrastructure
             </span>{" "}
           </h1>

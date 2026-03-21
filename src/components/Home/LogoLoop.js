@@ -40,7 +40,9 @@ function LogoLoop() {
     <section className="relative mx-auto max-w-360 overflow-hidden bg-transparent px-4 lg:px-6 pt-12 pb-6 ">
       {/* HEADING + ECOSYSTEM */}
       <div className="mb-4 flex gap-4  flex-row items-center justify-between">
-        <p className="large-text text-white">Trusted by the best</p>
+        <p className="subtitle-text font-mono uppercase text-white">
+          Trusted by the best
+        </p>
 
         <div className="pointer-events-none flex  font-mono text-lg tracking-widest text-white md:text-xl">
           {ECOSYSTEM_CHARS.map((char, i) => (

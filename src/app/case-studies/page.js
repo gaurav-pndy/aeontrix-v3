@@ -2,6 +2,7 @@
 
 import CaseStudiesHero from "@/components/CaseStudies/CaseStudiesHero";
 import CTASection from "@/components/CaseStudies/CTASection";
+import DigitalIdentity from "@/components/CaseStudies/DigitalIdentity";
 import Transformations from "@/components/CaseStudies/Transformations";
 import { useState } from "react";
 
@@ -12,7 +13,7 @@ export default function Home() {
     <>
       <CaseStudiesHero activeTab={activeTab} onTabChange={setActiveTab} />
       {activeTab === "Transformations" && <Transformations />}
-      {/* {tab === "Digital Identity" && <DigitalIdentitySection />} */}
+      {activeTab === "Digital Identity" && <DigitalIdentity />}
       <CTASection />{" "}
     </>
   );

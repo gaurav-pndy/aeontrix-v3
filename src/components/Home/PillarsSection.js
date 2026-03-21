@@ -32,8 +32,11 @@ export default function PillarsSection() {
       style={{ height: "400vh" }} // more space → slower
     >
       <div className="sticky top-0 h-screen rounded-4xl bg-background-dark overflow-hidden">
-        <div className="h-screen flex flex-col-reverse md:grid md:grid-cols-2  mx-auto  ">
-          <div className="h-[50vh] md:h-auto bg-white flex justify-end  rounded-4xl  overflow-hidden ">
+        <div className="h-screen flex flex-col md:grid md:grid-cols-2  mx-auto  ">
+          <div
+            data-nav-theme="light"
+            className="h-[50vh] md:h-auto bg-white flex justify-end  rounded-4xl  overflow-hidden "
+          >
             <div className="flex-1 flex xl:gap-8 max-w-180 px-4 lg:px-6">
               {/* STEP INDICATOR */}
               <div className="  py-8 pt-18 hidden xl:flex  ">
@@ -42,7 +45,7 @@ export default function PillarsSection() {
 
               {/* TEXT */}
               <div className="flex-1 relative">
-                <h3 className="absolute title-text font-bold text-text    top-4 md:top-20 text-center ">
+                <h3 className="absolute title-text font-bold text-text    top-14 md:top-20 text-center ">
                   {" "}
                   Aeontrix's{" "}
                   <span className="text-primary"> 4 Pillars of Growth</span> for

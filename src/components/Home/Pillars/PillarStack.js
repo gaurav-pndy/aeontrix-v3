@@ -75,7 +75,7 @@ export default function PillarStack({ scrollYProgress }) {
     <div
       className="
     relative
-    mt-4 xs:mt-10
+    mt-20 
     ml-[50%]
 
     md:absolute

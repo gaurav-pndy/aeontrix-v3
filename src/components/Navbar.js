@@ -19,6 +19,7 @@ export default function Navbar() {
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const [isAtTop, setIsAtTop] = useState(true);
   const navRef = useRef(null);
+  const [navTheme, setNavTheme] = useState("dark");
 
   useEffect(() => {
     const activeEl = navRef.current?.querySelector(`[data-item="${active}"]`);
@@ -29,6 +30,28 @@ export default function Navbar() {
       width: activeEl.offsetWidth,
     });
   }, [active]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("[data-nav-theme]");
+
+      let currentTheme = "dark";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= 80 && rect.bottom >= 80) {
+          currentTheme = section.dataset.navTheme;
+        }
+      });
+
+      setNavTheme(currentTheme);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -223,15 +246,15 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`flex h-10 w-10 items-center justify-center rounded-full backdrop-blur-xl border
-            ${pathname === "/" ? "border-white/20 bg-white/5" : "border-text/20 bg-surface"}
+            ${navTheme === "dark" ? "border-white/20 bg-white/5" : "border-text/40 bg-surface"}
             `}
           >
             <div className="space-y-1.5">
               <span
-                className={`block h-0.5 w-5 ${pathname === "/" ? "bg-white" : "bg-text"}`}
+                className={`block h-0.5 w-5 ${navTheme === "dark" ? "bg-white" : "bg-text"}`}
               />
               <span
-                className={`block h-0.5 w-5 ${pathname === "/" ? "bg-white" : "bg-text"}`}
+                className={`block h-0.5 w-5 ${navTheme === "dark" ? "bg-white" : "bg-text"}`}
               />
             </div>
           </button>
@@ -247,7 +270,7 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="
-              mt-4 mx-auto max-w-7xl
+              mt-4 mx-4 max-w-7xl
               rounded-2xl
               border border-white/20
               bg-black/70

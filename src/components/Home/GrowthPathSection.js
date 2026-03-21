@@ -35,6 +35,7 @@ const WORKSTREAMS = [
 export default function GrowthPathSection() {
   return (
     <section
+      data-nav-theme="light"
       id="solutions"
       className="relative bg-white py-16 rounded-4xl mt-10 mx-2"
     >

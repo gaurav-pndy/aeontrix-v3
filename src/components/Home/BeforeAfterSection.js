@@ -133,7 +133,11 @@ export default function BeforeAfterSection() {
                 ]}
               />{" "}
             </BoxReveal>
-            <BoxReveal index={5} active={hasEntered}>
+            <BoxReveal
+              index={5}
+              active={hasEntered}
+              customClass="order-6 lg:order-0"
+            >
               <MetricBox
                 title="Intelligence"
                 beforeOpacity={beforeOpacity}
@@ -152,7 +156,11 @@ export default function BeforeAfterSection() {
                 ]}
               />{" "}
             </BoxReveal>
-            <BoxReveal index={6} active={hasEntered}>
+            <BoxReveal
+              index={6}
+              active={hasEntered}
+              customClass="order-5 lg:order-0"
+            >
               <DataScatter
                 beforeOpacity={beforeOpacity}
                 afterOpacity={afterOpacity}

@@ -26,7 +26,10 @@ export default function CareersPage() {
       : ROLES.filter((r) => r.tags.includes(activeFilter));
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-white  font-satoshi pt-28 md:pt-36">
+    <div
+      data-nav-theme="light"
+      className="relative min-h-screen overflow-hidden bg-white  font-satoshi pt-28 md:pt-36"
+    >
       {/* Ambient Glow */}
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 lg:px-6">

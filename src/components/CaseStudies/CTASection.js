@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function CTASection() {
   return (
-    <section className="py-10 bg-white">
+    <section data-nav-theme="light" className="py-10 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
