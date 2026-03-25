@@ -4,12 +4,14 @@ import { useRef } from "react";
 import { useScroll } from "framer-motion";
 import PillarTextColumn from "./Pillars/PillarTextColumn";
 import dynamic from "next/dynamic";
+import { motion, useTransform } from "framer-motion";
 
 const PillarStack = dynamic(() => import("./Pillars/PillarStack"), {
   ssr: false,
 });
 import { useSpring } from "framer-motion";
 import PillarStepIndicator from "./Pillars/PillarStepIndicator";
+import PillarTimeline from "./Pillars/PillarTimeline";
 
 export default function PillarsSection() {
   const ref = useRef(null);
@@ -37,21 +39,57 @@ export default function PillarsSection() {
             data-nav-theme="light"
             className="h-[50vh] md:h-auto bg-white flex justify-end  rounded-4xl  overflow-hidden "
           >
-            <div className="flex-1 flex xl:gap-8 max-w-180 px-4 lg:px-6">
-              {/* STEP INDICATOR */}
-              <div className="  py-8 pt-18 hidden xl:flex  ">
-                <PillarStepIndicator scrollYProgress={smoothProgress} />
-              </div>
-
-              {/* TEXT */}
+            <div className="flex-1 flex md:hidden xl:gap-8 max-w-180 px-4 lg:px-6">
+              {" "}
+              {/* STEP INDICATOR */}{" "}
+              <div className=" py-8 pt-18 hidden xl:flex ">
+                {" "}
+                <PillarStepIndicator scrollYProgress={smoothProgress} />{" "}
+              </div>{" "}
+              {/* TEXT */}{" "}
               <div className="flex-1 relative">
-                <h3 className="absolute title-text font-bold text-text    top-14 md:top-20 text-center ">
+                {" "}
+                <h3 className="absolute title-text font-bold text-text top-14 md:top-20 text-center ">
                   {" "}
                   Aeontrix's{" "}
                   <span className="text-primary"> 4 Pillars of Growth</span> for
+                  Service Businesses{" "}
+                </h3>{" "}
+                <PillarTextColumn scrollYProgress={smoothProgress} />{" "}
+              </div>
+            </div>
+            <div className="flex-1 max-w-180 px-4 lg:px-6 hidden md:flex flex-col">
+              <div className="flex items-center mt-16 mb-6 2xl:mb-10">
+                {" "}
+                {/* PLUS GRID */}
+                <div className="hidden flex-1 xl:grid grid-cols-4 gap-x-10 gap-y-1 w-fit">
+                  {Array.from({ length: 16 }).map((_, i) => (
+                    <motion.div
+                      key={i}
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{
+                        duration: 2,
+                        delay: i * 0.15,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      className="text-primary text-3xl shrink-0"
+                    >
+                      +
+                    </motion.div>
+                  ))}
+                </div>
+                {/* HEADING */}
+                <h3 className="title-text font-bold text-text text-center ">
+                  Aeontrix's{" "}
+                  <span className="text-primary">4 Pillars of Growth</span> for
                   Service Businesses
                 </h3>
-                <PillarTextColumn scrollYProgress={smoothProgress} />
+              </div>
+
+              {/* TIMELINE */}
+              <div className="flex h-full items-center">
+                <PillarTimeline scrollYProgress={smoothProgress} />
               </div>
             </div>
           </div>

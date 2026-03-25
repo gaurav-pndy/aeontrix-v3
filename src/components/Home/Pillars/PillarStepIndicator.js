@@ -29,9 +29,9 @@ export default function PillarStepIndicator({ scrollYProgress }) {
       </div>
 
       {/* STEPS */}
-      <div className="relative flex  flex-col gap-10">
+      <div className="relative flex  flex-col  gap-10 h-full ">
         {/* STEPS */}
-        <div className="relative flex flex-col items-start">
+        <div className="relative flex flex-col items-start h-full  ">
           {STEPS.map((step, i) => {
             const start = i * STEP_SIZE;
 
@@ -64,7 +64,10 @@ export default function PillarStepIndicator({ scrollYProgress }) {
             );
 
             return (
-              <div key={step} className="flex  flex-col items-center">
+              <div
+                key={step}
+                className={`flex  flex-col ${i < STEPS.length - 1 && "h-full"} items-center`}
+              >
                 {/* STEP */}
                 <motion.div
                   style={{
@@ -76,7 +79,7 @@ export default function PillarStepIndicator({ scrollYProgress }) {
             flex h-16 w-16 items-center justify-center
             rounded-full
             border border-[#0a5850]
-            text-xl font-mono
+            text-xl font-mono shrink-0
           "
                 >
                   {String(step).padStart(2, "0")}
@@ -84,7 +87,7 @@ export default function PillarStepIndicator({ scrollYProgress }) {
 
                 {/* CONNECTING LINE (only if not last step) */}
                 {i < STEPS.length - 1 && (
-                  <div className="relative h-6 my-1 w-px bg-border overflow-hidden">
+                  <div className="relative h-full my-1 w-px bg-border overflow-hidden">
                     <motion.div
                       style={{ scaleY: lineFill }}
                       transformOrigin="top"

@@ -56,21 +56,23 @@ export default function PillarTextColumn({ scrollYProgress }) {
           <motion.div
             key={i}
             style={{ opacity, scale }}
-            className="absolute inset-0  flex items-center xl:pr-18"
+            className="absolute inset-0  flex items-center pt-28 xl:pr-18"
           >
-            <div className="flex items-start gap-10">
-              <div>
-                <div className="xl:hidden border border-primary-dark rounded-full w-10 md:w-16 h-10 md:h-16 md:text-xl shrink-0 flex justify-center items-center font-mono text-primary-dark mb-2 md:mb-4">
+            <div className="flex items-start   gap-10">
+              <div className="flex gap-4">
+                <div className="xl:hidden mt-1 border border-primary-dark rounded-full w-10 md:w-16 h-10 md:h-16 md:text-xl shrink-0 flex justify-center items-center font-mono text-primary-dark ">
                   {String(i + 1).padStart(2, "0")}
                 </div>
 
-                <h2 className="text-4xl md:text-6xl font-medium text-text">
-                  {item.title}
-                </h2>
+                <div>
+                  <h2 className="text-4xl md:text-6xl font-medium text-text">
+                    {item.title}
+                  </h2>
 
-                <p className="mt-2 md:mt-4 md:text-xl text-muted-foreground max-w-md">
-                  {item.desc}
-                </p>
+                  <p className="mt-2 md:mt-4 md:text-xl text-muted-foreground max-w-md">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
