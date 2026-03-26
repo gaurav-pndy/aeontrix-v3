@@ -1,7 +1,7 @@
 export const TRANSFORMATIONS = [
   {
     id: 1,
-    slug: "hospital-management-system",
+    slug: "sophos-medical-centre",
 
     title: "Hospital Management System",
     client: "Sophos Medical Centre",
@@ -357,7 +357,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility â
 
   {
     id: 2,
-    slug: "learning-management-system",
+    slug: "firmst-language-school",
 
     title: "Learning Management System",
     client: "FIRMST Language School",
@@ -628,7 +628,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility â
 
   {
     id: 3,
-    slug: "unified-olympiad-management-system",
+    slug: "national-aviation-olympiad",
 
     title: "Unified Olympiad Management System",
     client: "National Aviation Olympiad",
@@ -919,7 +919,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility â
 
   {
     id: 6,
-    slug: "community-platform",
+    slug: "ayushma-yoga",
 
     title: "Community Platform",
     client: "Ayushma Yoga",
@@ -1037,13 +1037,12 @@ Management dashboards with real-time KPIs gave the founder complete visibility â
 
     beforeAfter: [
       {
-        before:
-          "Community lived on WhatsApp groups â€” chaotic, unsearchable, unstructured",
+        before: "WhatsApp & Telegram",
         after:
           "Dedicated community platform with forums, topics, and searchable history",
       },
       {
-        before: "Course content shared as random files in group chats",
+        before: "No courses, just live classes",
         after:
           "Structured courses with video lessons, progress tracking, and learning paths",
       },
@@ -1185,7 +1184,7 @@ export const DIGITAL_IDENTITY = [
     image: "/websites/sophos.png",
 
     href: "https://sophos-med.ru/",
-    tags: ["Healthcare", "Multilingual"],
+    tags: ["Healthcare"],
     description:
       "Healthcare provider website with doctor profiles, service pages, and appointment inquiry forms.",
     result:
@@ -1196,7 +1195,7 @@ export const DIGITAL_IDENTITY = [
     image: "/websites/firmst.png",
 
     href: "https://firmst.org/",
-    tags: ["Education", "Lead Gen"],
+    tags: ["Education"],
     description:
       "Program showcase with course catalog, enrollment CTAs, student testimonials, and multilingual support.",
     result:
@@ -1207,7 +1206,7 @@ export const DIGITAL_IDENTITY = [
     image: "/websites/sanmas.png",
 
     href: "https://sanmas.com/",
-    tags: ["Corporate", "B2B"],
+    tags: ["Healthcare"],
     description:
       "Professional corporate presence with service catalog, inquiry generation, and project portfolio.",
     result:
@@ -1218,7 +1217,7 @@ export const DIGITAL_IDENTITY = [
     image: "/websites/ayushma-yoga.png",
 
     href: "https://ayushmayoga.ru/",
-    tags: ["Wellness", "Bookings"],
+    tags: ["Wellness"],
     description:
       "Community-focused wellness site with class schedules, instructor profiles, and event registration.",
     result:
@@ -1229,7 +1228,7 @@ export const DIGITAL_IDENTITY = [
     image: "/websites/akashgati.png",
 
     href: "http://akashgati.org/",
-    tags: ["Foundation", "Non-Profit"],
+    tags: ["Aviation"],
     description:
       "Foundation website with program information, volunteer sign-up, and organizational credibility.",
     result:
@@ -1240,26 +1239,28 @@ export const DIGITAL_IDENTITY = [
     image: "/websites/eafo.png",
 
     href: "https://eafo.info/",
-    tags: ["Healthcare", "Federation"],
+    tags: ["Non-Profit"],
     description:
       "Institutional platform for oncology professionals, events, and research collaboration.",
     result:
       "Strengthened digital presence across the oncology community. Streamlined event and membership management.",
   },
-  {
-    title: "Pasovit Technologies",
-    image: "/websites/pasovit.png",
+  // {
+  //   title: "Pasovit Technologies",
+  //   image: "/websites/pasovit.png",
 
-    href: "https://pasovit.com/",
-    tags: ["Tech", "B2B"],
-    description:
-      "Custom software development company website showcasing capabilities, portfolio, and service offerings.",
-    result:
-      "Professional positioning that elevated brand perception. Inbound leads increased from organic search.",
-  },
+  //   href: "https://pasovit.com/",
+  //   tags: ["Tech", "B2B"],
+  //   description:
+  //     "Custom software development company website showcasing capabilities, portfolio, and service offerings.",
+  //   result:
+  //     "Professional positioning that elevated brand perception. Inbound leads increased from organic search.",
+  // },
   {
     title: "Vayupath",
-    href: "https://vayupath.com/",
+    image: "/websites/vayupath.png",
+
+    href: "https://careerinaviation.com/",
     tags: ["Brand", "Corporate"],
     description:
       "Brand and digital presence build with modern design, clear messaging, and conversion-focused layout.",
@@ -1271,7 +1272,7 @@ export const DIGITAL_IDENTITY = [
     image: "/websites/saffron.png",
 
     href: "https://saffronmoscow.ru/",
-    tags: ["Tech", "B2B"],
+    tags: ["Restaurant"],
     description:
       "Restaurant website with menu showcase, reservation system, event booking, and brand storytelling for a premium dining experience.",
     result:

@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { FaArrowRight, FaQuoteRight } from "react-icons/fa";
+import Link from "next/link";
 
 const TESTIMONIALS = [
   {
     org: "EAFO",
+    href: "",
     website: "https://eafo.info",
     image: "/testimonials/Dr. Soma.png",
     quote:
@@ -17,6 +19,7 @@ const TESTIMONIALS = [
   },
   {
     org: "Ayushma Yoga",
+    href: "ayushma-yoga",
     website: "https://ayushmayoga.ru/",
     image: "/testimonials/Dr. Murali.jpg",
     quote:
@@ -26,6 +29,7 @@ const TESTIMONIALS = [
   },
   {
     org: "FIRMST",
+    href: "firmst-language-school",
     website: "https://firmst.org/",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400",
@@ -36,6 +40,7 @@ const TESTIMONIALS = [
   },
   {
     org: "Sophos Medical",
+    href: "sophos-medical-centre",
     website: "https://sophos-med.ru/",
     image:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
@@ -134,34 +139,36 @@ export default function TestimonialsSection() {
 
                   <div className="flex flex-col md:flex-row gap-4">
                     {/* CASE STUDY (Intel Blue 3D) */}
-                    <motion.a
-                      href="#"
-                      whileHover={{ y: -2 }}
-                      whileTap={{
-                        y: 3,
-                        scale: 0.98,
-                        boxShadow: "0 2px 0 rgba(6,60,130,1)",
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 220,
-                        damping: 18,
-                      }}
-                      className="
+                    <Link href={`/case-studies/${active.href}`} target="_blank">
+                      <motion.button
+                        href="#"
+                        whileHover={{ y: -2 }}
+                        whileTap={{
+                          y: 3,
+                          scale: 0.98,
+                          boxShadow: "0 2px 0 rgba(6,60,130,1)",
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 220,
+                          damping: 18,
+                        }}
+                        className="
     relative px-8 py-2.5 rounded-lg
     text-white font-medium
-    border
+    border cursor-pointer
   "
-                      style={{
-                        background: "var(--color-intel-blue)",
-                        borderColor: "var(--color-intel-blue)",
-                        boxShadow: "0 6px 0 rgba(6,60,130,1)",
-                      }}
-                    >
-                      <span className="relative z-10 flex gap-2 items-center">
-                        Case Study <FaArrowRight className="text-base" />
-                      </span>
-                    </motion.a>
+                        style={{
+                          background: "var(--color-intel-blue)",
+                          borderColor: "var(--color-intel-blue)",
+                          boxShadow: "0 6px 0 rgba(6,60,130,1)",
+                        }}
+                      >
+                        <span className="relative z-10 flex gap-2 items-center">
+                          Case Study <FaArrowRight className="text-base" />
+                        </span>
+                      </motion.button>
+                    </Link>
 
                     {/* VIEW WEBSITE (Green 3D) */}
                     <motion.a

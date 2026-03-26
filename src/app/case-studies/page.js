@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <>
       <CaseStudiesHero activeTab={activeTab} onTabChange={setActiveTab} />
-      {activeTab === "Transformations" && <Transformations />}
-      {activeTab === "Digital Identity" && <DigitalIdentity />}
+      <Transformations />
+      {/* {activeTab === "Digital Identity" && <DigitalIdentity />} */}
       <CTASection />{" "}
     </>
   );

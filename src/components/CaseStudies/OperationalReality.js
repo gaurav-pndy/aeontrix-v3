@@ -68,7 +68,7 @@ export default function OperationalReality({ items }) {
                 {/* Header */}
                 <button
                   onClick={() => setOpen(expanded ? null : i)}
-                  className="w-full cursor-pointer flex flex-col md:flex-row md:items-center gap-4 justify-between p-4 text-left"
+                  className={`w-full cursor-pointer flex flex-col md:flex-row md:items-center gap-4 justify-between p-4 text-left ${expanded && "bg-muted"} `}
                 >
                   <div>
                     <h3 className="body-text font-semibold text-text">

@@ -92,7 +92,7 @@ export default async function DetailedCaseStudyPage({ params }) {
             {study.aiSystems && <AISystems systems={study.aiSystems} />}
             <FinancialImpact data={study.financialImpact} />
             <WhatWeBuilt items={study.whatWeBuilt} />
-            <TechStack techStack={study.techStack} />
+            {/* <TechStack techStack={study.techStack} /> */}
             <Testimonial testimonial={study.testimonial} />
             <BeyondNumbers items={study.beyondNumbers} />
             <CTASection />{" "}

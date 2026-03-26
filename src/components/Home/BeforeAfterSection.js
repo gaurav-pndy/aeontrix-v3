@@ -25,7 +25,7 @@ export default function BeforeAfterSection() {
 
   useEffect(() => {
     return scrollYProgress.on("change", (v) => {
-      if (v > 0.55) setIsAfter(true);
+      if (v > 0.37) setIsAfter(true);
       else setIsAfter(false);
     });
   }, [scrollYProgress]);
@@ -41,22 +41,26 @@ export default function BeforeAfterSection() {
     damping: 20,
   });
 
-  /* Timeline */
-  const scanStart = 0.4;
-  const scanEnd = 0.75;
+  // --- Timeline (all values are fractions of the total 300vh scroll) ---
+  // The scan runs from 0.27 → 0.5 (same visual portion as before,
+  // but now the section is 300vh so the last ~33% is a pure "rest" phase
+  // where the sticky frame is frozen in the "after" state and the user
+  // must scroll through it before the next section appears).
+  const scanStart = 0.27;
+  const scanEnd = 0.5;
 
   const scanX = useTransform(progress, [scanStart, scanEnd], ["120%", "-100%"]);
 
   const beforeOpacity = useTransform(
     progress,
-    [scanStart - 0.05, scanStart],
+    [scanStart - 0.033, scanStart],
     [1, 0],
   );
 
   const afterOpacity = useTransform(progress, [scanStart, scanEnd], [0, 1]);
 
   return (
-    <section ref={ref} className="relative h-[200vh] w-full ">
+    <section ref={ref} className="relative h-[260vh] w-full ">
       <div className="sticky top-0 h-screen  overflow-hidden pt-16 md:pt-24 ">
         {/* HEADER */}
         <HeaderToggle

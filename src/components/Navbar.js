@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { scrollToSection } from "@/utils/navigation";
+import { FaArrowRight } from "react-icons/fa";
 const NAV_ITEMS = [
   { label: "Home", type: "page", href: "/" },
   { label: "Solutions", type: "scroll", id: "solutions" },
@@ -221,22 +222,36 @@ export default function Navbar() {
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
-            <Link
-              href="#"
-              className="
-                rounded-full
-                border border-primary/80
-                bg-primary/80
-                px-6 py-3
-                text-sm font-medium
-                text-white
-                backdrop-blur-2xl
-                shadow-[0_0_30px_rgba(7,118,89,0.35)]
-                transition
-                hover:bg-primary/40
-              "
-            >
-              Book a Free Strategy Call
+            <Link href="#">
+              <motion.button
+                whileHover={{ y: -2 }}
+                whileTap={{
+                  y: 2,
+                  scale: 0.985,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 250,
+                  damping: 18,
+                }}
+                className="
+                      w-full cursor-pointer
+                      relative
+                      rounded-lg
+                      bg-primary
+                      px-6
+                      py-2.5
+                      font-medium
+                      text-white
+                      border border-primary flex items-center justify-center gap-2 small-text
+                    "
+                style={{
+                  boxShadow: "0 6px 0 rgba(4,100,75,1)",
+                }}
+              >
+                Book a Free Strategy Call
+                <FaArrowRight />
+              </motion.button>
             </Link>
           </motion.div>
         </div>
@@ -300,19 +315,36 @@ export default function Navbar() {
                 </motion.button>
               ))}
 
-              <Link
-                href="#"
-                className="
-                  mt-4 rounded-xl
-                  border border-primary/80
-                bg-primary/60
-                  px-5 py-3
-                  text-sm font-medium
-                  text-primary-soft
-                  text-center
-                "
-              >
-                Book a Free Strategy Call
+              <Link href="#">
+                <motion.button
+                  whileHover={{ y: -2 }}
+                  whileTap={{
+                    y: 2,
+                    scale: 0.985,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 250,
+                    damping: 18,
+                  }}
+                  className="
+                      w-full cursor-pointer
+                      relative
+                      rounded-lg
+                      bg-primary
+                      px-6
+                      py-2.5
+                      font-medium
+                      text-white
+                      border border-primary flex items-center justify-center gap-2 small-text
+                    "
+                  style={{
+                    boxShadow: "0 6px 0 rgba(4,100,75,1)",
+                  }}
+                >
+                  Book a Free Strategy Call
+                  <FaArrowRight className="text-base" />
+                </motion.button>{" "}
               </Link>
             </div>
           </motion.div>

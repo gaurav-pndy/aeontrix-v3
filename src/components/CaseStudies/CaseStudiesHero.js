@@ -33,7 +33,7 @@ export default function CaseStudiesHero({ activeTab, onTabChange }) {
         </p>
 
         {/* Tabs */}
-        <div className="absolute left-1/2 -translate-x-1/2 md:translate-0 w-full md:w-fit md:left-4 lg:left-6 -bottom-4  flex justify-center">
+        {/* <div className="absolute left-1/2 -translate-x-1/2 md:translate-0 w-full md:w-fit md:left-4 lg:left-6 -bottom-4  flex justify-center">
           <div className="relative flex  rounded-lg bg-white p-1 shadow-sm">
             {TABS.map((tab) => {
               const active = activeTab === tab;
@@ -63,7 +63,7 @@ export default function CaseStudiesHero({ activeTab, onTabChange }) {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
