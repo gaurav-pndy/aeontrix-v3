@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const satoshi = localFont({
   src: [
@@ -82,6 +83,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${satoshi.variable} ${jetbrainsMono.variable} antialiased bg-[#05070a]`}
       >
+        <ScrollToTop />
+
         <Navbar />
         {children}
         <Footer />

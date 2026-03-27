@@ -628,59 +628,245 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
 
   {
     id: 3,
-    slug: "national-aviation-olympiad",
+    slug: "ayushma-yoga",
 
-    title: "Unified Olympiad Management System",
-    client: "National Aviation Olympiad",
+    title: "Community Platform",
+    client: "Ayushma Yoga",
 
-    partners: ["Codeforge"],
-    industry: "Education/Events",
-    duration: "Ongoing",
+    partners: ["Codeforge + IntelliOps"],
+    industry: "Wellness",
+    duration: "3 months",
+    comingSoon: false,
 
-    comingSoon: true,
+    metrics: [
+      { value: "3.8x", label: "Community Engagement Increase" },
+      { value: "64%", label: "Reduction in Repetitive Queries" },
+      { value: "2.1x", label: "Member Retention Increase" },
+    ],
 
     stack: ["React", "Node.js", "MongoDB"],
 
     /* ---------- detailed page ---------- */
 
     hero: {
-      subtitle: "National Aviation Olympiad",
-      client: "National Aviation Olympiad (NAO)",
-      tags: ["CodeForge — Custom Software", "Intelligence"],
-      duration: "Ongoing",
+      subtitle: "Ayushma Yoga",
+      client: "Ayushma Yoga — Wellness Community",
+      tags: ["CodeForge + IntelliOps", "Retention", "Acquisition"],
+      duration: "3 months",
     },
+
+    metricsFull: [
+      { value: "3.8x", label: "Community Engagement Increase" },
+      { value: "64%", label: "Reduction in Repetitive Queries" },
+      { value: "2.1x", label: "Member Retention Increase" },
+      { value: "42%", label: "Course Completion Rate" },
+      { value: "15", label: "Hours Saved Weekly" },
+      { value: "$42K+", label: "Annual Value Impact" },
+    ],
+
+    walkthrough: [
+      { type: "image" },
+      { type: "image" },
+      { type: "image" },
+      { type: "image" },
+      { type: "image" },
+      { type: "image" },
+    ],
+
+    diagnostic: {
+      text: `Ayushma Yoga had built a loyal following through in-person classes and word of mouth — but their community existed entirely on WhatsApp groups and Instagram DMs. The founder was personally answering the same questions repeatedly, managing schedules through group messages, and losing track of enrollment. When Aeontrix ran The Diagnostic, it revealed a community engagement problem hiding behind what looked like a marketing problem. The demand was there. But there was no infrastructure to support it. The Diagnostic quantified $4,800/month in operational waste and missed revenue across three critical areas.`,
+    },
+
+    operationalReality: [
+      {
+        title: "Founder as Single Point of Contact",
+        cost: "$2,400/mo",
+        summary:
+          "Every question, every enrollment, every schedule update flowed through one person",
+
+        process:
+          "The founder personally handled all community communication via Instagram DMs and WhatsApp. New member onboarding, class schedule questions, payment confirmations, content recommendations — everything required the founder's direct involvement. The same 15-20 questions were answered repeatedly every week. The founder spent more time on admin than on teaching.",
+
+        timeCost: [
+          "8 hours/week answering repetitive DMs and WhatsApp messages",
+          "4 hours/week onboarding new members individually",
+          "3 hours/week managing schedule updates and communicating changes",
+        ],
+
+        businessImpact: [
+          "Founder burnout — more time on logistics than teaching",
+          "Response delays of 6-12 hours frustrating engaged members",
+          "No delegation possible — community collapsed when founder was unavailable",
+          "Growth capped by founder's personal bandwidth",
+        ],
+      },
+      {
+        title: "Community Trapped in WhatsApp",
+        cost: "$1,600/mo",
+        summary:
+          "Valuable discussions, resources, and history lost in an unsearchable message stream",
+
+        process:
+          "The entire community lived in WhatsApp groups. Useful discussions about yoga philosophy, technique questions, member introductions, and resource sharing all happened in a linear message stream. Nothing was searchable. New members had no access to past conversations. Files shared in the group were buried within days. The community had zero institutional memory.",
+
+        timeCost: [
+          "2 hours/week re-sharing resources that got buried in the chat",
+          "2 hours/week repeating information for new members who missed earlier discussions",
+        ],
+
+        businessImpact: [
+          "Valuable community knowledge lost in an unsearchable stream",
+          "New members felt disconnected — no onboarding or orientation experience",
+          "Experienced members stopped contributing because discussions disappeared",
+          "No way to organize conversations by topic, level, or interest",
+        ],
+      },
+      {
+        title: "Course Content Scattered & Inaccessible",
+        cost: "$800/mo",
+        summary:
+          "Recorded sessions, guides, and resources shared as random files with no structure",
+
+        process:
+          "The founder occasionally recorded live sessions and shared them in the WhatsApp group as video files. Written guides were sent as PDFs. There was no structured curriculum, no progress tracking, and no way for members to learn at their own pace. Members who missed a live session had to hope the recording was still findable in the chat history.",
+
+        timeCost: [
+          "3 hours/week reformatting and re-uploading content that members couldn't find",
+          "2 hours/week fielding requests for specific past recordings",
+        ],
+
+        businessImpact: [
+          "No self-paced learning possible — everything depended on live attendance",
+          "Members who missed sessions had no structured way to catch up",
+          "No course completion tracking or progress visibility",
+          "Premium content couldn't be monetized because there was no delivery mechanism",
+        ],
+      },
+    ],
+
+    beforeAfter: [
+      {
+        before: "WhatsApp & Telegram",
+        after:
+          "Dedicated community platform with forums, topics, and searchable history",
+      },
+      {
+        before: "No courses, just live classes",
+        after:
+          "Structured courses with video lessons, progress tracking, and learning paths",
+      },
+      {
+        before: "Live sessions on informal video calls with no recordings",
+        after:
+          "Integrated live sessions with scheduling, attendance, and automatic recordings",
+      },
+      {
+        before:
+          "Founder personally answering the same questions repeatedly via DMs",
+        after:
+          "AI-powered Q&A engine that surfaces existing answers before new questions are asked",
+      },
+      {
+        before: "No way to offer tiered access or premium content",
+        after:
+          "Role-based access with member, admin, and owner permissions for structured programs",
+      },
+    ],
+
+    solution: {
+      description: `The CodeForge workstream delivered a custom-built community platform designed specifically for Ayushma Yoga's teaching model, while IntelliOps layered in intelligent engagement automation. A private community space with structured forums — organized by topic, program level, and interest area — where members post questions, share experiences, and support each other. Real-time chat enables direct member-to-member conversations. The courses module allows structured learning paths with video lessons, materials, assignments, and progress tracking. Live session integration handles scheduling, registration, attendance, and automatic recording. An AI-powered Q&A engine organizes questions and surfaces existing answers before members ask again, reducing the founder's repetitive DM load. Intelligent engagement monitoring flags members showing disengagement patterns and triggers re-activation sequences. Role-based access controls separate owners, administrators, and members with granular permissions. The platform transformed Ayushma from a schedule-dependent practice into an always-on wellness community.`,
+    },
+
+    aiSystems: false,
+    financialImpact: {
+      rows: [
+        {
+          category: "Founder Time on Community Management",
+          before: "$2,400/mo",
+          after: "$600/mo",
+          savings: "$1,800/mo",
+        },
+        {
+          category: "Member Churn & Missed Revenue",
+          before: "$1,600/mo",
+          after: "$500/mo",
+          savings: "$1,100/mo",
+        },
+        {
+          category: "Content Distribution & Course Delivery",
+          before: "$800/mo",
+          after: "$200/mo",
+          savings: "$600/mo",
+        },
+      ],
+      total: {
+        before: "$4,800/mo",
+        after: "$1,300/mo",
+        savings: "$3,500/mo",
+      },
+      annualImpact: "$42,000+",
+    },
+
+    whatWeBuilt: [
+      {
+        title: "Community Forum",
+        description:
+          "Structured discussion spaces organized by topic, program level, and interest area with threaded conversations and search.",
+      },
+      {
+        title: "Real-Time Member Chat",
+        description:
+          "Direct messaging and group conversations that replace WhatsApp chaos with organized, persistent, and searchable communication.",
+      },
+      {
+        title: "Course Builder & Library",
+        description:
+          "Create structured programs with video lessons, reading materials, assignments, and progress tracking for self-paced learning.",
+      },
+      {
+        title: "Live Session Integration",
+        description:
+          "Schedule, host, and record live sessions with automatic attendance tracking and replay access for members who miss a class.",
+      },
+      {
+        title: "AI-Powered Q&A Engine",
+        description:
+          "Intelligent question routing that surfaces existing answers, reduces repetitive queries, and builds a searchable knowledge base.",
+      },
+      {
+        title: "Role-Based Access Control",
+        description:
+          "Granular permissions for owners, administrators, and members — delegate moderation and content management without losing control.",
+      },
+    ],
+
+    techStack: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "WebRTC",
+      "Socket.io",
+      "AWS",
+    ],
+
+    testimonial: {
+      quote: `Before this, I was the community. Every question came to me, every schedule change was a WhatsApp message, every new member needed personal onboarding. Now the community runs itself. Members help each other, courses are always available, and I can focus on teaching instead of managing logistics. It feels like we went from a class to an institution.`,
+      name: "Ayushma",
+      role: "Founder, Ayushma Yoga",
+    },
+
+    beyondNumbers: [
+      "Founder freed from being the sole point of contact — community self-sustains between sessions",
+      "Members report deeper connection with each other, not just with the instructor",
+      "Course content creates value between live sessions, increasing perceived worth of membership",
+      "Platform professionalism elevated brand perception",
+      "Foundation built for scaling to multiple instructors without operational chaos",
+    ],
   },
 
   {
     id: 4,
-    slug: "xentary-agency-os",
-
-    title: "Xentary — Agency Operating System",
-    client: "Custom In-House ERP for Agencies",
-
-    partners: ["Xentary"],
-    industry: "Professional Services",
-    duration: "3 months + Ongoing",
-
-    comingSoon: true,
-
-    stack: ["React", "Node.js", "MongoDB"],
-
-    /* ---------- detailed page ---------- */
-
-    hero: {
-      subtitle: "Custom In-House ERP for Agencies",
-      tags: [
-        "Xentary — Proprietary Operating Platform",
-        "Retention",
-        "Intelligence",
-      ],
-      duration: "Ongoing",
-    },
-  },
-
-  {
-    id: 5,
     slug: "content-intelligence-os",
 
     title: "Content Intelligence OS",
@@ -918,242 +1104,56 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
   },
 
   {
-    id: 6,
-    slug: "ayushma-yoga",
+    id: 5,
+    slug: "xentary-agency-os",
 
-    title: "Community Platform",
-    client: "Ayushma Yoga",
+    title: "Xentary — Agency Operating System",
+    client: "Custom In-House ERP for Agencies",
 
-    partners: ["Codeforge + IntelliOps"],
-    industry: "Wellness",
-    duration: "3 months",
-    comingSoon: false,
+    partners: ["Xentary"],
+    industry: "Professional Services",
+    duration: "3 months + Ongoing",
 
-    metrics: [
-      { value: "3.8x", label: "Community Engagement Increase" },
-      { value: "64%", label: "Reduction in Repetitive Queries" },
-      { value: "2.1x", label: "Member Retention Increase" },
-    ],
+    comingSoon: true,
 
     stack: ["React", "Node.js", "MongoDB"],
 
     /* ---------- detailed page ---------- */
 
     hero: {
-      subtitle: "Ayushma Yoga",
-      client: "Ayushma Yoga — Wellness Community",
-      tags: ["CodeForge + IntelliOps", "Retention", "Acquisition"],
-      duration: "3 months",
-    },
-
-    metricsFull: [
-      { value: "3.8x", label: "Community Engagement Increase" },
-      { value: "64%", label: "Reduction in Repetitive Queries" },
-      { value: "2.1x", label: "Member Retention Increase" },
-      { value: "42%", label: "Course Completion Rate" },
-      { value: "15", label: "Hours Saved Weekly" },
-      { value: "$42K+", label: "Annual Value Impact" },
-    ],
-
-    walkthrough: [
-      { type: "image" },
-      { type: "image" },
-      { type: "image" },
-      { type: "image" },
-      { type: "image" },
-      { type: "image" },
-    ],
-
-    diagnostic: {
-      text: `Ayushma Yoga had built a loyal following through in-person classes and word of mouth — but their community existed entirely on WhatsApp groups and Instagram DMs. The founder was personally answering the same questions repeatedly, managing schedules through group messages, and losing track of enrollment. When Aeontrix ran The Diagnostic, it revealed a community engagement problem hiding behind what looked like a marketing problem. The demand was there. But there was no infrastructure to support it. The Diagnostic quantified $4,800/month in operational waste and missed revenue across three critical areas.`,
-    },
-
-    operationalReality: [
-      {
-        title: "Founder as Single Point of Contact",
-        cost: "$2,400/mo",
-        summary:
-          "Every question, every enrollment, every schedule update flowed through one person",
-
-        process:
-          "The founder personally handled all community communication via Instagram DMs and WhatsApp. New member onboarding, class schedule questions, payment confirmations, content recommendations — everything required the founder's direct involvement. The same 15-20 questions were answered repeatedly every week. The founder spent more time on admin than on teaching.",
-
-        timeCost: [
-          "8 hours/week answering repetitive DMs and WhatsApp messages",
-          "4 hours/week onboarding new members individually",
-          "3 hours/week managing schedule updates and communicating changes",
-        ],
-
-        businessImpact: [
-          "Founder burnout — more time on logistics than teaching",
-          "Response delays of 6-12 hours frustrating engaged members",
-          "No delegation possible — community collapsed when founder was unavailable",
-          "Growth capped by founder's personal bandwidth",
-        ],
-      },
-      {
-        title: "Community Trapped in WhatsApp",
-        cost: "$1,600/mo",
-        summary:
-          "Valuable discussions, resources, and history lost in an unsearchable message stream",
-
-        process:
-          "The entire community lived in WhatsApp groups. Useful discussions about yoga philosophy, technique questions, member introductions, and resource sharing all happened in a linear message stream. Nothing was searchable. New members had no access to past conversations. Files shared in the group were buried within days. The community had zero institutional memory.",
-
-        timeCost: [
-          "2 hours/week re-sharing resources that got buried in the chat",
-          "2 hours/week repeating information for new members who missed earlier discussions",
-        ],
-
-        businessImpact: [
-          "Valuable community knowledge lost in an unsearchable stream",
-          "New members felt disconnected — no onboarding or orientation experience",
-          "Experienced members stopped contributing because discussions disappeared",
-          "No way to organize conversations by topic, level, or interest",
-        ],
-      },
-      {
-        title: "Course Content Scattered & Inaccessible",
-        cost: "$800/mo",
-        summary:
-          "Recorded sessions, guides, and resources shared as random files with no structure",
-
-        process:
-          "The founder occasionally recorded live sessions and shared them in the WhatsApp group as video files. Written guides were sent as PDFs. There was no structured curriculum, no progress tracking, and no way for members to learn at their own pace. Members who missed a live session had to hope the recording was still findable in the chat history.",
-
-        timeCost: [
-          "3 hours/week reformatting and re-uploading content that members couldn't find",
-          "2 hours/week fielding requests for specific past recordings",
-        ],
-
-        businessImpact: [
-          "No self-paced learning possible — everything depended on live attendance",
-          "Members who missed sessions had no structured way to catch up",
-          "No course completion tracking or progress visibility",
-          "Premium content couldn't be monetized because there was no delivery mechanism",
-        ],
-      },
-    ],
-
-    beforeAfter: [
-      {
-        before: "WhatsApp & Telegram",
-        after:
-          "Dedicated community platform with forums, topics, and searchable history",
-      },
-      {
-        before: "No courses, just live classes",
-        after:
-          "Structured courses with video lessons, progress tracking, and learning paths",
-      },
-      {
-        before: "Live sessions on informal video calls with no recordings",
-        after:
-          "Integrated live sessions with scheduling, attendance, and automatic recordings",
-      },
-      {
-        before:
-          "Founder personally answering the same questions repeatedly via DMs",
-        after:
-          "AI-powered Q&A engine that surfaces existing answers before new questions are asked",
-      },
-      {
-        before: "No way to offer tiered access or premium content",
-        after:
-          "Role-based access with member, admin, and owner permissions for structured programs",
-      },
-    ],
-
-    solution: {
-      description: `The CodeForge workstream delivered a custom-built community platform designed specifically for Ayushma Yoga's teaching model, while IntelliOps layered in intelligent engagement automation. A private community space with structured forums — organized by topic, program level, and interest area — where members post questions, share experiences, and support each other. Real-time chat enables direct member-to-member conversations. The courses module allows structured learning paths with video lessons, materials, assignments, and progress tracking. Live session integration handles scheduling, registration, attendance, and automatic recording. An AI-powered Q&A engine organizes questions and surfaces existing answers before members ask again, reducing the founder's repetitive DM load. Intelligent engagement monitoring flags members showing disengagement patterns and triggers re-activation sequences. Role-based access controls separate owners, administrators, and members with granular permissions. The platform transformed Ayushma from a schedule-dependent practice into an always-on wellness community.`,
-    },
-
-    aiSystems: false,
-    financialImpact: {
-      rows: [
-        {
-          category: "Founder Time on Community Management",
-          before: "$2,400/mo",
-          after: "$600/mo",
-          savings: "$1,800/mo",
-        },
-        {
-          category: "Member Churn & Missed Revenue",
-          before: "$1,600/mo",
-          after: "$500/mo",
-          savings: "$1,100/mo",
-        },
-        {
-          category: "Content Distribution & Course Delivery",
-          before: "$800/mo",
-          after: "$200/mo",
-          savings: "$600/mo",
-        },
+      subtitle: "Custom In-House ERP for Agencies",
+      tags: [
+        "Xentary — Proprietary Operating Platform",
+        "Retention",
+        "Intelligence",
       ],
-      total: {
-        before: "$4,800/mo",
-        after: "$1,300/mo",
-        savings: "$3,500/mo",
-      },
-      annualImpact: "$42,000+",
+      duration: "Ongoing",
     },
+  },
 
-    whatWeBuilt: [
-      {
-        title: "Community Forum",
-        description:
-          "Structured discussion spaces organized by topic, program level, and interest area with threaded conversations and search.",
-      },
-      {
-        title: "Real-Time Member Chat",
-        description:
-          "Direct messaging and group conversations that replace WhatsApp chaos with organized, persistent, and searchable communication.",
-      },
-      {
-        title: "Course Builder & Library",
-        description:
-          "Create structured programs with video lessons, reading materials, assignments, and progress tracking for self-paced learning.",
-      },
-      {
-        title: "Live Session Integration",
-        description:
-          "Schedule, host, and record live sessions with automatic attendance tracking and replay access for members who miss a class.",
-      },
-      {
-        title: "AI-Powered Q&A Engine",
-        description:
-          "Intelligent question routing that surfaces existing answers, reduces repetitive queries, and builds a searchable knowledge base.",
-      },
-      {
-        title: "Role-Based Access Control",
-        description:
-          "Granular permissions for owners, administrators, and members — delegate moderation and content management without losing control.",
-      },
-    ],
+  {
+    id: 6,
+    slug: "national-aviation-olympiad",
 
-    techStack: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Express",
-      "WebRTC",
-      "Socket.io",
-      "AWS",
-    ],
+    title: "Unified Olympiad Management System",
+    client: "National Aviation Olympiad",
 
-    testimonial: {
-      quote: `Before this, I was the community. Every question came to me, every schedule change was a WhatsApp message, every new member needed personal onboarding. Now the community runs itself. Members help each other, courses are always available, and I can focus on teaching instead of managing logistics. It feels like we went from a class to an institution.`,
-      name: "Ayushma",
-      role: "Founder, Ayushma Yoga",
+    partners: ["Codeforge"],
+    industry: "Education/Events",
+    duration: "Ongoing",
+
+    comingSoon: true,
+
+    stack: ["React", "Node.js", "MongoDB"],
+
+    /* ---------- detailed page ---------- */
+
+    hero: {
+      subtitle: "National Aviation Olympiad",
+      client: "National Aviation Olympiad (NAO)",
+      tags: ["CodeForge — Custom Software", "Intelligence"],
+      duration: "Ongoing",
     },
-
-    beyondNumbers: [
-      "Founder freed from being the sole point of contact — community self-sustains between sessions",
-      "Members report deeper connection with each other, not just with the instructor",
-      "Course content creates value between live sessions, increasing perceived worth of membership",
-      "Platform professionalism elevated brand perception",
-      "Foundation built for scaling to multiple instructors without operational chaos",
-    ],
   },
 ];
 
