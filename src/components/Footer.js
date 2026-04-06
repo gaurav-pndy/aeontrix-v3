@@ -221,10 +221,10 @@ export default function Footer() {
           <div className="flex gap-6">
             <Link
               target="_blank"
-              href="/terms-of-use"
+              href="/terms-of-service"
               className="hover:text-green transition-colors"
             >
-              T&amp;C
+              Terms of Service
             </Link>
             <Link
               target="_blank"

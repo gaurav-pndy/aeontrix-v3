@@ -24,12 +24,12 @@ export default function PrivacyPolicyPage() {
         <header className="mb-10">
           <h1 className="display-text mb-4">Privacy Policy</h1>
 
-          <p className="subtitle-text text-black/90 mb-4">
+          {/* <p className="subtitle-text text-black/90 mb-4">
             We are committed to protecting your personal information and your
             right to privacy.
-          </p>
+          </p> */}
           <p className="subtitle-text text-primary ">
-            Last updated on 15th January, 2026
+            Last updated on 6th April, 2026
           </p>
         </header>
 
@@ -69,282 +69,338 @@ export default function PrivacyPolicyPage() {
             {/* <div className="absolute left-0 top-0 h-full w-1 bg-primary/60" /> */}
 
             <div className="p-8 md:p-12 space-y-14">
-              <Intro />
+              {/* <Intro /> */}
 
-              <Section
-                id="info-collect"
-                title="1. WHAT INFORMATION DO WE COLLECT?"
-              >
-                <SubSection title="Personal information you disclose to us">
-                  <p className="body-text font-semibold">
-                    In Short: We collect personal information that you provide
-                    to us.
-                  </p>
-
-                  <p className="body-text">
-                    We collect personal information that you voluntarily provide
-                    to us when you express an interest in obtaining information
-                    about us or our products and Services, when you participate
-                    in activities on the Website (such as posting messages,
-                    entering competitions, contests, or giveaways), or otherwise
-                    when you contact us.
-                  </p>
-
-                  <p className="body-text">
-                    The personal information that we collect depends on the
-                    context of your interactions with us, the choices you make,
-                    and the products and features you use. The personal
-                    information we collect may include:
-                  </p>
-
-                  <p className="body-text">
-                    <span className="font-semibold">
-                      Personal Information Provided by You:
-                    </span>
-                    <br />
-                    Names, phone numbers, email addresses, mailing addresses,
-                    job titles, contact preferences, billing addresses,
-                    debit/credit card numbers, and other similar information.
-                  </p>
-
-                  <p className="body-text">
-                    <span className="font-semibold">Payment Data:</span>
-                    <br />
-                    We may collect data necessary to process your payment, such
-                    as your payment instrument number and security code.
-                  </p>
-
-                  <p className="body-text">
-                    All personal information you provide must be true, complete,
-                    and accurate, and you must notify us of any changes.
-                  </p>
-                </SubSection>
-
-                <SubSection title="Information automatically collected">
-                  <p className="body-text font-semibold">
-                    In Short: Some information such as IP address and device
-                    details is collected automatically.
-                  </p>
-
-                  <p className="body-text">
-                    We automatically collect certain information when you visit,
-                    use, or navigate the Website. This includes device and usage
-                    information such as IP address, browser type, operating
-                    system, referring URLs, location, and usage data.
-                  </p>
-
-                  <p className="body-text">
-                    This information is needed to maintain the security and
-                    operation of the Website and for analytics.
-                  </p>
-
-                  <ul className="list-disc pl-5 body-text">
-                    <li>Log and Usage Data</li>
-                    <li>Device Data</li>
-                    <li>Location Data</li>
-                  </ul>
-
-                  <p className="body-text">
-                    You can disable location collection through your device
-                    settings, though this may limit some Services.
-                  </p>
-                </SubSection>
-
-                <SubSection title="Information collected from other sources">
-                  <p className="body-text font-semibold">
-                    In Short: We may receive limited data from public databases
-                    and marketing partners.
-                  </p>
-
-                  <p className="body-text">
-                    This may include contact details, social profiles, IP
-                    addresses, and intent data for marketing and event
-                    promotion.
-                  </p>
-                </SubSection>
-              </Section>
-
-              <Section id="use-info" title="2. HOW DO WE USE YOUR INFORMATION?">
-                <p className="body-text font-semibold">
-                  In Short: We use your information to operate, secure, improve,
-                  and market our Services.
+              <Section id="introduction" title="1. INTRODUCTION">
+                <p className="body-text">
+                  Aeontrix AI ("we," "us," or "our") operates the website
+                  aeontrix.ai and the domain aeontrix.com, which redirects to
+                  aeontrix.ai. All email communications from Aeontrix AI are
+                  sent from @aeontrix.com addresses. This Privacy Policy applies
+                  to both domains and all associated communications.
                 </p>
 
-                <p className="body-text">We use your information to:</p>
+                <p className="body-text">
+                  We are committed to protecting the privacy of anyone who
+                  visits our website or interacts with our services. This
+                  Privacy Policy explains what information we collect, how we
+                  use it, how it is shared, and your rights regarding your data.
+                </p>
+
+                <p className="body-text">
+                  By using this Site or submitting any form, you agree to the
+                  practices described in this policy.
+                </p>
+              </Section>
+
+              <Section
+                id="information-we-collect"
+                title="2. INFORMATION WE COLLECT"
+              >
+                <p className="body-text font-semibold">
+                  Information you provide directly:
+                </p>
 
                 <ul className="list-disc pl-5 space-y-2 body-text">
-                  <li>Create and manage accounts</li>
-                  <li>Post testimonials (with consent)</li>
-                  <li>Request feedback</li>
-                  <li>Enable user communication</li>
-                  <li>Provide services and support</li>
-                  <li>Send administrative and marketing communications</li>
-                  <li>Deliver targeted advertising</li>
-                  <li>Process payments and orders</li>
-                  <li>Run contests and promotions</li>
-                  <li>Analyze performance and improve Services</li>
+                  <li>Full name</li>
+                  <li>Email address</li>
+                  <li>Phone number</li>
+                  <li>
+                    Any additional information you voluntarily provide through
+                    contact forms or inquiry submissions
+                  </li>
+                </ul>
+
+                <p className="body-text font-semibold">
+                  Information collected automatically:
+                </p>
+
+                <p className="body-text">
+                  When you visit our Site, certain data is collected
+                  automatically through tracking technologies, including:
+                </p>
+
+                <ul className="list-disc pl-5 space-y-2 body-text">
+                  <li>IP address and approximate location</li>
+                  <li>Browser type and version</li>
+                  <li>Device type and operating system</li>
+                  <li>Pages visited, time on site, and referring URL</li>
+                  <li>
+                    Interaction data (clicks, scroll depth, form interactions)
+                  </li>
+                </ul>
+              </Section>
+
+              <Section
+                id="tracking-technologies"
+                title="3. TRACKING TECHNOLOGIES WE USE"
+              >
+                <p className="body-text ">
+                  <span className="font-semibold">Meta Pixel:</span> Our Site
+                  uses the Meta Pixel (formerly Facebook Pixel), a tracking tool
+                  provided by Meta Platforms, Inc. The Meta Pixel collects data
+                  about your activity on this Site and sends it to Meta. This
+                  data is used to measure the effectiveness of our advertising,
+                  optimize ad delivery, and build custom audiences on the Meta
+                  platform. Meta may use this data in accordance with its own
+                  Data Policy. You can learn more at{" "}
+                  <a
+                    href="https://www.facebook.com/privacy/explanation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    facebook.com/privacy/explanation
+                  </a>
+                  .
+                </p>
+
+                <p className="body-text">
+                  <span className="font-semibold">
+                    Google Tags (Google Tag Manager / Google Analytics):
+                  </span>{" "}
+                  We use Google Tag Manager and associated Google tags, which
+                  may include Google Analytics and Google Ads conversion
+                  tracking. These tools collect anonymized data about how
+                  visitors interact with our Site, which we use to understand
+                  traffic patterns and improve our services. Google may process
+                  this data in accordance with its Privacy Policy at{" "}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    policies.google.com/privacy
+                  </a>
+                  .
+                </p>
+
+                <p className="body-text">
+                  You can opt out of Google Analytics tracking by using the{" "}
+                  <a
+                    href="https://tools.google.com/dlpage/gaoptout"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Google Analytics Opt-Out Browser Add-On
+                  </a>
+                  .
+                </p>
+
+                <p className="body-text">
+                  <span className="font-semibold">Cookies:</span> Both Meta and
+                  Google tools use cookies — small text files stored in your
+                  browser — to track sessions and user behaviour across visits.
+                  You can control cookies through your browser settings. Note
+                  that disabling cookies may affect Site functionality.
+                </p>
+              </Section>
+
+              <Section
+                id="how-we-use-info"
+                title="4. HOW WE USE YOUR INFORMATION?"
+              >
+                <p className="body-text font-semibold">
+                  We use the information we collect to:
+                </p>
+
+                <ul className="list-disc pl-5 space-y-2 body-text">
+                  <li>
+                    Respond to your inquiries and communicate about our services
+                  </li>
+                  <li>
+                    Send you relevant information via email, SMS, or phone based
+                    on your submission and consent
+                  </li>
+                  <li>Improve the performance and content of our Site</li>
+                  <li>Measure the effectiveness of our marketing campaigns</li>
                   <li>Comply with legal obligations</li>
                 </ul>
-
-                <p className="body-text">
-                  We do not use identifiable personal information for analytics
-                  without your consent.
-                </p>
               </Section>
 
               <Section
-                id="sharing"
-                title="3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?"
+                id="automated-communications"
+                title="5. AUTOMATED COMMUNICATIONS AND SMS COMPLIANCE"
               >
                 <p className="body-text font-semibold">
-                  In Short: We only share information when legally allowed or
-                  required.
+                  When you submit a form on our Site or any system operated by
+                  Aeontrix AI and provide your consent at the time of
+                  submission, you may receive:
                 </p>
-
-                <p className="body-text">We may share data based on:</p>
 
                 <ul className="list-disc pl-5 space-y-2 body-text">
-                  <li>Consent</li>
-                  <li>Legitimate business interests</li>
-                  <li>Contractual necessity</li>
-                  <li>Legal obligations</li>
-                  <li>Protection of rights and safety</li>
-                </ul>
-
-                <p className="body-text">This may include:</p>
-
-                <ul className="list-disc pl-5 space-y-2 body-text">
-                  <li>Business transfers</li>
-                  <li>Affiliates</li>
-                  <li>Business partners</li>
-                  <li>Public interactions by users</li>
-                </ul>
-              </Section>
-
-              <Section
-                id="cookies"
-                title="4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?"
-              >
-                <p className="body-text font-semibold">In Short: Yes.</p>
-
-                <p className="body-text">
-                  We use cookies, web beacons, and pixels. Details are provided
-                  in our Cookie Policy.
-                </p>
-              </Section>
-
-              <Section
-                id="retention"
-                title="5. HOW LONG DO WE KEEP YOUR INFORMATION?"
-              >
-                <p className="body-text font-semibold">
-                  In Short: No longer than necessary.
-                </p>
-
-                <p className="body-text">
-                  We keep data only as long as required for business or legal
-                  purposes, and never longer than one year unless legally
-                  required.
-                </p>
-              </Section>
-
-              <Section
-                id="security"
-                title="6. HOW DO WE KEEP YOUR INFORMATION SAFE?"
-              >
-                <p className="body-text font-semibold">
-                  In Short: We use technical and organizational safeguards.{" "}
-                </p>
-
-                <p className="body-text">
-                  No system is perfectly secure, and data transmission is at
-                  your own risk.
-                </p>
-              </Section>
-
-              <Section id="rights" title="7. WHAT ARE YOUR PRIVACY RIGHTS?">
-                <p className="body-text font-semibold">
-                  In Short: You have legal rights in many regions.{" "}
-                </p>
-
-                <p className="body-text">You may request:</p>
-
-                <ul className="list-disc pl-5 space-y-2 body-text">
-                  <li>Access</li>
-                  <li>Correction</li>
-                  <li>Deletion</li>
-                  <li>Restriction</li>
-                  <li>Data portability</li>
-                  <li>Objection</li>
+                  <li>
+                    Automated emails related to your inquiry or onboarding
+                  </li>
+                  <li>SMS messages with relevant information or follow-up</li>
+                  <li>Phone calls from our team or automated systems</li>
                 </ul>
 
                 <p className="body-text">
-                  Requests should be sent to{" "}
+                  <span className="font-semibold">
+                    {" "}
+                    SMS — A2P Messaging Disclosure:
+                  </span>{" "}
+                  Our SMS communications are sent via registered A2P
+                  (Application-to-Person) messaging systems in compliance with
+                  carrier requirements and the TCPA (Telephone Consumer
+                  Protection Act). By opting in, you consent to receive
+                  automated text messages from Aeontrix AI.
+                </p>
+
+                <ul className="list-disc pl-5 space-y-2 body-text">
+                  <li>
+                    You may opt out at any time by replying STOP to any SMS
+                  </li>
+                  <li>Reply HELP for assistance</li>
+                  <li>Message and data rates may apply</li>
+                  <li>Message frequency varies</li>
+                  <li>
+                    We do not share your phone number with third parties for SMS
+                    marketing purposes
+                  </li>
+                </ul>
+              </Section>
+
+              <Section id="data-sharing" title="6. DATA SHARING">
+                <p className="body-text ">
+                  <span className="font-semibold">
+                    We do not sell your personal data.
+                  </span>{" "}
+                  We do not trade, rent, or sell your name, email, phone number,
+                  or any personally identifiable information to third parties
+                  for their own marketing purposes.
+                </p>
+
+                <p className="body-text">
+                  We may share your information only in the following limited
+                  circumstances:
+                </p>
+
+                <ul className="list-disc pl-5 space-y-2 body-text">
+                  <li>
+                    <span className="font-semibold">Service providers:</span>{" "}
+                    Third-party platforms we use to operate our business (such
+                    as CRM, billing, email service providers). These providers
+                    are bound by their own data protection policies and process
+                    data only as necessary to provide their services.
+                  </li>
+                  <li>
+                    <span className="font-semibold">Meta and Google:</span> As
+                    described above, these platforms receive behavioural and
+                    event data from our Site through their respective tracking
+                    tools. This is governed by their own privacy policies.
+                  </li>
+                  <li>
+                    <span className="font-semibold">Legal requirements:</span>{" "}
+                    We may disclose information if required to do so by law or
+                    in response to valid legal process.
+                  </li>
+                </ul>
+              </Section>
+
+              <Section id="data-retention" title="7. DATA RETENTION">
+                <p className="body-text ">
+                  We retain your personal information for as long as necessary
+                  to fulfill the purposes outlined in this policy, maintain
+                  business records, and comply with legal obligations. If you
+                  wish to have your data deleted, please contact us and we will
+                  honour your request in accordance with applicable law.
+                </p>
+              </Section>
+
+              <Section id="your-rights" title="8. YOUR RIGHTS">
+                <p className="body-text">
+                  Depending on your location, you may have the right to:
+                </p>
+
+                <ul className="list-disc pl-5 space-y-2 body-text">
+                  <li>Access the personal data we hold about you</li>
+                  <li>Request correction of inaccurate data</li>
+                  <li>Request deletion of your data</li>
+                  <li>Withdraw consent to communications at any time</li>
+                  <li>Object to certain processing activities</li>
+                </ul>
+
+                <p className="body-text">
+                  To exercise any of these rights, contact us at the details
+                  below.
+                </p>
+              </Section>
+
+              <Section
+                id="regional-privacy-rights"
+                title="9. REGIONAL PRIVACY RIGHTS"
+              >
+                <p className="body-text">
+                  <span className="font-semibold">
+                    {" "}
+                    California Residents (CCPA):
+                  </span>{" "}
+                  If you are a California resident, you have the right to: know
+                  what personal information we collect and how it is used;
+                  request deletion of your personal information; opt out of the
+                  sale of your personal information (note: we do not sell
+                  personal data); and non-discriminatory treatment for
+                  exercising your rights. To make a request, contact us at
+                  contact@aeontrix.com and we will respond within 45 days.
+                </p>
+
+                <p className="body-text">
+                  <span className="font-semibold">
+                    {" "}
+                    European Economic Area, UK, and Switzerland (GDPR)
+                  </span>{" "}
+                  If you are located in the EEA, UK, or Switzerland, your
+                  personal data is processed under the General Data Protection
+                  Regulation (GDPR) or applicable equivalent. Our lawful basis
+                  for processing your data is your consent (provided at the time
+                  of form submission) and our legitimate interest in responding
+                  to business inquiries. You have the right to access, correct,
+                  delete, or restrict processing of your data, and to lodge a
+                  complaint with your local data protection authority. To
+                  exercise your rights, contact us at contact@aeontrix.com.
+                </p>
+              </Section>
+
+              <Section id="data-security" title="10. DATA SECURITY">
+                <p className="body-text">
+                  We implement reasonable technical and organisational measures
+                  to protect your personal data from unauthorised access,
+                  disclosure, or misuse. However, no method of transmission over
+                  the internet is completely secure, and we cannot guarantee
+                  absolute security.
+                </p>
+              </Section>
+
+              <Section id="children's-privacy" title="11. CHILDREN'S PRIVACY">
+                <p className="body-text">
+                  Our Site and services are not directed at individuals under
+                  the age of 16. We do not knowingly collect personal data from
+                  minors. If you believe a minor has submitted data through our
+                  Site, please contact us and we will remove it promptly.
+                </p>
+              </Section>
+              <Section
+                id="changes-to-this-policy"
+                title="12. CHANGES TO THIS POLICY"
+              >
+                <p className="body-text">
+                  We may update this Privacy Policy from time to time. Any
+                  changes will be posted to this page with an updated effective
+                  date. We encourage you to review this page periodically.
+                </p>
+              </Section>
+              <Section id="contact" title="13. CONTACT">
+                <p className="body-text">
+                  If you have any questions, concerns, or requests regarding
+                  this Privacy Policy, please contact us at{" "}
                   <a
                     href="mailto:contact@aeontrix.com"
                     className="font-semibold"
                   >
                     contact@aeontrix.com
                   </a>
-                </p>
-              </Section>
-
-              <Section
-                id="do-not-track"
-                title="8. CONTROLS FOR DO-NOT-TRACK FEATURES"
-              >
-                <p className="body-text">
-                  We do not currently respond to Do-Not-Track browser
-                  signals.{" "}
-                </p>
-              </Section>
-
-              <Section
-                id="california"
-                title="9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?"
-              >
-                <p className="body-text">
-                  Yes. California residents may request:
-                </p>
-
-                <ul className="list-disc pl-5 space-y-2 body-text">
-                  <li>What data is collected</li>
-                  <li>How it is used</li>
-                  <li>Whether it is sold</li>
-                  <li>Deletion</li>
-                </ul>
-
-                <p className="body-text">
-                  Requests should be sent to{" "}
-                  <a
-                    href="mailto:contact@aeontrix.com"
-                    className="font-semibold"
-                  >
-                    contact@aeontrix.com
-                  </a>
-                </p>
-
-                <p className="body-text">We do not sell personal data.</p>
-              </Section>
-
-              <Section
-                id="updates"
-                title="10. DO WE MAKE UPDATES TO THIS POLICY?"
-              >
-                <p className="body-text">
-                  Yes. Updates will be posted and take effect immediately.
-                </p>
-              </Section>
-
-              <Section id="contact" title="11. CONTACT INFORMATION">
-                <p className="body-text">
-                  You may contact us at{" "}
-                  <a
-                    href="mailto:contact@aeontrix.com"
-                    className="font-semibold"
-                  >
-                    contact@aeontrix.com
-                  </a>
+                  . Email communications are sent from @aeontrix.com addresses.
                 </p>
               </Section>
             </div>
@@ -358,28 +414,28 @@ export default function PrivacyPolicyPage() {
 /* ---------- TOC DATA ---------- */
 
 const TOC = [
-  { id: "info-collect", label: "1. WHAT INFORMATION DO WE COLLECT?" },
-  { id: "use-info", label: "2. HOW DO WE USE YOUR INFORMATION?" },
-  { id: "sharing", label: "3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?" },
+  { id: "introduction", label: "1. INTRODUCTION" },
+  { id: "information-we-collect", label: "2. INFORMATION WE COLLECT" },
+  { id: "tracking-technologies", label: "3. TRACKING TECHNOLOGIES WE USE" },
   {
-    id: "cookies",
-    label: "4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
+    id: "how-we-use-info",
+    label: "4. HOW WE USE YOUR INFORMATION?",
   },
-  { id: "retention", label: "5. HOW LONG DO WE KEEP YOUR INFORMATION?" },
-  { id: "security", label: "6. HOW DO WE KEEP YOUR INFORMATION SAFE?" },
-  { id: "rights", label: "7. WHAT ARE YOUR PRIVACY RIGHTS?" },
-  { id: "do-not-track", label: "8. CONTROLS FOR DO-NOT-TRACK FEATURES" },
   {
-    id: "california",
-    label: "9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
+    id: "automated-communications",
+    label: "5. AUTOMATED COMMUNICATIONS AND SMS COMPLIANCE",
   },
-  { id: "updates", label: "10. DO WE MAKE UPDATES TO THIS POLICY?" },
-  { id: "contact", label: "11. HOW CAN YOU CONTACT US ABOUT THIS POLICY?" },
-  // {
-  //   id: "review-data",
-  //   label:
-  //     "12. HOW CAN YOU REVIEW, UPDATE OR DELETE THE DATA WE COLLECT FROM YOU?",
-  // },
+  { id: "data-sharing", label: "6. DATA SHARING" },
+  { id: "data-retention", label: "7. DATA RETENTION" },
+  { id: "your-rights", label: "8. YOUR RIGHTS" },
+  {
+    id: "regional-privacy-rights",
+    label: "9. REGIONAL PRIVACY RIGHTS",
+  },
+  { id: "data-security", label: "10. DATA SECURITY" },
+  { id: "children's-privacy", label: "11. CHILDREN'S PRIVACY" },
+  { id: "changes-to-this-policy", label: "12. CHANGES TO THIS POLICY" },
+  { id: "contact", label: "12. CONTACT" },
 ];
 
 /* ---------- COMPONENTS ---------- */
