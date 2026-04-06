@@ -4,6 +4,7 @@ import { JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import Script from "next/script";
 
 export const satoshi = localFont({
   src: [
@@ -80,6 +81,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5MP82FPX6L"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5MP82FPX6L');
+          `}
+        </Script>
+      </head>
       <body
         className={`${satoshi.variable} ${jetbrainsMono.variable} antialiased bg-[#05070a]`}
       >
