@@ -6,7 +6,7 @@ export const TRANSFORMATIONS = [
     title: "Hospital Management System",
     client: "Sophos Medical Centre",
 
-    partners: ["Codeforge + IntelliOps"],
+    partners: [],
     industry: "Healthcare",
     duration: "12 months",
     comingSoon: false,
@@ -24,12 +24,7 @@ export const TRANSFORMATIONS = [
     hero: {
       subtitle: "Sophos Medical Centre",
       client: "Sophos Medical Centre — Multispecialty Clinic",
-      tags: [
-        "CodeForge + IntelliOps",
-        "Retention",
-        "Intelligence",
-        "Acquisition",
-      ],
+      tags: ["Retention", "Intelligence", "Acquisition"],
       duration: "12 months",
     },
 
@@ -184,21 +179,21 @@ export const TRANSFORMATIONS = [
       },
     ],
 
-    solution: {
-      description: `
-Aeontrix deployed a two-layer transformation: a unified Hospital Management System (CodeForge) covering the complete patient lifecycle — registration, scheduling, consultation, diagnostics, prescription management, billing, and follow-up — plus a coordinated network of 8 AI systems (IntelliOps) that automate appointment management, patient communication, payments, healthcare marketing, and inventory intelligence.
+    //     solution: {
+    //       description: `
+    // Aeontrix deployed a two-layer transformation: a unified Hospital Management System (CodeForge) covering the complete patient lifecycle — registration, scheduling, consultation, diagnostics, prescription management, billing, and follow-up — plus a coordinated network of 8 AI systems (IntelliOps) that automate appointment management, patient communication, payments, healthcare marketing, and inventory intelligence.
 
-Electronic medical records with instant search replaced the filing cabinets. Smart scheduling with conflict detection eliminated the phone-call bottleneck. Integrated billing with insurance claim processing closed the revenue leakage.
+    // Electronic medical records with instant search replaced the filing cabinets. Smart scheduling with conflict detection eliminated the phone-call bottleneck. Integrated billing with insurance claim processing closed the revenue leakage.
 
-An AI receptionist now handles 24/7 booking and patient inquiries. Automated appointment reminders with online payment incentives cut no-shows by over half.
+    // An AI receptionist now handles 24/7 booking and patient inquiries. Automated appointment reminders with online payment incentives cut no-shows by over half.
 
-A unified multi-channel chat interface consolidated WhatsApp, Telegram, email, and website into one AI-powered dashboard. Personalized healthcare package promotions generate additional revenue automatically.
+    // A unified multi-channel chat interface consolidated WhatsApp, Telegram, email, and website into one AI-powered dashboard. Personalized healthcare package promotions generate additional revenue automatically.
 
-Follow-up appointment scheduling, feedback collection, and inventory monitoring all run on intelligent automation.
+    // Follow-up appointment scheduling, feedback collection, and inventory monitoring all run on intelligent automation.
 
-Management dashboards with real-time KPIs gave the founder complete visibility — revenue per doctor, patient satisfaction, capacity utilization — without chasing anyone for reports.
-`,
-    },
+    // Management dashboards with real-time KPIs gave the founder complete visibility — revenue per doctor, patient satisfaction, capacity utilization — without chasing anyone for reports.
+    // `,
+    //     },
 
     aiSystems: [
       {
@@ -362,7 +357,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
     title: "Learning Management System",
     client: "FIRMST Language School",
 
-    partners: ["Codeforge + IntelliOps"],
+    partners: [],
     industry: "Education",
     duration: "4 months",
     comingSoon: false,
@@ -380,7 +375,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
     hero: {
       subtitle: "FIRMST Language School",
       client: "FIRMST Language School",
-      tags: ["CodeForge + IntelliOps", "Retention", "Intelligence"],
+      tags: ["Retention", "Intelligence"],
       duration: "4 months",
     },
 
@@ -497,11 +492,11 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
     ],
 
     beforeAfter: [
-      {
-        before: "Enrollment via Google Forms — manual processing took 2-3 days",
-        after:
-          "Instant enrollment with AI-powered placement testing and auto-level assignment",
-      },
+      // {
+      //   before: "Enrollment via Google Forms — manual processing took 2-3 days",
+      //   after:
+      //     "Instant enrollment with AI-powered placement testing and auto-level assignment",
+      // },
       {
         before: "Scheduling in shared Google Sheet — constant double-bookings",
         after:
@@ -525,10 +520,10 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
       },
     ],
 
-    solution: {
-      description: `The CodeForge workstream delivered a complete custom Learning Management System from the ground up, while IntelliOps layered in intelligent automation across enrollment, scheduling, and student engagement. Enrollment automation with instant confirmation, AI-powered placement testing, and auto-level assignment replaced the Google Forms bottleneck entirely. Smart scheduling with timezone detection and conflict prevention eliminated the chaos — zero conflicts since deployment. An intelligent student engagement system monitors progress patterns and flags at-risk students before they drop off, automatically triggering re-engagement sequences. Automated billing with package-based and per-session pricing, auto-invoicing, and smart payment reminders closed the spreadsheet gap. A teacher portal consolidated class management, materials, attendance, grading, and communication into one interface. A certification system with verifiable credentials added a professional layer. The Aeontrix team had zero experience in education technology when this started. The Diagnostic identified the problems. Research filled the knowledge gaps. The right team was assembled. FIRMST transformed from a small language school into a premium boutique school with infrastructure matching the quality of their teaching.
-`,
-    },
+    //     solution: {
+    //       description: `The CodeForge workstream delivered a complete custom Learning Management System from the ground up, while IntelliOps layered in intelligent automation across enrollment, scheduling, and student engagement. Enrollment automation with instant confirmation, AI-powered placement testing, and auto-level assignment replaced the Google Forms bottleneck entirely. Smart scheduling with timezone detection and conflict prevention eliminated the chaos — zero conflicts since deployment. An intelligent student engagement system monitors progress patterns and flags at-risk students before they drop off, automatically triggering re-engagement sequences. Automated billing with package-based and per-session pricing, auto-invoicing, and smart payment reminders closed the spreadsheet gap. A teacher portal consolidated class management, materials, attendance, grading, and communication into one interface. A certification system with verifiable credentials added a professional layer. The Aeontrix team had zero experience in education technology when this started. The Diagnostic identified the problems. Research filled the knowledge gaps. The right team was assembled. FIRMST transformed from a small language school into a premium boutique school with infrastructure matching the quality of their teaching.
+    // `,
+    //     },
 
     aiSystems: false,
 
@@ -568,11 +563,11 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
     },
 
     whatWeBuilt: [
-      {
-        title: "Enrollment & AI Placement Engine",
-        description:
-          "Self-service enrollment with AI-powered language proficiency assessment to place students in the right level automatically.",
-      },
+      // {
+      //   title: "Enrollment & AI Placement Engine",
+      //   description:
+      //     "Self-service enrollment with AI-powered language proficiency assessment to place students in the right level automatically.",
+      // },
       {
         title: "Smart Hybrid Class Management",
         description:
@@ -581,7 +576,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
       {
         title: "Intelligent Student Tracking",
         description:
-          "Progress dashboards with AI-powered at-risk detection that flags disengaging students and triggers re-engagement.",
+          "Progress dashboards that flags disengaging students and triggers re-engagement.",
       },
       {
         title: "Teacher Portal",
@@ -633,7 +628,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
     title: "Community Platform",
     client: "Ayushma Yoga",
 
-    partners: ["Codeforge + IntelliOps"],
+    partners: [],
     industry: "Wellness",
     duration: "3 months",
     comingSoon: false,
@@ -651,7 +646,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
     hero: {
       subtitle: "Ayushma Yoga",
       client: "Ayushma Yoga — Wellness Community",
-      tags: ["CodeForge + IntelliOps", "Retention", "Acquisition"],
+      tags: ["Retention", "Acquisition"],
       duration: "3 months",
     },
 
@@ -773,9 +768,9 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
       },
     ],
 
-    solution: {
-      description: `The CodeForge workstream delivered a custom-built community platform designed specifically for Ayushma Yoga's teaching model, while IntelliOps layered in intelligent engagement automation. A private community space with structured forums — organized by topic, program level, and interest area — where members post questions, share experiences, and support each other. Real-time chat enables direct member-to-member conversations. The courses module allows structured learning paths with video lessons, materials, assignments, and progress tracking. Live session integration handles scheduling, registration, attendance, and automatic recording. An AI-powered Q&A engine organizes questions and surfaces existing answers before members ask again, reducing the founder's repetitive DM load. Intelligent engagement monitoring flags members showing disengagement patterns and triggers re-activation sequences. Role-based access controls separate owners, administrators, and members with granular permissions. The platform transformed Ayushma from a schedule-dependent practice into an always-on wellness community.`,
-    },
+    // solution: {
+    //   description: `The CodeForge workstream delivered a custom-built community platform designed specifically for Ayushma Yoga's teaching model, while IntelliOps layered in intelligent engagement automation. A private community space with structured forums — organized by topic, program level, and interest area — where members post questions, share experiences, and support each other. Real-time chat enables direct member-to-member conversations. The courses module allows structured learning paths with video lessons, materials, assignments, and progress tracking. Live session integration handles scheduling, registration, attendance, and automatic recording. An AI-powered Q&A engine organizes questions and surfaces existing answers before members ask again, reducing the founder's repetitive DM load. Intelligent engagement monitoring flags members showing disengagement patterns and triggers re-activation sequences. Role-based access controls separate owners, administrators, and members with granular permissions. The platform transformed Ayushma from a schedule-dependent practice into an always-on wellness community.`,
+    // },
 
     aiSystems: false,
     financialImpact: {
@@ -865,243 +860,243 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
     ],
   },
 
-  {
-    id: 4,
-    slug: "content-intelligence-os",
+  // {
+  //   id: 4,
+  //   slug: "content-intelligence-os",
 
-    title: "Content Intelligence OS",
-    client: "Competitive Intelligence for Content Creators",
+  //   title: "Content Intelligence OS",
+  //   client: "Competitive Intelligence for Content Creators",
 
-    partners: ["Codeforge + IntelliOps"],
-    industry: "Creator Economy",
-    duration: "2 weeks",
-    comingSoon: false,
+  //   partners: ["Codeforge + IntelliOps"],
+  //   industry: "Creator Economy",
+  //   duration: "2 weeks",
+  //   comingSoon: false,
 
-    metrics: [
-      { value: "10", label: "Hours Saved Weekly" },
-      { value: "47%", label: "Improvement in Engagement" },
-      { value: "3.2x", label: "Faster Content Planning" },
-    ],
+  //   metrics: [
+  //     { value: "10", label: "Hours Saved Weekly" },
+  //     { value: "47%", label: "Improvement in Engagement" },
+  //     { value: "3.2x", label: "Faster Content Planning" },
+  //   ],
 
-    stack: ["React", "Node.js", "MongoDB"],
+  //   stack: ["React", "Node.js", "MongoDB"],
 
-    /* ---------- detailed page ---------- */
+  //   /* ---------- detailed page ---------- */
 
-    hero: {
-      subtitle: "Competitive Intelligence for Content Creators",
-      client: "Instagram & YouTube Influencer · 450K+ Combined Following",
-      tags: ["CodeForge + IntelliOps", "Acquisition", "Intelligence"],
-      duration: "2 weeks",
-    },
+  //   hero: {
+  //     subtitle: "Competitive Intelligence for Content Creators",
+  //     client: "Instagram & YouTube Influencer · 450K+ Combined Following",
+  //     tags: ["CodeForge + IntelliOps", "Acquisition", "Intelligence"],
+  //     duration: "2 weeks",
+  //   },
 
-    metricsFull: [
-      { value: "10", label: "Hours Saved Weekly" },
-      { value: "47%", label: "Improvement in Engagement" },
-      { value: "3.2x", label: "Faster Content Planning" },
-      { value: "100%", label: "Competitor Tracking Accuracy" },
-      { value: "23%", label: "Lead Magnet Conversion Up" },
-      { value: "$50K+", label: "Annual Value Impact" },
-    ],
+  //   metricsFull: [
+  //     { value: "10", label: "Hours Saved Weekly" },
+  //     { value: "47%", label: "Improvement in Engagement" },
+  //     { value: "3.2x", label: "Faster Content Planning" },
+  //     { value: "100%", label: "Competitor Tracking Accuracy" },
+  //     { value: "23%", label: "Lead Magnet Conversion Up" },
+  //     { value: "$50K+", label: "Annual Value Impact" },
+  //   ],
 
-    walkthrough: [
-      { type: "image" },
-      { type: "image" },
-      { type: "image" },
-      { type: "image" },
-      { type: "image" },
-      { type: "image" },
-    ],
+  //   walkthrough: [
+  //     { type: "image" },
+  //     { type: "image" },
+  //     { type: "image" },
+  //     { type: "image" },
+  //     { type: "image" },
+  //     { type: "image" },
+  //   ],
 
-    diagnostic: {
-      text: `A content creator with 450K+ combined following across Instagram and YouTube was spending 10+ hours per week manually checking competitor channels, screenshotting metrics, and trying to spot trends in spreadsheets. Content decisions were based on intuition, not data. The Diagnostic identified the core problem: zero centralized visibility into their own performance across the two platforms they operated on, let alone their competitors. Every decision was a guess. The Diagnostic quantified $6,500/month in lost opportunity and inefficiency across three critical areas.`,
-    },
+  //   diagnostic: {
+  //     text: `A content creator with 450K+ combined following across Instagram and YouTube was spending 10+ hours per week manually checking competitor channels, screenshotting metrics, and trying to spot trends in spreadsheets. Content decisions were based on intuition, not data. The Diagnostic identified the core problem: zero centralized visibility into their own performance across the two platforms they operated on, let alone their competitors. Every decision was a guess. The Diagnostic quantified $6,500/month in lost opportunity and inefficiency across three critical areas.`,
+  //   },
 
-    operationalReality: [
-      {
-        title: "Manual Competitor Monitoring",
-        cost: "$2,500/mo",
-        summary:
-          "10+ hours per week manually screenshotting and tracking competitor content across platforms",
+  //   operationalReality: [
+  //     {
+  //       title: "Manual Competitor Monitoring",
+  //       cost: "$2,500/mo",
+  //       summary:
+  //         "10+ hours per week manually screenshotting and tracking competitor content across platforms",
 
-        process:
-          "Every Monday, the creator spent the entire morning opening competitor profiles across Instagram and YouTube, screenshotting posts, manually logging engagement numbers into a spreadsheet, and trying to spot trends. By the time analysis was done, half the day was gone. Competitor tracking was always reactive — seeing what worked last week instead of predicting what would work next week.",
+  //       process:
+  //         "Every Monday, the creator spent the entire morning opening competitor profiles across Instagram and YouTube, screenshotting posts, manually logging engagement numbers into a spreadsheet, and trying to spot trends. By the time analysis was done, half the day was gone. Competitor tracking was always reactive — seeing what worked last week instead of predicting what would work next week.",
 
-        timeCost: [
-          "6 hours/week manually checking and logging competitor activity",
-          "3 hours/week building spreadsheets to track trends",
-          "1 hour/week trying to identify patterns across platforms",
-        ],
+  //       timeCost: [
+  //         "6 hours/week manually checking and logging competitor activity",
+  //         "3 hours/week building spreadsheets to track trends",
+  //         "1 hour/week trying to identify patterns across platforms",
+  //       ],
 
-        businessImpact: [
-          "Half of every Monday consumed by manual research instead of creating",
-          "Trend identification lagged by 1-2 weeks behind real-time shifts",
-          "Analysis was inconsistent — some competitors tracked closely, others forgotten",
-          "No systematic understanding of what made competitor content perform",
-        ],
-      },
-      {
-        title: "Scattered Performance Data",
-        cost: "$3,200/mo",
-        summary:
-          "Instagram Insights and YouTube Studio as two separate, non-comparable data silos",
+  //       businessImpact: [
+  //         "Half of every Monday consumed by manual research instead of creating",
+  //         "Trend identification lagged by 1-2 weeks behind real-time shifts",
+  //         "Analysis was inconsistent — some competitors tracked closely, others forgotten",
+  //         "No systematic understanding of what made competitor content perform",
+  //       ],
+  //     },
+  //     {
+  //       title: "Scattered Performance Data",
+  //       cost: "$3,200/mo",
+  //       summary:
+  //         "Instagram Insights and YouTube Studio as two separate, non-comparable data silos",
 
-        process:
-          "Performance data lived in two separate native analytics dashboards — Instagram Insights and YouTube Studio. Each had different metrics, different time ranges, and different interfaces. Cross-platform performance comparison was impossible without manual spreadsheet work. The creator had no unified view of which content type performed best across both platforms.",
+  //       process:
+  //         "Performance data lived in two separate native analytics dashboards — Instagram Insights and YouTube Studio. Each had different metrics, different time ranges, and different interfaces. Cross-platform performance comparison was impossible without manual spreadsheet work. The creator had no unified view of which content type performed best across both platforms.",
 
-        timeCost: [
-          "2 hours/week toggling between platform analytics dashboards",
-          "2 hours/week manually consolidating metrics into comparison spreadsheets",
-        ],
+  //       timeCost: [
+  //         "2 hours/week toggling between platform analytics dashboards",
+  //         "2 hours/week manually consolidating metrics into comparison spreadsheets",
+  //       ],
 
-        businessImpact: [
-          "No cross-platform performance comparison possible",
-          "Engagement patterns invisible across the full audience",
-          "Content strategy decisions made based on incomplete, single-platform data",
-          "Lead magnet attribution impossible — no idea which platform drove conversions",
-        ],
-      },
-      {
-        title: "Content Planning by Gut Feel",
-        cost: "$800/mo",
-        summary:
-          "No data-driven system for hooks, CTAs, formats, or posting times — every decision was a guess",
+  //       businessImpact: [
+  //         "No cross-platform performance comparison possible",
+  //         "Engagement patterns invisible across the full audience",
+  //         "Content strategy decisions made based on incomplete, single-platform data",
+  //         "Lead magnet attribution impossible — no idea which platform drove conversions",
+  //       ],
+  //     },
+  //     {
+  //       title: "Content Planning by Gut Feel",
+  //       cost: "$800/mo",
+  //       summary:
+  //         "No data-driven system for hooks, CTAs, formats, or posting times — every decision was a guess",
 
-        process:
-          'Content planning happened in the creator\'s head or in scattered notes. Hooks were written based on intuition. CTAs were copy-pasted from previous posts. No testing framework for what formats performed best. Posting times were based on "what feels right" rather than audience data. Lead magnets were created without any conversion tracking.',
+  //       process:
+  //         'Content planning happened in the creator\'s head or in scattered notes. Hooks were written based on intuition. CTAs were copy-pasted from previous posts. No testing framework for what formats performed best. Posting times were based on "what feels right" rather than audience data. Lead magnets were created without any conversion tracking.',
 
-        timeCost: [
-          "3 hours/week brainstorming content ideas without data",
-          "2 hours/week creating lead magnets with no conversion feedback",
-        ],
+  //       timeCost: [
+  //         "3 hours/week brainstorming content ideas without data",
+  //         "2 hours/week creating lead magnets with no conversion feedback",
+  //       ],
 
-        businessImpact: [
-          "Engagement plateau — same formats repeated without performance data",
-          "Lead magnets underperforming with no visibility into conversion rates",
-          "Hook effectiveness completely unknown until post-publish",
-          "Brand voice inconsistency across posts and platforms",
-        ],
-      },
-    ],
+  //       businessImpact: [
+  //         "Engagement plateau — same formats repeated without performance data",
+  //         "Lead magnets underperforming with no visibility into conversion rates",
+  //         "Hook effectiveness completely unknown until post-publish",
+  //         "Brand voice inconsistency across posts and platforms",
+  //       ],
+  //     },
+  //   ],
 
-    beforeAfter: [
-      {
-        before: "Manually checking 5-10 competitor accounts daily",
-        after:
-          "Automated weekly intelligence reports with AI-powered trend analysis",
-      },
-      {
-        before:
-          "Content performance scattered across Instagram and YouTube analytics",
-        after:
-          "Unified dashboard showing cross-platform performance in one view",
-      },
-      {
-        before: "Hook and CTA effectiveness was pure guesswork",
-        after:
-          "AI-powered analysis of top-performing hooks and CTAs with recommendations",
-      },
-      {
-        before: "Scheduling done separately on each platform",
-        after: "Unified content calendar with cross-platform scheduling",
-      },
-      {
-        before: "No data on which lead magnets drove conversions",
-        after: "Lead magnet performance tracking with conversion attribution",
-      },
-    ],
+  //   beforeAfter: [
+  //     {
+  //       before: "Manually checking 5-10 competitor accounts daily",
+  //       after:
+  //         "Automated weekly intelligence reports with AI-powered trend analysis",
+  //     },
+  //     {
+  //       before:
+  //         "Content performance scattered across Instagram and YouTube analytics",
+  //       after:
+  //         "Unified dashboard showing cross-platform performance in one view",
+  //     },
+  //     {
+  //       before: "Hook and CTA effectiveness was pure guesswork",
+  //       after:
+  //         "AI-powered analysis of top-performing hooks and CTAs with recommendations",
+  //     },
+  //     {
+  //       before: "Scheduling done separately on each platform",
+  //       after: "Unified content calendar with cross-platform scheduling",
+  //     },
+  //     {
+  //       before: "No data on which lead magnets drove conversions",
+  //       after: "Lead magnet performance tracking with conversion attribution",
+  //     },
+  //   ],
 
-    solution: {
-      description: `The CodeForge and IntelliOps workstreams delivered a Content Intelligence OS — automated competitor tracking with weekly intelligence reports, cross-platform analytics dashboard unifying Instagram and YouTube data, AI-powered hook and CTA analysis, unified scheduling, lead magnet attribution tracking, and a brand profile engine for content consistency. The system provides actionable suggestions based on the creator's brand profile and historical performance data. Every decision backed by data. Every priority backed by quantified impact. What used to take an entire Monday of manual competitor research now takes a glance at a dashboard over morning coffee.`,
-    },
+  //   solution: {
+  //     description: `The CodeForge and IntelliOps workstreams delivered a Content Intelligence OS — automated competitor tracking with weekly intelligence reports, cross-platform analytics dashboard unifying Instagram and YouTube data, AI-powered hook and CTA analysis, unified scheduling, lead magnet attribution tracking, and a brand profile engine for content consistency. The system provides actionable suggestions based on the creator's brand profile and historical performance data. Every decision backed by data. Every priority backed by quantified impact. What used to take an entire Monday of manual competitor research now takes a glance at a dashboard over morning coffee.`,
+  //   },
 
-    aiSystems: false,
+  //   aiSystems: false,
 
-    financialImpact: {
-      rows: [
-        {
-          category: "Manual Research & Competitor Monitoring",
-          before: "$2,500/mo",
-          after: "$400/mo",
-          savings: "$2,100/mo",
-        },
-        {
-          category: "Missed Engagement Opportunities",
-          before: "$3,200/mo",
-          after: "$1,700/mo",
-          savings: "$1,500/mo",
-        },
-        {
-          category: "Content Planning Inefficiency",
-          before: "$800/mo",
-          after: "$200/mo",
-          savings: "$600/mo",
-        },
-      ],
-      total: {
-        before: "$6,500/mo",
-        after: "$2,300/mo",
-        savings: "$4,200/mo",
-      },
-      annualImpact: "$50,000+",
-    },
+  //   financialImpact: {
+  //     rows: [
+  //       {
+  //         category: "Manual Research & Competitor Monitoring",
+  //         before: "$2,500/mo",
+  //         after: "$400/mo",
+  //         savings: "$2,100/mo",
+  //       },
+  //       {
+  //         category: "Missed Engagement Opportunities",
+  //         before: "$3,200/mo",
+  //         after: "$1,700/mo",
+  //         savings: "$1,500/mo",
+  //       },
+  //       {
+  //         category: "Content Planning Inefficiency",
+  //         before: "$800/mo",
+  //         after: "$200/mo",
+  //         savings: "$600/mo",
+  //       },
+  //     ],
+  //     total: {
+  //       before: "$6,500/mo",
+  //       after: "$2,300/mo",
+  //       savings: "$4,200/mo",
+  //     },
+  //     annualImpact: "$50,000+",
+  //   },
 
-    whatWeBuilt: [
-      {
-        title: "Competitor Intelligence Engine",
-        description:
-          "Automated tracking of competitor content, engagement metrics, posting frequency, and trend identification.",
-      },
-      {
-        title: "Cross-Platform Analytics",
-        description:
-          "Unified performance dashboard pulling data from Instagram and YouTube into a single view.",
-      },
-      {
-        title: "AI Content Suggestions",
-        description:
-          "Hook recommendations, CTA analysis, and format suggestions based on brand profile and historical performance.",
-      },
-      {
-        title: "Unified Scheduling",
-        description:
-          "Cross-platform content calendar with scheduling, queue management, and optimal posting time suggestions.",
-      },
-      {
-        title: "Lead Magnet Analytics",
-        description:
-          "Track which content pieces and lead magnets drive the most conversions and audience growth.",
-      },
-      {
-        title: "Brand Profile Engine",
-        description:
-          "Define brand voice, topics, and positioning — AI suggestions are tailored to maintain consistency.",
-      },
-    ],
+  //   whatWeBuilt: [
+  //     {
+  //       title: "Competitor Intelligence Engine",
+  //       description:
+  //         "Automated tracking of competitor content, engagement metrics, posting frequency, and trend identification.",
+  //     },
+  //     {
+  //       title: "Cross-Platform Analytics",
+  //       description:
+  //         "Unified performance dashboard pulling data from Instagram and YouTube into a single view.",
+  //     },
+  //     {
+  //       title: "AI Content Suggestions",
+  //       description:
+  //         "Hook recommendations, CTA analysis, and format suggestions based on brand profile and historical performance.",
+  //     },
+  //     {
+  //       title: "Unified Scheduling",
+  //       description:
+  //         "Cross-platform content calendar with scheduling, queue management, and optimal posting time suggestions.",
+  //     },
+  //     {
+  //       title: "Lead Magnet Analytics",
+  //       description:
+  //         "Track which content pieces and lead magnets drive the most conversions and audience growth.",
+  //     },
+  //     {
+  //       title: "Brand Profile Engine",
+  //       description:
+  //         "Define brand voice, topics, and positioning — AI suggestions are tailored to maintain consistency.",
+  //     },
+  //   ],
 
-    techStack: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Python",
-      "OpenAI API",
-      "AWS Lambda",
-      "GitHub",
-    ],
+  //   techStack: [
+  //     "React",
+  //     "Node.js",
+  //     "MongoDB",
+  //     "Python",
+  //     "OpenAI API",
+  //     "AWS Lambda",
+  //     "GitHub",
+  //   ],
 
-    testimonial: {
-      quote: `I was literally spending my entire Monday just looking at what other creators posted last week and trying to figure out what worked. Now I open the dashboard Monday morning and it’s all there — what competitors did, what worked for me, what I should try next. My content planning went from a full day to about 2 hours.`,
-      name: "Content Creator",
-      role: "Instagram & YouTube, 450K+ Combined Following",
-    },
+  //   testimonial: {
+  //     quote: `I was literally spending my entire Monday just looking at what other creators posted last week and trying to figure out what worked. Now I open the dashboard Monday morning and it’s all there — what competitors did, what worked for me, what I should try next. My content planning went from a full day to about 2 hours.`,
+  //     name: "Content Creator",
+  //     role: "Instagram & YouTube, 450K+ Combined Following",
+  //   },
 
-    beyondNumbers: [
-      "Creator reports feeling significantly less overwhelmed by the content treadmill",
-      'Data-backed decisions replaced the anxiety of "am I posting the right thing?"',
-      "Competitive awareness improved without obsessive manual checking",
-      "Content quality improved as time shifted from logistics to creativity",
-      "Brand consistency improved with AI guardrails on voice and positioning",
-    ],
-  },
+  //   beyondNumbers: [
+  //     "Creator reports feeling significantly less overwhelmed by the content treadmill",
+  //     'Data-backed decisions replaced the anxiety of "am I posting the right thing?"',
+  //     "Competitive awareness improved without obsessive manual checking",
+  //     "Content quality improved as time shifted from logistics to creativity",
+  //     "Brand consistency improved with AI guardrails on voice and positioning",
+  //   ],
+  // },
 
   {
     id: 5,
@@ -1110,7 +1105,7 @@ Management dashboards with real-time KPIs gave the founder complete visibility �
     title: "Xentary — Agency Operating System",
     client: "Custom In-House ERP for Agencies",
 
-    partners: ["Xentary"],
+    partners: [],
     industry: "Professional Services",
     duration: "3 months + Ongoing",
 

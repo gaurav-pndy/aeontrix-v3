@@ -76,7 +76,7 @@ export default function ProductWalkthrough({ media = [], comingSoon }) {
                     ) : (
                       <div className="text-center text-text-muted h-full flex flex-col items-center justify-center">
                         <ImageIcon className="mb-2" />
-                        Screenshot or Video
+                        Coming Soon{" "}
                       </div>
                     )}
                   </motion.div>

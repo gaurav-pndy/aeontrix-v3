@@ -147,7 +147,7 @@ export default function Footer() {
               <ul className="space-y-1 small-text md:body-text text-white/90">
                 <li>
                   <Link
-                    href="#"
+                    href="/case-studies/sophos-medical-centre"
                     className="hover:text-primary text-left leading-tight cursor-pointer transition-colors"
                   >
                     Sophos Clinic
@@ -155,7 +155,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/case-studies/firmst-language-school"
                     className="hover:text-primary text-left leading-tight cursor-pointer transition-colors"
                   >
                     FIRMST School
@@ -163,7 +163,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/case-studies/ayushma-yoga"
                     className="hover:text-primary text-left leading-tight cursor-pointer transition-colors"
                   >
                     Ayushma Yoga

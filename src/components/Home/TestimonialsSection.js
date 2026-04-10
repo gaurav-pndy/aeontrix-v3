@@ -31,8 +31,7 @@ const TESTIMONIALS = [
     org: "FIRMST",
     href: "firmst-language-school",
     website: "https://firmst.org/",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400",
+    image: "/testimonials/Marina Yurievna.jpeg",
     quote:
       "We wanted one system to run the entire school, built around how we actually operate. Aeontrix built us a custom LMS that manages everything in one place: online and on-site students, coursework and study materials, assignments and grading, meetings inside the platform, timetable scheduling, payments, and even our website blog publishing inside the same system. The best part is that it’s all custom made. We don’t need extra software or workarounds. It has improved our productivity by 200% because our team isn’t switching tools or handling admin manually. Teaching and learning is smoother for both teachers and students, and it helped us confidently position ourselves as a premium school.",
     author: "Marina Yurievna",
@@ -42,8 +41,7 @@ const TESTIMONIALS = [
     org: "Sophos Medical",
     href: "sophos-medical-centre",
     website: "https://sophos-med.ru/",
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+    image: "testimonials/SANKARANARAYANAN ARUMUGAM Saravanan.jpg",
     quote:
       "Aeontrix built our entire Medical Information System from scratch, including separate doctor, patient, and admin portals, inventory management, consultation bookings, and secure patient history storage. What impressed us most is that they didn’t treat this like a normal software project. They researched the regulatory requirements, coordinated with lawyers, and took compliance and security seriously from day one, which matters massively in healthcare. Operationally, it made the clinic feel coordinated. Doctors have the right context instantly, patients get a smoother experience, and the admin side runs cleanly. It supports a genuinely premium standard of care, without adding friction for the team.",
     author: "Dr. Saravanan Arumugam Sankaranarayanan",
@@ -125,7 +123,7 @@ export default function TestimonialsSection() {
                 transition={{ duration: 0.6 }}
                 className="relative"
               >
-                <p className="subtitle-text lg:large-text leading-tight text-white mb-4 pt-6 md:pt-0 whitespace-pre-line ">
+                <p className="subtitle-text lg:large-text leading-tight text-white mb-4 pt-8   whitespace-pre-line ">
                   "{active.quote}"
                 </p>
 
@@ -203,7 +201,7 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
 
-                <FaQuoteRight className="absolute text-primary -top-4 md:-top-8 lg:-top-10 right-2 text-5xl md:text-6xl lg:text-8xl opacity-50" />
+                <FaQuoteRight className="absolute text-primary -top-4 md:-top-6 lg:-top-10 right-2 text-5xl  lg:text-7xl opacity-50" />
               </motion.div>
             </AnimatePresence>
           </div>

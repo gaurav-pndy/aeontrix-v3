@@ -88,7 +88,7 @@ export default async function DetailedCaseStudyPage({ params }) {
             <DiagnosticSection text={study.diagnostic?.text} />
             <OperationalReality items={study.operationalReality} />
             <BeforeAfter items={study.beforeAfter} />
-            <TheSolution solution={study.solution} />
+            {/* {study.solution && <TheSolution solution={study.solution} />} */}
             {study.aiSystems && <AISystems systems={study.aiSystems} />}
             <FinancialImpact data={study.financialImpact} />
             <WhatWeBuilt items={study.whatWeBuilt} />

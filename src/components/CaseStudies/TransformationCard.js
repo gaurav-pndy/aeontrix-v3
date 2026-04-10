@@ -7,14 +7,14 @@ export default function TransformationCard({ study }) {
         {/* HEADER */}
         <div className="bg-primary text-white p-4 md:p-6 md:pt-4 min-h-38 flex flex-col justify-between">
           <div className="flex gap-2 mb-2 flex-wrap">
-            {study.partners.map((p) => (
+            {/* {study.partners.map((p) => (
               <span
                 key={p}
                 className="text-[0.65rem] bg-white/20 px-2 py-1 font-mono rounded"
               >
                 {p.toUpperCase()}
               </span>
-            ))}
+            ))} */}
 
             {study.comingSoon && (
               <span className="text-[0.65rem] bg-white/20 px-2 py-1 rounded">
@@ -64,7 +64,7 @@ export default function TransformationCard({ study }) {
               {study.comingSoon ? "View Details →" : "Read Case Study →"}
             </span>
 
-            <div className="flex gap-1 flex-wrap justify-end">
+            {/* <div className="flex gap-1 flex-wrap justify-end">
               {study.stack?.map((tech) => (
                 <span
                   key={tech}
@@ -73,7 +73,7 @@ export default function TransformationCard({ study }) {
                   {tech}
                 </span>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

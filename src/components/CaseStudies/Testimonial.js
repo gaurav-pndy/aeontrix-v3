@@ -21,12 +21,12 @@ export default function Testimonial({ testimonial }) {
           "
         >
           {/* Quote mark */}
-          <div className="absolute top-4 left-6 md:left-8 text-primary/50 text-5xl ">
+          <div className="absolute top-2 left-6 md:left-8 text-primary/50 text-5xl ">
             <FaQuoteLeft />
           </div>
 
           {/* Quote */}
-          <p className="relative z-10 subtitle-text leading-relaxed mb-6 text-white/90 italic">
+          <p className="relative pt-4 z-10 subtitle-text leading-relaxed mb-6 text-white/90 italic">
             "{testimonial.quote}"
           </p>
 
